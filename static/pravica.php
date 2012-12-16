@@ -2,7 +2,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="span3 offset9">
+		<div class="span3 offset9 addsuggestion">
 			DODAJ PREDLOG +
 		</div>
 	</div>
