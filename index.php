@@ -4,8 +4,8 @@ include('php/class.template.php');
 
 class RewriteUrl {
 	public function rru($i){
-		$m = explode('/',strtolower($_GET['m']));
-		return (isset($i)) ? $m[$i] : $m[0];
+		$m = explode('/',@strtolower($_GET['m']));
+		return (isset($i)) ? @$m[$i] : @$m[0];
 	}
 }
 
@@ -17,7 +17,7 @@ $rights['pravica-do-dobre-politicne-oblasti']=3;
 $rights['pravica-do-narave']=4;
 $rights['pravica-do-cloveku-prijazne-ekonomije']=5;
 $rights['pravica-do-vkljucenosti']=6;
-$id_right = $rights[RewriteUrl::rru(0)];
+$id_right = @$rights[RewriteUrl::rru(0)];
 
 
 
