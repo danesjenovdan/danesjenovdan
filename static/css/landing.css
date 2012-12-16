@@ -1,0 +1,66 @@
+body {
+/*	background-image: ; */
+}
+
+.logo {
+	background-image: url('../img/logo.png');
+	width: 160px;
+	height: 63px;
+	display: inline-block;
+	float: left;
+}
+
+.stepone {
+	background-image: url('../img/stepone.png');
+	width: 207px;
+	height: 75px;
+	display: inline-block;
+	float: left;
+}
+.steptwo {
+	background-image: url('../img/steptwo.png');
+	width: 252px;
+	height: 75px;
+	display: inline-block;
+	float: left;
+}
+.stepthree {
+	background-image: url('../img/stepthree.png');
+	width: 276px;
+	height: 75px;
+	display: inline-block;
+	float: left;
+}
+.stepfour {
+	background-image: url('../img/stepfour.png');
+	width: 228px;
+	height: 75px;
+	display: inline-block;
+	float: left;
+}
+
+.tableft {
+	background-image: url('../img/tableft.png');
+	width: 492px;
+	height: 44px;
+	float: left;
+}
+.tabright {
+	background-image: url('../img/tabright.png');
+	width: 492px;
+	height: 44px;
+	float: left;
+}
+
+.tabtext {
+	
+}
+.totalsuggestions {
+	
+}
+.tabbox {
+	
+}
+.supporters {
+	
+}
