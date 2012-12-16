@@ -31,3 +31,12 @@ body {
 .votebox div {
 	float: left;
 }
+
+
+/* SUGGESTION PAGE */
+.suggestionvotefor {
+	display: inline-block;
+}
+.suggestionvoteagainst {
+	display: inline-block;
+}

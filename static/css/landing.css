@@ -1,5 +1,5 @@
 body {
-/*	background-image: ; */
+	background-image: url('../img/bck_pattern.png');
 }
 
 .logo {
@@ -10,33 +10,11 @@ body {
 	float: left;
 }
 
-.stepone {
-	background-image: url('../img/stepone.png');
-	width: 207px;
-	height: 75px;
-	display: inline-block;
-	float: left;
+.steps {
+	text-align: center;
 }
-.steptwo {
-	background-image: url('../img/steptwo.png');
-	width: 252px;
+.steps img {
 	height: 75px;
-	display: inline-block;
-	float: left;
-}
-.stepthree {
-	background-image: url('../img/stepthree.png');
-	width: 276px;
-	height: 75px;
-	display: inline-block;
-	float: left;
-}
-.stepfour {
-	background-image: url('../img/stepfour.png');
-	width: 228px;
-	height: 75px;
-	display: inline-block;
-	float: left;
 }
 
 .tableft {
