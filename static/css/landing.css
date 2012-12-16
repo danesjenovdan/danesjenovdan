@@ -17,28 +17,50 @@ body {
 	height: 75px;
 }
 
+
 .tableft {
 	background-image: url('../img/tableft.png');
 	width: 492px;
 	height: 44px;
 	float: left;
 }
+
 .tabright {
 	background-image: url('../img/tabright.png');
 	width: 492px;
 	height: 44px;
-	float: left;
+	float: right;
 }
 
-.tabtext {
+.leftbox {
+	background-color: #e6e6e6;
+}
+
+.rightbox {
+	background-color: #ffffff;
+	display: none;
+}
+
+.boxpravica {
+	background-color: #ffffff;
+	padding: 0.5em;
+	margin: 1em;
+}
+.trikotnik {
+	background-image: url('../img/puscica_pravice.png');
+	width: 20px;
+	height: 15px;
+	display: inline-block;
+}
+.takemethere {
+	background: url('../img/gumb_sooblikuj.png');
+	width: 98px;
+	height: 42px;
+	display: inline-block;
+	float: right;
 	
 }
-.totalsuggestions {
-	
-}
-.tabbox {
-	
-}
-.supporters {
-	
+.signupform {
+	background-color: white;
+	float: right;
 }
