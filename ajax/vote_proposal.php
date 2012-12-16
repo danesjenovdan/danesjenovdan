@@ -61,9 +61,8 @@ if (empty ($returnArr)) {
 		);
 	}
 
+	/* close connection */
+	$mysqli->close();
 }
-
-/* close connection */
-$mysqli->close();
 
 echo json_encode ($returnArr);
