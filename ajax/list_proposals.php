@@ -20,8 +20,14 @@
 require("../config/config.php");
 
 // Checking and setting defaults if necessary.
+if(isset($_REQUEST['id'])){
+    $id=intval($_REQUEST['id']);
+}
+else {
+    die();
+}
 if(isset($_REQUEST['no'])){
-    $number=$_REQUEST['no'];
+    $number=intval($_REQUEST['no']);
 }
 else {
     $number=10;
@@ -42,7 +48,7 @@ else {
 }
 $query="select title,timestamp,id_proposal as id, (select count(*) from vote where
 id_proposal=id and vote_plus>0) as vote_plus, (select count(*) from vote where
-id_proposal=id and vote_minus>0) as vote_minus from proposal order by ".$sortby ." ".$order." limit ".$number.";";
+id_proposal=id and vote_minus>0) as vote_minus from proposal where id_right=".$id." order by ".$sortby ." ".$order." limit ".$number.";";
 
 //echo $query;
 $array=array();;
