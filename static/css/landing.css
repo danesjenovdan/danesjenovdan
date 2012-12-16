@@ -63,6 +63,7 @@ body {
 	background-color: #ffffff;
 	padding: 0.5em;
 	margin: 1em;
+	overflow: hidden;
 }
 .trikotnik {
 	background-image: url('../img/puscica_pravice.png');
@@ -85,8 +86,9 @@ body {
 
 .pravicatext {
 	font-size: 20px;
-	font-family: 'Archivo Narrow', sans-serif;
+	font-family: 'Dosus', sans-serif;
 	line-height: 42px;
+	float: left;
 }
 
 .tekstpravica {
