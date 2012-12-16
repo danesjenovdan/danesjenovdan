@@ -2,8 +2,8 @@
 
 session_start();
 
-if(isset($_SESSION['uid']) && $_SESSION['uid']>0){
-    $var=array('uid'=>$_SESSION['uid'],'name'=>$_SESSION['username'], 'email'=>$_SESSION['email']);
+if(isset($_SESSION['user'])){
+    $var=array('uid'=>$_SESSION['uid'],'name'=>$_SESSION['user']['name']." ".$_SESSION['user']['surname'], 'email'=>$_SESSION['user']['email']);
 } else {
     $var=array('uid'=>-1);
 }
