@@ -27,7 +27,7 @@ switch (strtolower(RewriteUrl::rru(0)))
 	//	include('php/proposal.php');
 	break;
 
-	default: 
+	default:
 		include('php/index.php');
 	break;
 }
