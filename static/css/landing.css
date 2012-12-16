@@ -15,30 +15,48 @@ body {
 }
 .steps img {
 	height: 75px;
+	max-width: 906px;
+	width: 100%;
+}
+.illustration {
+	text-align: center;
+	margin-bottom: 2em;
+}
+.steps img {
+	max-width: 906px;
+	width: 100%;
 }
 
 
 .tableft {
 	background-image: url('../img/tableft.png');
-	width: 492px;
+	background-position: right;
+	width: 50%;
+	max-width: 492px;
 	height: 44px;
 	float: left;
 }
 
 .tabright {
 	background-image: url('../img/tabright.png');
-	width: 492px;
+	background-position: left;
+	width: 50%;
+	max-width: 492px;
 	height: 44px;
 	float: right;
 }
 
-.leftbox {
+.leftbox .limiter {
 	background-color: #e6e6e6;
+	padding-top: 1em;
 }
 
 .rightbox {
-	background-color: #ffffff;
 	display: none;
+}
+
+.rightbox .limiter {
+	background-color: #ffffff;
 }
 
 .boxpravica {
@@ -58,9 +76,33 @@ body {
 	height: 42px;
 	display: inline-block;
 	float: right;
-	
+	margin-right: 10px;
 }
 .signupform {
 	background-color: white;
 	float: right;
+}
+
+.pravicatext {
+	font-size: 20px;
+	font-family: 'Archivo Narrow', sans-serif;
+	line-height: 42px;
+}
+
+.tekstpravica {
+	margin: 2em;
+	margin-left: 3em;
+}
+.tekstpravica p {
+	font-size: 16px;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+.limiter {
+	max-width: 906px !important;
+	margin: auto;
+	padding: 0px;
+}
+#zadnjapravica {
+	padding-bottom: 1em;
 }
