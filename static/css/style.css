@@ -40,3 +40,45 @@ body {
 .suggestionvoteagainst {
 	display: inline-block;
 }
+.suggestionup {
+	display: inline-block;
+	background-image: url('../img/gumb_za.png');
+	width: 70px;
+	height: 33px;
+}
+.suggestiondown {
+	display: inline-block;
+	background-image: url('../img/gumb_proti.png');
+	width: 94px;
+	height: 32px;
+}
+
+.suggest {
+	background-image: url('../img/gumb_dodaj-predlog.png');
+	width: 211px;
+	height: 63px;
+}
+.suggest:hover {
+	background-image: url('../img/gumb_dodaj-predlog_hover.png');
+}
+.title {
+	font-size: 1.4em;
+}
+
+.adddocument {
+	background-image: url('../img/gumb_dodaj-dokument.png');
+	width: 145px;
+	height: 32px;
+}
+.argumentup {
+	background-image: url('../img/gumb_arg_za.png');
+	width: 32px;
+	height: 33px;
+	float: left;
+}
+.argumentdown {
+	background-image: url('../img/gumb_arg_proti.png');
+	width: 32px;
+	height: 32px;
+	float: right;
+}
