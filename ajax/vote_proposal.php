@@ -10,12 +10,12 @@ include_once ("../config/config.php");
 //	if (empty ($_SESSION['user_id'])) die ('gtfo');
 $user_id = 0;
 
-$proposal_id	= (int)$_POST['proposal_id'];
+$proposal_id= (int)$_POST['proposal_id'];
 $type		= (int)$_POST['type'];
 
 $returnArr	= array ();
 
-if (empty ($returnArr) && (empty ($proposal_id))) {
+if (empty ($returnArr) && empty ($proposal_id)) {
 	$returnArr = array (
 		'success'		=> 0,
 		'description'	=> 'Prišlo je do napake.'

@@ -17,6 +17,6 @@ if ($db->connect_errno) {
     exit(1);
 }
 
+include_once ("lib/user.php");
 
-
-?>
+session_start();
