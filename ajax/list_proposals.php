@@ -40,7 +40,7 @@ if(!isset($_REQUEST['order']) || $_REQUEST['order']=="desc"){
 else {
     $order="asc";
 }
-$query="select title,id_proposal as id, (select count(*) from vote where
+$query="select title,timestamp,id_proposal as id, (select count(*) from vote where
 id_proposal=id and vote_plus>0) as vote_plus, (select count(*) from vote where
 id_proposal=id and vote_minus>0) as vote_minus from proposal order by ".$sortby ." ".$order." limit ".$number.";";
 
