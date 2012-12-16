@@ -38,7 +38,7 @@ require 'lib/openid.php';
 				'email' => $email
 			);
 
-			if ($user = User::getUserByEmail($email)) {
+			if ($user = User::getUserByArray (array ('email' => $email))) {
 				User::login ($user['id_user']);
 
 			} else {
