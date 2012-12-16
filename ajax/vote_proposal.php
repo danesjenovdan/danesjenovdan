@@ -31,8 +31,6 @@ if (empty ($returnArr) && empty ($type)) {
 
 if (empty ($returnArr)) {
 
-	$mysqli = new mysqli ($dbhost, $dbuser, $dbpassword, $dbname);
-
 	/* check connection */
 	if (mysqli_connect_errno()) {
 		printf("Connect failed: %s\n", mysqli_connect_error());
@@ -42,14 +40,14 @@ if (empty ($returnArr)) {
 	$vp = ($type == 1) ? 1 : 0;
 	$vm = ($type == -1) ? 1 : 0;
 	$sql = "
-		INSERT INTO
+		INSERT IGNORE INTO
 			vote
 		(`id_proposal`, `id_user`, `vote_plus`, `vote_minus`, `timestamp`)
 		VALUES
 		('" . $proposal_id . "', '" . $user_id . "', '" . $vp . "', '" . $vm . "', NOW())
 	";
-	mysqli_query ($mysqli, $sql);
-	if (mysqli_affected_rows ($mysqli) <= 0) {
+	mysqli_query ($db, $sql);
+	if (mysqli_affected_rows ($db) <= 0) {
 		$returnArr = array (
 			'success'		=> 0,
 			'description'	=> 'Pri glasovanju je prišlo do napake.'
@@ -62,7 +60,7 @@ if (empty ($returnArr)) {
 	}
 
 	/* close connection */
-	$mysqli->close();
+	$db->close();
 }
 
 echo json_encode ($returnArr);

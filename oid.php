@@ -1,5 +1,6 @@
 <?php
 
+include_once ('config/config.php');
 # Logging in with Google accounts requires setting special identity, so this example shows how to do it.
 require 'lib/openid.php';
 //try {
@@ -8,7 +9,7 @@ require 'lib/openid.php';
 	if(!$openid->mode) {
 		if(isset($_GET['login'])) {
 			$openid->identity = 'https://www.google.com/accounts/o8/id';
-			$openid->required = array('contact/email' , 'namePerson/first' , 'namePerson/last' , 'pref/language' , 'contact/country/home');
+			$openid->required = array('contact/email' , 'namePerson/first' , 'namePerson/last');
 			header('Location: ' . $openid->authUrl());
 		}
 		?>
@@ -31,21 +32,20 @@ require 'lib/openid.php';
 			$data = array(
 				'name' => $first_name ,
 				'surname' => $last_name ,
-				'email' => $email ,
+				'email' => $email
 			);
 
-			//	TODO: Write to DB
-			if ($user_id = User::getUserByEmail($email)) {
-				//	TODO: Login
-				$_SESSION['uid'] = $user_id;
+			if ($user = User::getUserByEmail($email)) {
+				User::login ($user['user_id']);
+
 			} else {
 				$user_id = User::addUser ($data);
-				$_SESSION['uid'] = $user_id;
+				User::login ($user_id);
 			}
 		}
 		else
 		{
-			die ("NOT");
+			echo ("NOT");
 			//user is not logged in
 		}
 	}
