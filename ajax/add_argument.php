@@ -6,9 +6,15 @@
 
 include_once ("../config/config.php");
 
-//	TODO: User check
-//	if (empty ($_SESSION['user_id'])) die ('gtfo');
-$user_id = 0;
+if (empty ($_SESSION['uid'])) {
+	$returnArr = array (
+		'success'		=> 0,
+		'description'	=> 'Uporabnik ni prijavljen.'
+	);
+	echo json_encode ($returnArr);
+	exit();
+}
+$user_id = (int)$_SESSION['uid'];
 
 $proposal_id	= (int)$_POST['proposal_id'];
 $type			= (int)$_POST['type'];
