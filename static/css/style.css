@@ -28,3 +28,6 @@ body {
 	height: 110px;
 	background-color: #196666;
 }
+.votebox div {
+	float: left;
+}
