@@ -1,0 +1,33 @@
+body {
+/*	background-image: ; */
+}
+
+.logo {
+	background-image: url('../img/logo.png');
+	width: 160px;
+	height: 63px;
+	display: inline-block;
+	float: left;
+}
+
+.navigation div {
+	float: left;
+}
+.navblock {
+	width: 115px;
+	height: 110px;
+	background-color: #1d7373;
+}
+.navblock a {
+}
+.navblock.active a {
+	color: #ffffff;
+}
+.divider {
+	width: 1px;
+	height: 110px;
+	background-color: #196666;
+}
+.votebox div {
+	float: left;
+}
