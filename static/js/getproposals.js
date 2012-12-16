@@ -10,11 +10,32 @@ $(document).ready(function() {
 
 function createbuttons() {
 	$('.votefor').click(function() {
-		//TODO vote for function
-		console.log($(this).parent().data('id'));
+		$.ajax({
+			type: 'post',
+			url: 'http://sect.io/danesjenovdan/ajax/vote_proposal.php',
+			dataType: 'json',
+			data: {
+				'proposal_id': $(this).parent().data('id'),
+				'type': 1
+			},
+			success: function(data) {
+				console.log(data);
+			}});
 	});
 	$('.voteagainst').click(function() {
-		//TODO vote against function
-		console.log($(this).parent().data('id'));
+		$.ajax({
+			type: 'post',
+			url: 'http://sect.io/danesjenovdan/ajax/vote_proposal.php',
+			dataType: 'json',
+			data: {
+				'proposal_id': $(this).parent().data('id'),
+				'type': -1
+			},
+			success: function(data) {
+				console.log(data);
+			}});
+	});
+	$('.addsuggestion').click(function() {
+		$('.modal').modal('show');
 	});
 }
