@@ -1,5 +1,5 @@
 body {
-/*	background-image: ; */
+	background-image: url('../img/bck_pattern.png');
 }
 
 .logo {
@@ -30,4 +30,13 @@ body {
 }
 .votebox div {
 	float: left;
+}
+
+
+/* SUGGESTION PAGE */
+.suggestionvotefor {
+	display: inline-block;
+}
+.suggestionvoteagainst {
+	display: inline-block;
 }
