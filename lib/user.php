@@ -5,6 +5,7 @@ Class User {
 	public static function getUserByArray ($array)
 	{
 		global $db;
+
 		$sql = "
 			SELECT
 				*
@@ -13,7 +14,6 @@ Class User {
 			WHERE
 				" . key ($array) . " = '" . array_pop ($array) . "'
 		";
-		var_dump($sql);exit();
 		$result = mysqli_query ($db, $sql);
 		if (mysqli_num_rows ($result) > 0) {
 			return mysqli_fetch_assoc ($result);
@@ -40,7 +40,7 @@ Class User {
 
 	public static function login ($user_id)
 	{
-		$user = User::getUserByArray (array ('id' => $user_id));
+		$user = User::getUserByArray (array ('id_user' => $user_id));
 		$_SESSION['uid'] = $user_id;
 		$_SESSION['user'] = $user;
 	}
