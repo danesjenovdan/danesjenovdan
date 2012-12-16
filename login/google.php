@@ -1,10 +1,10 @@
 <?php
 
-include_once ('../config/config.php');
-
-//var_dump($_SESSION);exit();
+require_once ('../config/config.php');
+require_once ("../lib/user.php");
+require_once ('../lib/openid.php');
 # Logging in with Google accounts requires setting special identity, so this example shows how to do it.
-require '../lib/openid.php';
+
 //try {
 	# Change 'localhost' to your domain name.
 	$openid = new LightOpenID($_SERVER['HTTP_HOST']);
@@ -28,7 +28,7 @@ require '../lib/openid.php';
 		{
 			//User logged in
 			$d = $openid->getAttributes();
-var_dump ($d);Exit();
+
 			$first_name = $d['namePerson/first'];
 			$last_name = $d['namePerson/last'];
 			$email = $d['contact/email'];
