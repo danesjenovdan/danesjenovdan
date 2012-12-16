@@ -23,13 +23,14 @@ Class User {
 	public static function getUserByEmail ($email)
 	{
 		global $db;
+
 		$sql = "
 			SELECT
 				*
 			FROM
 				user
 			WHERE
-				email = '" . (int)$email . "'
+				email = '" . (string)$email . "'
 		";
 		$result = mysqli_query ($db, $sql);
 		if (mysqli_num_rows ($result) > 0) {
@@ -57,7 +58,7 @@ Class User {
 
 	public static function login ($user_id)
 	{
-		$user = User::getUserById($user_id);
+		$user = User::getUserById ($user_id);
 		$_SESSION['uid'] = $user_id;
 		$_SESSION['user'] = $user;
 	}

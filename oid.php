@@ -1,12 +1,15 @@
 <?php
 
 include_once ('config/config.php');
+//var_dump($_SESSION);exit();
 # Logging in with Google accounts requires setting special identity, so this example shows how to do it.
 require 'lib/openid.php';
 //try {
 	# Change 'localhost' to your domain name.
 	$openid = new LightOpenID($_SERVER['HTTP_HOST']);
-	if(!$openid->mode) {
+	if (!empty ($_SESSION['uid'])) {
+		echo "Prijavljen!";
+	} elseif(!$openid->mode) {
 		if(isset($_GET['login'])) {
 			$openid->identity = 'https://www.google.com/accounts/o8/id';
 			$openid->required = array('contact/email' , 'namePerson/first' , 'namePerson/last');
@@ -36,15 +39,14 @@ require 'lib/openid.php';
 			);
 
 			if ($user = User::getUserByEmail($email)) {
-				User::login ($user['user_id']);
+				User::login ($user['id_user']);
 
 			} else {
 				$user_id = User::addUser ($data);
 				User::login ($user_id);
 			}
-		}
-		else
-		{
+			echo "Prijavljen!";
+		} else {
 			echo ("NOT");
 			//user is not logged in
 		}
