@@ -1,0 +1,13 @@
+
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-s 
+	RewriteRule ^(.*) index.php?m=$1&%{QUERY_STRING} [L]
+</IfModule>
