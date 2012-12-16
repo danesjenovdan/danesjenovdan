@@ -12,7 +12,7 @@ Class User {
 			FROM
 				user
 			WHERE
-				" . key ($array) . " = '" . array_pop ($array) . "'
+				`" . key ($array) . "` = '" . array_pop ($array) . "'
 		";
 		$result = mysqli_query ($db, $sql);
 		if (mysqli_num_rows ($result) > 0) {
@@ -21,16 +21,25 @@ Class User {
 		return false;
 	}
 
-	public static function addUser ($vars)
+	public static function updateUser ($vars)
 	{
 		global $db;
 
 		$sql = "
-			INSERT IGNORE INTO user
-				(". implode(', ', array_keys ($vars)) .", timestamp)
-			VALUES
-				('". implode('\', \'', array_values ($vars)) ."', NOW())
-		";
+			UPDATE
+				user
+			SET";
+
+		foreach ($vars as $key => $item) {
+			$sql.= "
+				`" . $key . "` = '" . $item . "',";
+		}
+
+		$sql = substr ($sql, 0, -1);
+		$sql.= "
+			WHERE
+				user_id = '" . $vars['user_id'] . "'";
+
 		mysqli_query ($db, $sql);
 		if (mysqli_affected_rows ($db) > 0) {
 			return mysqli_insert_id ($db);
