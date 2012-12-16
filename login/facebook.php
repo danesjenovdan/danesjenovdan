@@ -9,6 +9,9 @@ if(!isset($_REQUEST["code"])){
        . $app_id . "&redirect_uri=" . urlencode($my_url) . "&state="
        . $_SESSION['state']."&scope=email";
      echo("<script> top.location.href='" . $dialog_url . "'</script>");
+    if(isset($_REQUEST['ref'])){
+        $_SESSION['ref']=$_REQUEST['ref'];
+    }
 }
 else
 {
@@ -27,10 +30,10 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
        . $params['access_token'];
 
     $user = json_decode(file_get_contents($graph_url));
-            $namesurname=explode(" ",$user->name);
+            //$namesurname=explode(" ",$user->name);
 			$data = array(
-				'name' => $namesurname[0] ,
-				'surname' => $namesurname[1] ,
+				'name' => $user->first_name,
+				'surname' => $user->last_name ,
 				'email' => $user->email,
                 'fbid' => $user->id
 			);
@@ -40,6 +43,10 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
 				$user_id = User::addUser ($data);
 				User::login ($user_id);
 			}
+            if(isset($_SESSION['ref'])){
+                header("Location: ".$_SESSION['ref']);
+                unset($_SESSION['ref']);
+            }
     }
    else {
     // echo("Login Failed...");
