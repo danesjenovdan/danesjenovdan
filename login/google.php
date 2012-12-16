@@ -9,7 +9,7 @@ require_once ('../lib/openid.php');
 	# Change 'localhost' to your domain name.
 	$openid = new LightOpenID($_SERVER['HTTP_HOST']);
 	if (!empty ($_SESSION['uid'])) {
-		echo "Prijavljen!";
+		header ("Location: ../");
 	} elseif(!$openid->mode) {
 		if(isset($_GET['login'])) {
 			$openid->identity = 'https://www.google.com/accounts/o8/id';
@@ -46,7 +46,7 @@ require_once ('../lib/openid.php');
 				$user_id = User::addUser ($data);
 				User::login ($user_id);
 			}
-			echo "Prijavljen!";
+			header ("Location: ../");
 		} else {
 			echo ("NOT");
 			//user is not logged in
