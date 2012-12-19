@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
 /*
  * Author: Marko Bratkovič (marko@lunca.com)
