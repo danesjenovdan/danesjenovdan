@@ -15,7 +15,7 @@ $dbname="danesjenovdan";
 $dbuser="danesjenovdan";
 $dbpassword="danesjenovdan";
 
-$db = new mysqli($dbhost, $dbuser, $dbpassword, $dbpassword);
+$db = new mysqli($dbhost, $dbuser, $dbpassword, $dbname);
 if ($db->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     exit(1);

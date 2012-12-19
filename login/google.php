@@ -11,16 +11,18 @@ require_once ('../lib/openid.php');
 	if (!empty ($_SESSION['uid'])) {
 		header ("Location: ../");
 	} elseif(!$openid->mode) {
-		if(isset($_GET['login'])) {
+// uncomment to set manual login
+//		if(isset($_GET['login'])) {
 			$openid->identity = 'https://www.google.com/accounts/o8/id';
 			$openid->required = array('contact/email' , 'namePerson/first' , 'namePerson/last');
+            $openid->returnUrl = $_SERVER['HTTP_REFERER']; // redirect after login
 			header('Location: ' . $openid->authUrl());
-		}
-		?>
+//		}
+/*		?>
 	<form action="?login" method="post">
 		<button>Login with Google</button>
 	</form>
-	<?php
+	<?php*/
 	} elseif($openid->mode == 'cancel') {
 		echo 'User has canceled authentication!';
 	} else {
