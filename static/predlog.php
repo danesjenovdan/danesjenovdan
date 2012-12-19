@@ -134,7 +134,7 @@
 		</div>
 	</div>
 </div>
-<input type="hidden" value="INJECT PARENT RIGHT ID" id="rightid"/>
+<input type="hidden" value="<?php print $this->id_right; ?>" id="rightid"/>
 <div class="modal hide fade">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

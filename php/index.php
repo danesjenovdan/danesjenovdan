@@ -12,6 +12,8 @@ if(RewriteUrl::rru(1)!=''){
 
 	$id_proposal = RewriteUrl::rru(1);
 
+	$tpl->set("id_right", $id_right);
+
 	//seznam
 	// proposal + votes
 	$query="select 
