@@ -1,6 +1,6 @@
 <?php
 include('config/config.php');
-include('php/class.template.php');
+include('lib/class.template.php');
 
 class RewriteUrl {
 	public function rru($i){
