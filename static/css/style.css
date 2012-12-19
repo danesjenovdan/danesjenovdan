@@ -143,19 +143,65 @@ body {
 	border-right: 0;
 }
 .predlogcrta {
+	color: #363636;
+	height: 2px;
 	background-color: #363636;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
+
 .documenttitle {
 	font-family: 'Archivo Narrow', sans-serif;
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: normal;
 	margin-top: 0.5em;
+	margin-left: 1.8em;
 }
 .documentbox {
 	background-image: url('/static/img/bck_pattern.png');
+	margin-left: 20px;
+	padding: 1em;
+	overflow: hidden;
+}
+.documentlink {
+	color: #1d7373;
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.2em;
+}
+.documenttype {
+	color: #a1a1a1;
+}
+#documentname {
+	border-radius: 0px;
+	height: 20px;
+	border: 2px solid #c5c5c5;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 98%;	
+	margin-top: 2em;
+}
+#documentname:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+#documentfile {
+	opacity: 0;
+	float: left;
+}
+#uploadlabel {
+	background-image: url('/static/img/gumb_izberi-datoteko.png');
+	width: 103px;
+	height: 25px;
+	float: left;
+}
+#submitdocument {
+	background-image: url('/static/img/gumb_objavi.png');
+	width: 69px;
+	height: 32px;
+	border: 0px;
+	float: right;
+	margin-bottom: 1em;
 }
 .workgrouptitle {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -163,9 +209,12 @@ body {
 	line-height: 20px;
 	font-weight: normal;
 	margin-top: 0.5em;
+	margin-left: 1.2em;
 }
 .workgroupbox {
 	background-image: url('/static/img/bck_pattern.png');
+	padding: 1em;
+	margin-right: 20px;
 }
 
 .argumentbox {
@@ -207,13 +256,39 @@ body {
 	background-image: url('../img/gumb_dodaj-predlog_hover.png');
 }
 .title {
-	font-size: 1.4em;
+	font-size: 1.2em;
+	padding: 10px;
+	padding-left: 20px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	width: 50%;
+	float: left;
+	line-height: 1.2em;
+}
+.author {
+	padding-left: 20px;
+	color: #a1a1a1;
+	font-family: 'Dosis', sans-serif;
+}
+.suggestiontimestamp {
+	color: #a1a1a1;
+	font-family: 'Dosis', sans-serif;
+}
+.suggestiontext {
+	padding-left: 20px;
+	padding-top: 10px;
+	color: #363636;
+	font-family: 'Dosis', sans-serif;
+}
+.temporarybox {
+	float: right;
 }
 
 .adddocument {
 	background-image: url('../img/gumb_dodaj-dokument.png');
 	width: 145px;
 	height: 32px;
+	float: right;
 }
 .argumentup {
 	background-image: url('../img/gumb_arg_za.png');

@@ -11,16 +11,18 @@
 <div class="container blokic">
 	<div class="row">
 		<div class="span12 toprow">
-			<span class="title"><?php print $this->predlog->title; ?></span>
-			<div class="suggestionup" data-id="<?php print $this->predlog->id; ?>"></div>
-			<div class="votecount"><?php print $this->predlog->vote_plus; ?></div>
-			<div class="suggestiondown" data-id="<?php print $this->predlog->id; ?>"></div>
-			<div class="votecount"><?php print $this->predlog->vote_minus; ?></div>
+			<h1 class="title"><?php print $this->predlog->title; ?></h1>
+			<div class="temporarybox">
+				<div class="suggestionup" data-id="<?php print $this->predlog->id; ?>"></div>
+				<div class="votecount"><?php print $this->predlog->vote_plus; ?></div>
+				<div class="suggestiondown" data-id="<?php print $this->predlog->id; ?>"></div>
+				<div class="votecount"><?php print $this->predlog->vote_minus; ?></div>
+			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="span12">
-			<span class="author"><?php print $this->user->name; ?></span>
+			<span class="author"><?php print $this->user->name; ?>, </span>
 			<span class="suggestiontimestamp"><?php print $this->predlog->timestamp; ?></span>
 			<span class="suggestionsocial">LAJK BATONS</span>
 		</div>
@@ -36,12 +38,14 @@
 			<h1 class="documenttitle">Dokumenti</h1>
 			<div class="documentbox">
 			<?php foreach ($this->document as $key => $value) { ?>
-				<a href="<?php print $value->path; ?>" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print $value->type; ?>, <?php print $value->size; ?>)</span></a>
+				<a href="<?php print $value->path; ?>" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print $value->type; ?>, <?php print $value->size; ?>)</span></a><br />
 			<?php } ?>	
 				<div class="adddocument"></div>
 				<form class="adddocumentbox">
-					<input type="file" name="documentfile" />
-					<input type="submit" />
+					<input type="text" name="documentname" id="documentname" placeholder="ime dokumenta" />
+					<label for="documentfile" id="uploadlabel"></label>
+					<input type="file" name="documentfile" id="documentfile" />
+					<input type="submit" id="submitdocument" value="" />
 				</form>
 			</div>
 		</div>
