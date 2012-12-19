@@ -14,10 +14,10 @@ if (empty ($_SESSION['uid'])) {
 	echo json_encode ($returnArr);
 	exit();
 }
-$user_id = (int)$_SESSION['uid'];
+$user_id = (int)mysqli_real_escape_string($_SESSION['uid']);
 
-$argument_id	= (int)$_POST['argument_id'];
-$type		= (int)$_POST['type'];
+$argument_id	= (int)mysqli_real_escape_string($_POST['argument_id']);
+$type		= (int)mysqli_real_escape_string($_POST['type']);
 
 $returnArr	= array ();
 
@@ -45,6 +45,21 @@ if (empty ($returnArr)) {
 
 	$vp = ($type == 1) ? 1 : 0;
 	$vm = ($type == -1) ? 1 : 0;
+    
+    // user can vote once
+    $sqlCheck = "SELECT id" .
+        " FROM vote" .
+        " WHERE id_argument = " . $argument_id .
+        " AND id_user = " . $user_id .
+        " LIMIT 1";
+    mysql_query($db, $sqlCheck);
+    if (mysqli_affected_rows($db) > 0) {
+        $returnArr = array (
+            'success'       => -1,
+            'description'   => 'Uporabnik je že glasoval.'
+        );
+    }
+
 	$sql = "
 		INSERT IGNORE INTO
 			vote
