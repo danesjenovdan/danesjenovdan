@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 /* Connects to database and returns list of proposals in ajax string.
  *
  * usage:
