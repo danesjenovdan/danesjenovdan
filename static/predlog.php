@@ -65,11 +65,12 @@
 				<div class="row">
 
 					<div class="span6">
-						<div class="argumentbox">
-							<p class="authorship"><?php print $value->name; ?>, [<?php print $value->timestamp; ?>]</p>
+						<div class="argumentboxfor">
+							<p class="authorship"><?php print $value->name; ?>, <?php print $value->timestamp; ?></p>
 							<p class="argumenttext"><?php print $value->text; ?></p>
 							<div class="argumentup" data-id="<?php print $value->id_argument; ?>"></div>
 							<div class="argumentdown" data-id="<?php print $value->id_argument; ?>"></div>
+							<hr class="argumentcrta" />
 						</div>
 					</div>
 						
@@ -79,7 +80,7 @@
 
 			<div class="row">
 				<div class="span6">
-					<div class="addargument">
+					<div class="addargumentfor">
 						<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
 						<input type="textarea" name="argumentinput" id="argumentinput"/>
 						<div class="submitargumentfor"></div>
@@ -106,11 +107,12 @@
 				<div class="row">
 
 					<div class="span6">
-						<div class="argumentbox">
-							<p class="authorship"><?php print $value->name; ?>, [<?php print $value->timestamp; ?>]</p>
+						<div class="argumentboxagainst">
+							<p class="authorship"><?php print $value->name; ?>, <?php print $value->timestamp; ?></p>
 							<p class="argumenttext"><?php print $value->text; ?></p>
 							<div class="argumentup" data-id="<?php print $value->id_argument; ?>"></div>
 							<div class="argumentdown" data-id="<?php print $value->id_argument; ?>"></div>
+							<hr class="argumentcrta" />
 						</div>
 					</div>
 						
@@ -119,7 +121,7 @@
 			<?php }?>
 			
 
-			<div class="addargument">
+			<div class="addargumentagainst">
 				<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
 				<input type="textarea" name="argumentinput" id="argumentinput"/>
 				<div class="socialconnect">

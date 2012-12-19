@@ -228,13 +228,26 @@ body {
 	overflow: hidden;
 }
 
-.argumentbox {
+.argumentboxfor {
 	background-color: #e6e6e6;
 	overflow: hidden;
+	margin-left: 20px;
 }
-.addargument {
+.argumentboxagainst {
 	background-color: #e6e6e6;
 	overflow: hidden;
+	margin-right: 20px;
+}
+
+.addargumentfor {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-left: 20px;
+}
+.addargumentagainst {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-right: 20px;
 }
 
 .suggestionvotefor {
@@ -301,17 +314,38 @@ body {
 	height: 32px;
 	float: right;
 }
+.authorship {
+	font-family: 'Dosis', sans-serif;
+	padding-left: 1.2em;
+	padding-top: 1em;
+}
+.argumenttext {
+	font-family: 'Dosis', sans-serif;
+	padding-left: 1em;
+	font-size: 1.2em;
+}
 .argumentup {
 	background-image: url('../img/gumb_arg_za.png');
 	width: 32px;
 	height: 33px;
 	float: left;
+	margin-left: 1.2em;
 }
 .argumentdown {
 	background-image: url('../img/gumb_arg_proti.png');
 	width: 32px;
 	height: 32px;
 	float: right;
+	margin-right: 1.2em;
+}
+.argumentcrta {
+	color: #363636;
+	height: 1px;
+	background-color: #363636;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	border: 0px;
+	margin-top: 64px;
 }
 
 /* FOOTER */
