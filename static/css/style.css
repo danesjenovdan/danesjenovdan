@@ -81,6 +81,7 @@ body {
 	margin-left: 5px;
 	font-size: 13px;
 	color: #a1a1a1;
+	display: inline-block;
 }
 .ihaveanargument {
 	background-image: url('/static/img/gumb_imam-argument.png');
@@ -103,6 +104,54 @@ body {
 
 
 /* SUGGESTION PAGE */
+.blokic {
+	background-color: white;
+}
+.toprow {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	border-image: url('/static/img/crtica.png') 20 3 repeat stretch;
+	border-left: 0;
+	border-right: 0;
+}
+.predlogcrta {
+	background-color: #363636;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.documenttitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+}
+.documentbox {
+	background-image: url('/static/img/bck_pattern.png');
+}
+.workgrouptitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+}
+.workgroupbox {
+	background-image: url('/static/img/bck_pattern.png');
+}
+
+.argumentbox {
+	background-color: #e6e6e6;
+	overflow: hidden;
+}
+.addargument {
+	background-color: #e6e6e6;
+	overflow: hidden;
+}
+
 .suggestionvotefor {
 	display: inline-block;
 }

@@ -8,14 +8,14 @@
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container blokic">
 	<div class="row">
-		<div class="span12">
+		<div class="span12 toprow">
 			<span class="title"><?php print $this->predlog->title; ?></span>
-			<div class="suggestionup"></div>
-			<div class="suggestionvotefor" data-id="<?php print $this->predlog->id; ?>"><?php print $this->predlog->vote_plus; ?></div>
-			<div class="suggestiondown"></div>
-			<div class="suggestionvoteagainst" data-id="<?php print $this->predlog->id; ?>"><?php print $this->predlog->vote_minus; ?></div>
+			<div class="suggestionup" data-id="<?php print $this->predlog->id; ?>"></div>
+			<div class="votecount"><?php print $this->predlog->vote_plus; ?></div>
+			<div class="suggestiondown" data-id="<?php print $this->predlog->id; ?>"></div>
+			<div class="votecount"><?php print $this->predlog->vote_minus; ?></div>
 		</div>
 	</div>
 	<div class="row">
@@ -30,10 +30,10 @@
 			<p class="suggestiontext"><?php print $this->predlog->text; ?></p>
 		</div>
 	</div>
-	<hr />
+	<hr class="predlogcrta" />
 	<div class="row">
 		<div class="span6">
-			<h1>Dokumenti</h1>
+			<h1 class="documenttitle">Dokumenti</h1>
 			<div class="documentbox">
 			<?php foreach ($this->document as $key => $value) { ?>
 				<a href="<?php print $value->path; ?>" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print $value->type; ?>, <?php print $value->size; ?>)</span></a>
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 		<div class="span6">
-			<h1>Delovna skupina</h1>
+			<h1 class="workgrouptitle">Delovna skupina</h1>
 			<div class="workgroupbox">
 				<p>Iniciativa mi veliko pomeni ...</p>
 				<div class="toggleworkgroup">PRIDRUŽI SE BATON</div>
@@ -55,7 +55,7 @@
 	</div>
 	<div class="row">
 		<div class="span6">
-			Prednosti
+			<h1 class="documenttitle">Prednosti</h1>
 			<?php
 			foreach ($this->argplus as $key => $value) { ?>
 				<div class="row">
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div class="span6">
-			Zadržki
+			<h1 class="documenttitle">Zadržki</h1>
 			<?php
 			foreach ($this->argminus as $key => $value) { ?>
 				<div class="row">

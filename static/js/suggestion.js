@@ -7,9 +7,10 @@ $(document).ready(function() {
 		$.ajax({
 			type: 'post',
 			url: 'http://sect.io/danesjenovdan/ajax/vote_suggestion.php',
+			//url: 'danesjenovdan:8888/ajax/vote_suggestion.php',
 			dataType: 'json',
 			data: {
-				'proposal_id': $(this).parent().data('id'),
+				'proposal_id': parseInt($(this).data('id')),
 				'type': 1
 			},
 			success: function(data) {
