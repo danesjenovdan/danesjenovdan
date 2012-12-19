@@ -1,9 +1,9 @@
 body {
-	background-image: url('../img/bck_pattern.png');
+	background-image: url('/static/img/bck_pattern.png');
 }
 
 .logo {
-	background-image: url('../img/logo.png');
+	background-image: url('/static/img/logo.png');
 	width: 160px;
 	height: 63px;
 	display: inline-block;
@@ -29,7 +29,7 @@ body {
 
 
 .tableft {
-	background-image: url('../img/tableft.png');
+	background-image: url('/static/img/tableft.png');
 	background-position: right;
 	width: 50%;
 	max-width: 492px;
@@ -38,7 +38,7 @@ body {
 }
 
 .tabright {
-	background-image: url('../img/tabright.png');
+	background-image: url('/static/img/tabright.png');
 	background-position: left;
 	width: 50%;
 	max-width: 492px;
@@ -67,13 +67,13 @@ body {
 }
 .box
 .trikotnik {
-	background-image: url('../img/puscica_pravice.png');
+	background-image: url('/static/img/puscica_pravice.png');
 	width: 20px;
 	height: 15px;
 	display: inline-block;
 }
 .takemethere {
-	background: url('../img/gumb_sooblikuj.png');
+	background: url('/static/img/gumb_sooblikuj.png');
 	width: 98px;
 	height: 42px;
 	display: inline-block;
@@ -101,11 +101,98 @@ body {
 	font-family: 'Archivo Narrow', sans-serif;
 }
 
-.limiter {
+/*.limiter {
 	max-width: 906px !important;
 	margin: auto;
 	padding: 0px;
-}
+}*/
 #zadnjapravica {
 	padding-bottom: 1em;
+}
+
+.podporniki {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 14px;
+	padding: 2em;
+}
+
+/* Sign up form */
+.signupform {
+	background-image: url('/static/img/bck_pattern.png');
+	font-family: 'Archivo Narrow', sans-serif;
+	margin: 2em;
+}
+.signupform h2 {
+	color: #1d7373;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.signupform input {
+	border-radius: 0px;
+	height: 28px;
+	border: 2px solid #eaeaea;
+	padding-left: 5px;
+}
+.signupform input:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+.signupform .question {
+	color: #262626;
+}
+.signupform .radio {
+	list-style: none;	
+}
+.signupform .radio input {
+	position: relative;
+	top: -5px;
+}
+.signupform .radio label {
+	
+}
+#mc-embedded-subscribe {
+	background-color: #1d7373;
+	border: none;
+	color: #e6e6e6;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/* End of sign up form */
+
+.footy {
+	background-image: url('/static/img/footer_pattern.png');
+/*	max-width: 906px !important;*/
+}
+
+.footy h1 {
+	color: #363636;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.footy p {
+	color: #363636;
+	font-family: 'Dosus', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+.footy .mail {
+	position: relative;
+	top: -20px;
+}
+
+.crtica {
+	background-image: url('/static/img/crtica_footer.png');
+	height: 8px;
+	width: 100%;
+}
+.crticapokoncna {
+	background-image: url('/static/img/crtica_footer_pokoncna.png');
+	height: 50px;
+	width: 8px;
+	display: inline-block;
 }

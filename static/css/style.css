@@ -32,6 +32,75 @@ body {
 	float: left;
 }
 
+#predlogi {
+	background-color: white;
+}
+.suggestionrow {
+	font-family: 'Dosus', sans-serif;
+	border-top: 1px solid #e5e5e5;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+.suggestiontitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+}
+
+.timestamp {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+}
+.votefor {
+	margin-top: 3px;
+	display: inline-block;
+	background-image: url('/static/img/gumb_za.png');
+	width: 70px;
+	height: 33px;
+}
+.voteagainst {
+	margin-top: 3px;
+	display: inline-block;
+	background-image: url('/static/img/gumb_proti.png');
+	width: 94px;
+	height: 33px;
+}
+.votecount {
+	background-image: url('/static/img/counter_back.png');
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 20px;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 13px;
+	color: #a1a1a1;
+}
+.ihaveanargument {
+	background-image: url('/static/img/gumb_imam-argument.png');
+	width: 128px;
+	height: 32px;
+	margin-top: 7px;
+}
+.m0ar {
+	background-image: url('/static/img/gumb_vec.png');
+	width: 69px;
+	height: 36px;
+	margin: auto;
+}
+
+
+
+
+
+
+
 
 /* SUGGESTION PAGE */
 .suggestionvotefor {
@@ -57,6 +126,7 @@ body {
 	background-image: url('../img/gumb_dodaj-predlog.png');
 	width: 211px;
 	height: 63px;
+	float: right;
 }
 .suggest:hover {
 	background-image: url('../img/gumb_dodaj-predlog_hover.png');
@@ -81,4 +151,42 @@ body {
 	width: 32px;
 	height: 32px;
 	float: right;
+}
+
+/* FOOTER */
+.footy {
+	margin-top: 4em;
+	background-image: url('/static/img/footer_pattern.png');
+/*	max-width: 906px !important;*/
+}
+
+.footy h1 {
+	color: #363636;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.footy p {
+	color: #363636;
+	font-family: 'Dosus', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+.footy .mail {
+	position: relative;
+	top: -20px;
+}
+
+.crtica {
+	background-image: url('/static/img/crtica_footer.png');
+	height: 8px;
+	width: 100%;
+}
+.crticapokoncna {
+	background-image: url('/static/img/crtica_footer_pokoncna.png');
+	height: 50px;
+	width: 8px;
+	display: inline-block;
 }

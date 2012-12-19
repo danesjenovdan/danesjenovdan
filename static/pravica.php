@@ -2,8 +2,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="span3 offset9 addsuggestion">
-			DODAJ PREDLOG +
+		<div class="span3 offset9 suggest">
 		</div>
 	</div>
 </div>
@@ -12,20 +11,24 @@
 			<?php foreach ($this->predlogi as $key => $value) { ?>
 
 <div class="row predlog">
-	<div class="span4">
-		<p class="suggestiontitle"><?php print $value->title; ?></p>
-	</div>
-	<div class="span1">
-		<p class="timestamp"><?php print $value->timestamp; ?></p>
-	</div>
-	<div class="span4">
-		<div class="votebox" data-id="<?php print $value->id; ?>">
-			<div class="votefor"><?php print $value->vote_plus; ?></div>
-			<div class="voteagainst"><?php print $value->vote_minus; ?></div>
+	<div class="suggestionrow">
+		<div class="span5 firstblock">
+			<h1 class="suggestiontitle"><?php print $value->title; ?></h1>
 		</div>
+		<div class="span2">
+			<h1 class="timestamp"><?php print $value->timestamp; ?></h1>
+		</div>
+		<div class="span3">
+			<div class="votebox" data-id="<?php print $value->id; ?>">
+				<div class="votefor"></div>
+				<div class="votecount"><?php print $value->vote_plus; ?></div>
+				<div class="voteagainst"></div>
+				<div class="votecount"><?php print $value->vote_minus; ?></div>
+			</div>
+		</div>
+		<div class="span1">
+		<div class="ihaveanargument"></div>
 	</div>
-	<div class="span3">
-		<div class="ihaveanargument">imam argument</div>
 	</div>
 </div>
 
@@ -33,9 +36,7 @@
 
 
 	<!-- konec predlogov -->
-	<div class="moresuggestions">
-		VEČ
-	</div>
+	<div class="m0ar"></div>
 </div>
 <input type="hidden" value="<?php print $this->id; ?>" id="rightid"/>
 <div class="modal hide fade">
