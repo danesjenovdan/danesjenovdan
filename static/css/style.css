@@ -3,22 +3,35 @@ body {
 }
 
 .logo {
-	background-image: url('../img/logo.png');
-	width: 160px;
-	height: 63px;
+	background-image: url('/static/img/logo.png');
+	width: 218px;
+	height: 111px;
 	display: inline-block;
 	float: left;
+	margin-bottom: 1em;
+	margin-top: 2em;
 }
 
 .navigation div {
-	float: left;
+	float: right;
+	margin-top: 2em;
+	margin-bottom: 1em;
 }
 .navblock {
-	width: 115px;
-	height: 110px;
+	width: 105px;
+	height: 106px;
 	background-color: #1d7373;
+	padding-left: 10px;
+	padding-top: 4px;
 }
 .navblock a {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #262626;
+	font-weight: bold;
+}
+.navblock a:hover {
+	text-decoration: none;
+	color: #ffffff;
 }
 .navblock.active a {
 	color: #ffffff;
@@ -34,6 +47,7 @@ body {
 
 #predlogi {
 	background-color: white;
+	margin-bottom: 5em;
 }
 .suggestionrow {
 	font-family: 'Dosus', sans-serif;
@@ -41,16 +55,26 @@ body {
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: normal;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
 }
 .suggestiontitle {
 	font-family: 'Archivo Narrow', sans-serif;
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: normal;
+	padding-left: 1em;
+}
+.suggestiontitle a {
+	color: #363636;
+}
+.suggestiontitle a:hover {
+	text-decoration: none;
 }
 
+.timestampwrap {
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	text-align: center;
+}
 .timestamp {
 	font-family: 'Archivo Narrow', sans-serif;
 	font-size: 20px;
@@ -94,6 +118,7 @@ body {
 	width: 69px;
 	height: 36px;
 	margin: auto;
+	margin-bottom: 1em;
 }
 
 
@@ -176,6 +201,7 @@ body {
 	width: 211px;
 	height: 63px;
 	float: right;
+	margin-bottom: 1em;
 }
 .suggest:hover {
 	background-image: url('../img/gumb_dodaj-predlog_hover.png');
@@ -204,7 +230,6 @@ body {
 
 /* FOOTER */
 .footy {
-	margin-top: 4em;
 	background-image: url('/static/img/footer_pattern.png');
 /*	max-width: 906px !important;*/
 }
@@ -215,6 +240,7 @@ body {
 	font-weight: normal;
 	font-size: 16px;
 	text-transform: uppercase;
+	padding-left: 1.5em;
 }
 
 .footy p {
@@ -226,12 +252,17 @@ body {
 .footy .mail {
 	position: relative;
 	top: -20px;
+	padding-left: 1.5em;
+	color: #363636;
 }
 
 .crtica {
 	background-image: url('/static/img/crtica_footer.png');
 	height: 8px;
-	width: 100%;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1em;
 }
 .crticapokoncna {
 	background-image: url('/static/img/crtica_footer_pokoncna.png');
@@ -239,8 +270,59 @@ body {
 	width: 8px;
 	display: inline-block;
 }
+.uredniskapolitika {
+	padding-left: 1.5em;
+}
+.footy ul {
+	display: inline-block;
+	list-style: none;
+	position: relative;
+	top: -8px;
+}
+.footerlink {
+	color: #1d7373;
+}
 .submitargumentfor {
 	background-image: url('/static/img/gumb_dodaj-argument.png');
 	width: 134px;
 	height: 32px;
+}
+
+/* suggestion popup */
+.suggestionpopup {
+	border-radius: 0px;
+	background-color: #e6e6e6;
+}
+.closepopup {
+	background-image: url('/static/img/gumb_iks.png');
+	width: 20px;
+	height: 20px;
+	border: 0px;
+	float: right;
+	margin: 5px;
+}
+input.addsuggestiontitle {
+	border-radius: 0px;
+	height: 20px;
+	border: 2px solid #c5c5c5;
+	padding-left: 5px;	
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 2em;
+}
+input.addsuggestiontitle:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+input.addsuggestioncontent {
+	border-radius: 0px;
+	height: 100px;
+	border: 2px solid #c5c5c5;
+	padding: 5px;	
+	width: 80%;
+	margin-left: 10%;
+}
+input.addsuggestioncontent:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px !important;
 }

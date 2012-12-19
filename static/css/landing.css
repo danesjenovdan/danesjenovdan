@@ -4,26 +4,28 @@ body {
 
 .logo {
 	background-image: url('/static/img/logo.png');
-	width: 160px;
-	height: 63px;
+	width: 218px;
+	height: 111px;
 	display: inline-block;
 	float: left;
+	margin-bottom: 2em;
+	margin-top: 2em;
 }
 
 .steps {
-	text-align: center;
+/*	text-align: center;*/
 }
 .steps img {
 	height: 75px;
-	max-width: 906px;
+/*	max-width: 906px;*/
 	width: 100%;
-}
-.illustration {
-	text-align: center;
 	margin-bottom: 2em;
 }
-.steps img {
-	max-width: 906px;
+.illustration {
+/*	text-align: center;*/
+	margin-bottom: 2em;
+}
+.illustration img {
 	width: 100%;
 }
 
@@ -47,7 +49,7 @@ body {
 }
 
 .leftbox .limiter {
-	background-color: #e6e6e6;
+	background-color: #d7d7d7;
 	padding-top: 1em;
 }
 
@@ -121,6 +123,7 @@ body {
 	background-image: url('/static/img/bck_pattern.png');
 	font-family: 'Archivo Narrow', sans-serif;
 	margin: 2em;
+	width: 30%;
 }
 .signupform h2 {
 	color: #1d7373;
@@ -161,6 +164,14 @@ body {
 }
 /* End of sign up form */
 
+.m0ar {
+	background-image: url('/static/img/gumb_vec.png');
+	width: 69px;
+	height: 36px;
+	margin-left: 33%;
+}
+
+
 .footy {
 	background-image: url('/static/img/footer_pattern.png');
 /*	max-width: 906px !important;*/
@@ -172,6 +183,7 @@ body {
 	font-weight: normal;
 	font-size: 16px;
 	text-transform: uppercase;
+	padding-left: 1.5em;
 }
 
 .footy p {
@@ -183,16 +195,33 @@ body {
 .footy .mail {
 	position: relative;
 	top: -20px;
+	padding-left: 1.5em;
+	color: #363636;
 }
 
 .crtica {
 	background-image: url('/static/img/crtica_footer.png');
 	height: 8px;
-	width: 100%;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1em;
 }
 .crticapokoncna {
 	background-image: url('/static/img/crtica_footer_pokoncna.png');
 	height: 50px;
 	width: 8px;
 	display: inline-block;
+}
+.uredniskapolitika {
+	padding-left: 1.5em;
+}
+.footy ul {
+	display: inline-block;
+	list-style: none;
+	position: relative;
+	top: -8px;
+}
+.footerlink {
+	color: #1d7373;
 }

@@ -7,15 +7,18 @@
 	</div>
 </div>
 <div class="container" id="predlogi">
-
+<div class="row sortrow">
+	<div class="span5">SORT TOGGLE</div>
+	<div class="span2 timestampwrap">.</div>
+</div>
 			<?php foreach ($this->predlogi as $key => $value) { ?>
 
 <div class="row predlog">
 	<div class="suggestionrow">
 		<div class="span5 firstblock">
-			<h1 class="suggestiontitle"><?php print $value->title; ?></h1>
+			<h1 class="suggestiontitle"><a href="./<?php print $value->id; ?>"><?php print $value->title; ?></a></h1>
 		</div>
-		<div class="span2">
+		<div class="span2 timestampwrap">
 			<h1 class="timestamp"><?php print $value->timestamp; ?></h1>
 		</div>
 		<div class="span3">
@@ -27,7 +30,7 @@
 			</div>
 		</div>
 		<div class="span1">
-		<div class="ihaveanargument"></div>
+		<div class="ihaveanargument" data-id="<?php print $value->id; ?>"></div>
 	</div>
 	</div>
 </div>
@@ -36,19 +39,19 @@
 
 
 	<!-- konec predlogov -->
+	<div class="row predlog">
+		<div class="suggestionrow">
+		</div>
+	</div>
 	<div class="m0ar"></div>
 </div>
 <input type="hidden" value="<?php print $this->id; ?>" id="rightid"/>
-<div class="modal hide fade">
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h3>Modal header</h3>
-	</div>
+<div class="modal hide fade suggestionpopup">
+	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
 	<div class="modal-body">
-		<p>One fine body…</p>
 		<form>
-			<input type="text" class="addsuggestiontitle" />
-			<input type="textarea" class="addsuggestioncontent" />
+			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
+			<input type="textarea" class="addsuggestioncontent" placeholder="opis" rows="4" columns="50" />
 		</form>
 	</div>
 	<div class="modal-footer">
