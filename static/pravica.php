@@ -47,12 +47,12 @@
 	<div class="modal-body">
 		<p>One fine body…</p>
 		<form>
-			<input type="text" />
-			<input type="textarea" />
+			<input type="text" class="addsuggestiontitle" />
+			<input type="textarea" class="addsuggestioncontent" />
 		</form>
 	</div>
 	<div class="modal-footer">
-		<a href="#" class="btn btn-primary">Save changes</a>
+		<a href="#" class="btn btn-primary postsuggestion">Save changes</a>
 	</div>
 </div>
 

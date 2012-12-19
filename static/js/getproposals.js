@@ -11,7 +11,7 @@ function createbuttons() {
 	$('.votefor').click(function() {
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/danesjenovdan/ajax/vote_proposal.php',
+			url: 'http://sect.io/ajax/vote_proposal.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': $(this).parent().data('id'),
@@ -24,7 +24,7 @@ function createbuttons() {
 	$('.voteagainst').click(function() {
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/danesjenovdan/ajax/vote_proposal.php',
+			url: 'http://sect.io/ajax/vote_proposal.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': $(this).parent().data('id'),
@@ -34,8 +34,42 @@ function createbuttons() {
 				console.log(data);
 			}});
 	});
-	$('.addsuggestion').click(function() {
+	$('.suggest').click(function() {
 		$('.modal').modal('show');
+	});
+	$('.postsuggestion').click(function() {
+		console.log('begin');
+		$.ajax({
+			type: 'post',
+			url: 'http://sect.io/ajax/add_proposal.php',
+			dataType: 'json',
+			data: {
+				'right_id': $('#rightid').val(),
+				'title': $('.addsuggestiontitle').val(),
+				'content': $('.addsuggestioncontent').val()
+			},
+			success: function(data) {
+				console.log(data);
+			}
+		});
+		console.log('end');
+	});
+	$('.postsuggestionfromsuggestion').click(function() {
+		console.log('begin');
+		$.ajax({
+			type: 'post',
+			url: 'http://sect.io/ajax/add_proposal.php',
+			dataType: 'json',
+			data: {
+				'right_id': $('#rightid').val(),
+				'title': $('.addsuggestiontitle').val(),
+				'content': $('.addsuggestioncontent').val()
+			},
+			success: function(data) {
+				console.log(data);
+			}
+		});
+		console.log('end');
 	});
 }
 

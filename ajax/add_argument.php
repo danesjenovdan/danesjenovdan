@@ -50,7 +50,7 @@ if (empty ($returnArr)) {
 	$sql = "
 		INSERT INTO
 			argument
-		(`id_proposal`, `id_user`, `type`, `title`, `text`, `timestamp`)
+		(`id_proposal`, `id_user`, `type`, `title`, `text`, `timestamp`) //
 		VALUES
 		('" . $proposal_id . "', '" . $user_id . "', '" . $type . "', '" . mysqli_real_escape_string ($mysqli, $title) . "', '" . mysqli_real_escape_string ($mysqli, $content) . "', NOW())
 	";

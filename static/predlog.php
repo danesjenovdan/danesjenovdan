@@ -78,11 +78,12 @@
 					<div class="addargument">
 						<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
 						<input type="textarea" name="argumentinput" id="argumentinput"/>
+						<div class="submitargumentfor"></div>
 						<div class="socialconnect">
 							<p>Poveži se z</p>
-							<img src="/static/img/gumb_fb.png" />
+							<img src="/static/img/gumb_fb.png" class="fbsignin"/>
 							<img src="/static/img/gumb_twitter.png" />
-							<img src="/static/img/gumb_g+.png" />
+							<img src="/static/img/gumb_g+.png" class="googlesign"/>
 						</div>
 						<div class="createaccount">
 							<p>ali si ustvari račun</p>
@@ -119,9 +120,9 @@
 				<input type="textarea" name="argumentinput" id="argumentinput"/>
 				<div class="socialconnect">
 					<p>Poveži se z</p>
-					<img src="/static/img/gumb_fb.png" />
+					<img src="/static/img/gumb_fb.png" class="fbsingin"/>
 					<img src="/static/img/gumb_twitter.png" />
-					<img src="/static/img/gumb_g+.png" />
+					<img src="/static/img/gumb_g+.png" class="googlesign"/>
 				</div>
 				<div class="createaccount">
 					<p>ali si ustvari račun</p>
@@ -131,6 +132,23 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+<input type="hidden" value="INJECT PARENT RIGHT ID" id="rightid"/>
+<div class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Modal header</h3>
+	</div>
+	<div class="modal-body">
+		<p>One fine body…</p>
+		<form>
+			<input type="text" class="addsuggestiontitle" />
+			<input type="textarea" class="addsuggestioncontent" />
+		</form>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn btn-primary postsuggestionfromsuggestion">Save changes</a>
 	</div>
 </div>
 

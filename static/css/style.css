@@ -239,3 +239,8 @@ body {
 	width: 8px;
 	display: inline-block;
 }
+.submitargumentfor {
+	background-image: url('/static/img/gumb_dodaj-argument.png');
+	width: 134px;
+	height: 32px;
+}
