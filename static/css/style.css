@@ -203,6 +203,16 @@ body {
 	float: right;
 	margin-bottom: 1em;
 }
+.workgrouptext {
+	float: left;
+	font-family: 'Dosis', sans-serif;
+}
+.toggleworkgroup {
+	background-image: url('/static/img/gumb_pridruzi-se.png');
+	width: 101px;
+	height: 32px;
+	float: right;
+}
 .workgrouptitle {
 	font-family: 'Archivo Narrow', sans-serif;
 	font-size: 20px;
@@ -215,6 +225,7 @@ body {
 	background-image: url('/static/img/bck_pattern.png');
 	padding: 1em;
 	margin-right: 20px;
+	overflow: hidden;
 }
 
 .argumentbox {

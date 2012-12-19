@@ -52,8 +52,8 @@
 		<div class="span6">
 			<h1 class="workgrouptitle">Delovna skupina</h1>
 			<div class="workgroupbox">
-				<p>Iniciativa mi veliko pomeni ...</p>
-				<div class="toggleworkgroup">PRIDRUŽI SE BATON</div>
+				<p class="workgrouptext">Iniciativa mi veliko pomeni ...</p>
+				<div class="toggleworkgroup"></div>
 			</div>
 		</div>
 	</div>
