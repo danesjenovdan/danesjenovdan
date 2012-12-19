@@ -76,5 +76,15 @@ Class User {
 		unset ($_SESSION['uid']);
 		unset ($_SESSION['user']);
 	}
+    
+    public static function jsonEncodeUser() {
+        if(isset($_SESSION['user'])){
+            $var=array('uid'=>$_SESSION['uid'],'name'=>$_SESSION['user']['name']." ".$_SESSION['user']['surname'], 'email'=>$_SESSION['user']['email']);
+        } else {
+            $var=array('uid'=>-1);
+        }
+        
+        return json_encode($var);
+    }
 
 }
