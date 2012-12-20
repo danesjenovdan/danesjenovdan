@@ -75,6 +75,7 @@ Class User {
 	{
 		unset ($_SESSION['uid']);
 		unset ($_SESSION['user']);
+		session_destroy();
 	}
     
     public static function jsonEncodeUser() {
