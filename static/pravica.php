@@ -1,4 +1,5 @@
 <?php print ($this->header); $id_user = $this->id_user; ?>
+
 <div class="container">
 	<div class="row">
 		<div class="span3 offset9 suggest">
@@ -22,9 +23,9 @@
 		</div>
 		<div class="span4">
 			<div class="votebox" data-id="<?php print $value->id; ?>">
-				<div class="votefor  <?php print ($this->id_user==$id_user) ? "marked" : null; ?>"></div>
+				<div class="votefor  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>"></div>
 				<div class="votecount"><?php print $value->vote_plus; ?></div>
-				<div class="voteagainst  <?php print ($this->id_user==$id_user) ? "marked" : null; ?>"></div>
+				<div class="voteagainst  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>"></div>
 				<div class="votecount"><?php print $value->vote_minus; ?></div>
 			</div>
 		</div>

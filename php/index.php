@@ -1,5 +1,5 @@
 <?php
-$user_id = (int)$_SESSION['uid'];
+$id_user = (int)$_SESSION['uid'];
 // proposal -> arguments
 if(RewriteUrl::rru(1)!=''){
 

@@ -94,9 +94,10 @@ $(document).ready(function() {
 
             $('#adddocumentbox').ajaxForm({
             	target:        '#docresp',   // target element(s) to be updated with server response 
- 		       	//beforeSubmit:  showRequest,  // pre-submit callback 
+ 		       	beforeSubmit:  function(){
+ 		       		$("#docresp").html("Nalagam...");
+ 		       	},  // pre-submit callback 
         		success:       function(){
-        			alert('gdfgd');
         		}  // post-submit callback 
  
             });	
