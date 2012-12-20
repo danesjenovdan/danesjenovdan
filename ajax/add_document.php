@@ -18,7 +18,7 @@ $user_id = (int)$_SESSION['uid'];
 
 if (!empty($_FILES)) {
 	$tempFile = $_FILES['documentfile']['tmp_name'];
-	$targetPath = $_SERVER['DOCUMENT_ROOT'] .  '/documents/';
+	$targetPath = '../documents/';
 	$targetFile =  str_replace('//','/',$targetPath) . $_FILES['documentfile']['name'];
 
 
