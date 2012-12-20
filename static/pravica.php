@@ -15,13 +15,13 @@
 
 <div class="row predlog">
 	<div class="suggestionrow">
-		<div class="span5 firstblock">
+		<div class="span4 firstblock">
 			<h1 class="suggestiontitle"><a href="./<?php print $value->id; ?>"><?php print $value->title; ?></a></h1>
 		</div>
 		<div class="span2 timestampwrap">
 			<h1 class="timestamp"><?php print $value->timestamp; ?></h1>
 		</div>
-		<div class="span3">
+		<div class="span4">
 			<div class="votebox" data-id="<?php print $value->id; ?>">
 				<div class="votefor"></div>
 				<div class="votecount"><?php print $value->vote_plus; ?></div>
