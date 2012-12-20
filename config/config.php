@@ -31,5 +31,5 @@ session_start();
 
    $app_id = "212117025591104";
    $app_secret = "23f0eb6371165818dabb378b7fabbf7a";
-   $my_url = "http://sect.io/login/facebook.php";
+   $my_url = !isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER']) ? "http://sect.io/login/facebook.php" : $_SERVER['HTTP_REFERER'];
 
