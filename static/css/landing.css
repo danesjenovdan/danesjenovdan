@@ -111,11 +111,14 @@ body {
 	display: inline-block;
 }
 .takemethere {
-	background: url('/static/img/gumb_sooblikuj.png');
+	background-image: url('/static/img/gumb_sooblikuj.png');
 	width: 98px;
 	height: 42px;
 	display: inline-block;
 	float: right;
+}
+.takemethere:hover {
+	background-image: url('/static/img/gumb_sooblikuj_hover.png');
 }
 .signupform {
 	background-color: white;
