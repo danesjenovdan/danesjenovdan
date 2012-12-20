@@ -42,7 +42,7 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
                 'fbid' => $user->id
 			);
 		if ($user = User::getUserByArray (array ('email' => $user->email))) {
-				User::updateUser(array ('fbid' => $user->id, "email" => $user->email)), "email");
+				User::updateUser(array ('fbid' => $user->id, "email" => $user->email), "email");
 				User::login ($user['id_user']);
 			} else if (!empty($data['name'])) {
 				$user_id = User::addUser ($data);
