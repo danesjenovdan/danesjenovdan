@@ -51,10 +51,8 @@
 	<div class="modal-body">
 		<form>
 			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
-			<input type="textarea" class="addsuggestioncontent" placeholder="opis" rows="4" columns="50" />
+			<textarea class="addsuggestioncontent" placeholder="opis"/>
 		</form>
-	</div>
-	<div class="modal-footer">
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>
 			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
@@ -65,9 +63,8 @@
 			<p>ali si ustvari račun</p>
 			<input type="text" class="accountname" placeholder="ime in priimek"/>
 			<input type="email" class="accountemail" placeholder="email"/>
-			<div class="submitargumentagainst"></div>
+			<div class="submitsuggestion postsuggestion"></div>
 		</div>
-		<a href="#" class="btn btn-primary postsuggestion">Save changes</a>
 	</div>
 </div>
 

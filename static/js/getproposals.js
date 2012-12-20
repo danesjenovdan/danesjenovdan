@@ -54,23 +54,23 @@ function createbuttons() {
 		});
 		console.log('end');
 	});
-	$('.postsuggestionfromsuggestion').click(function() {
-		console.log('begin');
-		$.ajax({
-			type: 'post',
-			url: 'http://sect.io/ajax/add_proposal.php',
-			dataType: 'json',
-			data: {
-				'right_id': $('#rightid').val(),
-				'title': $('.addsuggestiontitle').val(),
-				'content': $('.addsuggestioncontent').val()
-			},
-			success: function(data) {
-				console.log(data);
-			}
-		});
-		console.log('end');
-	});
+//	$('.postsuggestionfromsuggestion').click(function() {
+//		console.log('begin');
+//		$.ajax({
+//			type: 'post',
+//			url: 'http://sect.io/ajax/add_proposal.php',
+//			dataType: 'json',
+//			data: {
+//				'right_id': $('#rightid').val(),
+//				'title': $('.addsuggestiontitle').val(),
+//				'content': $('.addsuggestioncontent').val()
+//			},
+//			success: function(data) {
+//				console.log(data);
+//			}
+//		});
+//		console.log('end');
+//	});
 	$('.ihaveanargument').click(function() {
 		document.location = document.location.href + '/' + $(this).data('id');
 	});

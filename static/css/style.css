@@ -205,6 +205,15 @@ body {
 	float: right;
 	margin-bottom: 1em;
 }
+.submitsuggestion {
+	background-image: url('/static/img/gumb_objavi.png');
+	width: 69px;
+	height: 32px;
+	border: 0px;
+	float: right;
+	margin-bottom: 1em;
+}
+
 .workgrouptext {
 	float: left;
 	font-family: 'Dosis', sans-serif;

@@ -152,9 +152,6 @@
 			<textarea class="addsuggestioncontent"></textarea>
 		</form>
 	</div>
-	<div class="modal-footer">
-		<a href="#" class="btn btn-primary postsuggestionfromsuggestion">Save changes</a>
-	</div>
 </div>
 
 
