@@ -52,7 +52,7 @@ if (empty ($returnArr)) {
         " WHERE id_argument = " . $argument_id .
         " AND id_user = " . $user_id .
         " LIMIT 1";
-    mysql_query($db, $sqlCheck);
+    mysqli_query($db, $sqlCheck);
     if (mysqli_affected_rows($db) > 0) {
         $returnArr = array (
             'success'       => -1,
