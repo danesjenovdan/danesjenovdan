@@ -119,7 +119,7 @@ if(RewriteUrl::rru(0)!=''){
 		// proposals + votes
 		$query="select title,timestamp,id_proposal as id, (select count(*) from vote where
 		id_proposal=id and vote_plus>0) as vote_plus, (select count(*) from vote where
-		id_proposal=id and vote_minus>0) as vote_minus from proposal where id_right=".$id_right." order by timestamp desc limit 10;";
+		id_proposal=id and vote_minus>0) as vote_minus from proposal where approved=1 and id_right=".$id_right." order by timestamp desc limit 10;";
 
 		if ($result = $db->query($query)) {
 			$data = array();
