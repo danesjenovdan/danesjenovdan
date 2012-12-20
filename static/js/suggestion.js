@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	$('.naprej').click(function() {
+		$('.razvijaj').toggle('slow');
+		return false;
+	});
 	$.ajax({
 		type: 'get',
 		url: 'http://sect.io/ajax/isAuthorized.php',

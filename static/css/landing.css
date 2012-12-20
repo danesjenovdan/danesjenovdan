@@ -25,9 +25,9 @@ body {
 	cursor: pointer;
 }
 .navblock a {
-	font-family: 'Archivo Narrow', sans-serif;
-	color: #262626;
-	font-weight: bold;
+	font-family: 'Dosis', sans-serif;
+	color: #363636;
+	font-weight: 900;
 }
 .navblock a:hover {
 	text-decoration: none;
