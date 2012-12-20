@@ -51,7 +51,7 @@
 	<div class="modal-body">
 		<form>
 			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
-			<textarea class="addsuggestioncontent" placeholder="opis"/>
+			<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
 		</form>
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>
