@@ -72,7 +72,7 @@ function createbuttons() {
 		console.log('end');
 	});
 	$('.ihaveanargument').click(function() {
-		document.location = './' + $(this).data('id');
+		document.location = document.location.href + '/' + $(this).data('id');
 	});
 }
 
