@@ -29,7 +29,7 @@ Class User {
 			INSERT IGNORE INTO user
 				(". implode(', ', array_keys ($vars)) .", timestamp)
 			VALUES
-				('". implode('\', \'', array_values ($vars)) ."', NOW())
+				('". implode("','", array_values ($vars)) ."', NOW())
 		";
 		mysqli_query ($db, $sql);
 		if (mysqli_affected_rows ($db) > 0) {
