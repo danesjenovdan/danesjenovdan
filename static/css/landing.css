@@ -225,7 +225,7 @@ body {
 .footy {
 	background-image: url('/static/img/footer_pattern.png');
 	overflow: hidden;
-/*	max-width: 906px !important;*/
+	padding-bottom: 20px;
 }
 
 .footy h1 {
@@ -268,8 +268,7 @@ body {
 }
 .footerlink {
 	color: #1d7373;
-	padding-top: 3px;
-	padding-bottom: 3px;
+	display: block;
 }
 .tabtext {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -298,4 +297,7 @@ body {
 #___plusone_0 {
 	display: inline-block;
 	width: 60px !important;
+}
+.lajkbatons {
+	margin: auto;
 }
