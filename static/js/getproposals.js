@@ -56,6 +56,11 @@ function createbuttons() {
 				'content': $('.addsuggestioncontent').val()
 			},
 			success: function(data) {
+				if (data.success == 1) {
+					alert(data.description);
+					$('.addsuggestiontitle').val('');
+					$('.addsuggestioncontent').val('');
+				}
 				console.log(data);
 			}
 		});
