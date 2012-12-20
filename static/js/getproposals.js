@@ -79,4 +79,5 @@ function createbuttons() {
 $(document).ready(function() {
 	createbuttons();
 	$('.timestamp').text($('.timestamp').text().split(' ')[0])
+	$('.'+$('#rightid').val()+' a').css('color', 'white');
 });

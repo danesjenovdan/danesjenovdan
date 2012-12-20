@@ -55,6 +55,18 @@
 		</form>
 	</div>
 	<div class="modal-footer">
+		<div class="socialconnect">
+			<p class="connectwith">Poveži se z</p>
+			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
+			<img src="/static/img/gumb_g+.png" class="googlesign"/>
+		</div>
+		<div class="createaccount">
+			<p>ali si ustvari račun</p>
+			<input type="text" class="accountname" placeholder="ime in priimek"/>
+			<input type="email" class="accountemail" placeholder="email"/>
+			<div class="submitargumentagainst"></div>
+		</div>
 		<a href="#" class="btn btn-primary postsuggestion">Save changes</a>
 	</div>
 </div>
