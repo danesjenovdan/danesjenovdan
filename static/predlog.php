@@ -41,11 +41,16 @@
 				<a href="<?php print $value->path; ?>" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print $value->type; ?>, <?php print $value->size; ?>)</span></a><br />
 			<?php } ?>	
 				<div class="adddocument"></div>
-				<form class="adddocumentbox">
+
+				<form class="adddocumentbox" id="adddocumentbox" action="/ajax/add_document.php" method="post"> 
 					<input type="text" name="documentname" id="documentname" placeholder="ime dokumenta" />
+<input type="hidden" name="right_id" value="<?php print $this->id_right; ?>" />
+<input type="hidden" name="proposal_id" value="<?php print $this->predlog->id; ?>" />
+
 					<label for="documentfile" id="uploadlabel"></label>
 					<input type="file" name="documentfile" id="documentfile" />
 					<input type="submit" id="submitdocument" value="" />
+					<div id="docresp"></div>
 				</form>
 			</div>
 		</div>

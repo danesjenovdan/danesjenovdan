@@ -83,12 +83,23 @@ function createbuttons() {
 	$('.fbsignin').click(function() {
 		document.location.href = '/login/facebook.php';
 	});
+ 	
 }
 
 $(document).ready(function() {
 	createbuttons();
 	$('.timestamp').text($('.timestamp').text().split(' ')[0])
 	$('.'+$('#rightid').val()+' a').toggleClass('iamthestar');
+
+
+            $('#adddocumentbox').ajaxForm({
+            	target:        '#docresp',   // target element(s) to be updated with server response 
+ 		       	//beforeSubmit:  showRequest,  // pre-submit callback 
+        		success:       function(){
+        			alert('gdfgd');
+        		}  // post-submit callback 
+ 
+            });	
 });
 
 

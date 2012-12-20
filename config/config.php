@@ -1,5 +1,6 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
+session_start();
 //ini_set ("display_errors", 1);
 //ini_set ("display_startup_errors", 1);
 //ini_set('error_reporting', E_ALL);
@@ -23,7 +24,6 @@ if ($db->connect_errno) {
 	mysqli_query ($db, "SET NAMES UTF8");
 }
 
-session_start();
 
 /* *********************************************
    ************ Facebook settings **************
