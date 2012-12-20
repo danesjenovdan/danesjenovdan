@@ -440,7 +440,8 @@ body {
 /* FOOTER */
 .footy {
 	background-image: url('/static/img/footer_pattern.png');
-/*	max-width: 906px !important;*/
+	overflow: hidden;
+	padding-bottom: 20px;
 }
 
 .footy h1 {
@@ -454,20 +455,62 @@ body {
 
 .footy p {
 	color: #363636;
-	font-family: 'Dosus', sans-serif;
+	font-family: 'Archivo Narrow', sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 }
 .footy .mail {
-	position: relative;
-	top: -20px;
 	padding-left: 1.5em;
 	color: #363636;
 }
-.razvijaj {
-	display: none;
-	padding-right: 20px;
+
+.crtica {
+	background-image: url('/static/img/crtica_footer.png');
+	height: 8px;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1em;
+}
+.crticapokoncna {
+	background-image: url('/static/img/crtica_footer_pokoncna.png');
+	height: 50px;
+	line-height: 50px;
+	width: 8px;
+	display: inline-block;
+}
+.uredniskapolitika {
+	padding-left: 1.5em;
+}
+.footerlink {
+	color: #1d7373;
+	display: block;
+}
+.tabtext {
 	font-family: 'Archivo Narrow', sans-serif;
+	color: #a1a1a1;
+	font-weight: bold;
+	display: inline-block;
+	padding-top: 15px;
+	font-size: 1.2em;
+}
+.tabtext.infocus {
+	color: #1d7373;
+}
+.fb-like {
+	display: inline-block;
+	position: relative;
+	top: -3px;
+}
+.twitter-share-button {
+	display: inline-block;
+}
+#___plusone_0 {
+	display: inline-block;
+	width: 60px !important;
+}
+.lajkbatons {
+	margin: auto;
 }
 
 .argumentinputwrap {
@@ -566,32 +609,6 @@ input.accountemail:focus {
 	display: none;
 }
 
-.crtica {
-	background-image: url('/static/img/crtica_footer.png');
-	height: 8px;
-	width: 96%;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 1em;
-}
-.crticapokoncna {
-	background-image: url('/static/img/crtica_footer_pokoncna.png');
-	height: 50px;
-	width: 8px;
-	display: inline-block;
-}
-.uredniskapolitika {
-	padding-left: 1.5em;
-}
-.footy ul {
-	display: inline-block;
-	list-style: none;
-	position: relative;
-	top: -8px;
-}
-.footerlink {
-	color: #1d7373;
-}
 .submitargumentfor {
 	background-image: url('/static/img/gumb_dodaj-argument.png');
 	width: 134px;
@@ -678,4 +695,7 @@ input.addsuggestiontitle:focus {
 	color: white !important;
 }
 .nonexistent {	
+}
+.razvijaj {
+	display: none;
 }

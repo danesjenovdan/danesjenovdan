@@ -161,7 +161,6 @@ body {
 	padding: 2em;
 	padding-bottom: 0px;
 }
-
 /* Sign up form */
 .signupform {
 	background-image: url('/static/img/bck_pattern.png');
@@ -298,4 +297,7 @@ body {
 }
 .lajkbatons {
 	margin: auto;
+}
+.razvijaj {
+	display: none;
 }
