@@ -97,8 +97,8 @@
 								<p>ali si ustvari račun</p>
 								<input type="text" class="accountname" placeholder="ime in priimek" />
 								<input type="email" class="accountemail" placeholder="email" />
-								<div class="submitargumentfor"></div>
 							</div>
+							<div class="submitargumentfor"></div>
 						</div>
 					</div>
 				</div>
@@ -142,8 +142,8 @@
 						<p>ali si ustvari račun</p>
 						<input type="text" class="accountname" placeholder="ime in priimek"/>
 						<input type="email" class="accountemail" placeholder="email"/>
-						<div class="submitargumentagainst"></div>
 					</div>
+					<div class="submitargumentagainst"></div>
 				</div>
 			</div>
 		</div>
@@ -153,11 +153,9 @@
 <div class="modal hide fade suggestionpopup">
 	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
 	<div class="modal-body">
-		<form>
-			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
-			<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
-			<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
-		</form>
+		<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
+		<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
+		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>
 			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
@@ -168,8 +166,8 @@
 			<p>ali si ustvari račun</p>
 			<input type="text" class="accountname" placeholder="ime in priimek"/>
 			<input type="email" class="accountemail" placeholder="email"/>
-			<div class="submitsuggestion postsuggestion"></div>
 		</div>
+		<div class="submitsuggestion postsuggestion"></div>
 	</div>
 </div>
 
