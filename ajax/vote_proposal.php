@@ -60,25 +60,27 @@ if (empty ($returnArr)) {
         );
     }
     
-	$sql = "
-		INSERT IGNORE INTO
-			vote
-		(`id_proposal`, `id_user`, `vote_plus`, `vote_minus`, `timestamp`)
-		VALUES
-		('" . $proposal_id . "', '" . $user_id . "', '" . $vp . "', '" . $vm . "', NOW())
-	";
-	mysqli_query ($db, $sql);
-	if (mysqli_affected_rows ($db) <= 0) {
-		$returnArr = array (
-			'success'		=> 0,
-			'description'	=> 'Pri glasovanju je prišlo do napake.'
-		);
-	} else {
-		$returnArr = array (
-			'success'		=> 1,
-			'description'	=> 'OK'
-		);
-	}
+    if (empty($returnArr)) {
+    	$sql = "
+    		INSERT IGNORE INTO
+    			vote
+    		(`id_proposal`, `id_user`, `vote_plus`, `vote_minus`, `timestamp`)
+    		VALUES
+    		('" . $proposal_id . "', '" . $user_id . "', '" . $vp . "', '" . $vm . "', NOW())
+    	";
+    	mysqli_query ($db, $sql);
+    	if (mysqli_affected_rows ($db) <= 0) {
+    		$returnArr = array (
+    			'success'		=> 0,
+    			'description'	=> 'Pri glasovanju je prišlo do napake.'
+    		);
+    	} else {
+    		$returnArr = array (
+    			'success'		=> 1,
+    			'description'	=> 'OK'
+    		);
+    	}
+    }
 
 	/* close connection */
 	$db->close();
