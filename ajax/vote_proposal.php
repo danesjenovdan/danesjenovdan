@@ -14,10 +14,10 @@ if (empty ($_SESSION['uid'])) {
 	echo json_encode ($returnArr);
 	exit();
 }
-$user_id = (int)mysqli_real_escape_string($_SESSION['uid']);
+$user_id = (int)mysqli_real_escape_string($db, $_SESSION['uid']);
 
-$proposal_id    = (int)mysqli_real_escape_string($_POST['proposal_id']);
-$type       = (int)mysqli_real_escape_string($_POST['type']);
+$proposal_id    = (int)mysqli_real_escape_string($db, $_POST['proposal_id']);
+$type       = (int)mysqli_real_escape_string($db, $_POST['type']);
 
 $returnArr	= array ();
 

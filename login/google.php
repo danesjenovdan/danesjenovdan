@@ -15,7 +15,7 @@ require_once ('../lib/openid.php');
 //		if(isset($_GET['login'])) {
 			$openid->identity = 'https://www.google.com/accounts/o8/id';
 			$openid->required = array('contact/email' , 'namePerson/first' , 'namePerson/last');
-            $openid->returnUrl = !isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER']) ? "/" : $_SERVER['HTTP_REFERER']; // redirect after login
+            $openid->returnUrl = "/login/google.php?ref=" . $_SERVER['HTTP_REFERER'];
 			header('Location: ' . $openid->authUrl());
 //		}
 /*		?>
@@ -48,7 +48,7 @@ require_once ('../lib/openid.php');
 				$user_id = User::addUser ($data);
 				User::login ($user_id);
 			}
-			header ("Location: ../");
+			header ("Location: " . $_GET['ref']);
 		} else {
 			echo ("NOT");
 			//user is not logged in
