@@ -82,19 +82,18 @@
 				<div class="span6">
 					<div class="addargumentfor">
 						<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
-						<input type="textarea" name="argumentinput" id="argumentinput"/>
-						<div class="submitargumentfor"></div>
+						<textarea id="argumentinput"></textarea>
 						<div class="socialconnect">
-							<p>Poveži se z</p>
+							<p class="connectwith">Poveži se z</p>
 							<img src="/static/img/gumb_fb.png" class="fbsignin"/>
-							<img src="/static/img/gumb_twitter.png" />
+							<img src="/static/img/gumb_twitter.png" class="twsignin"/>
 							<img src="/static/img/gumb_g+.png" class="googlesign"/>
 						</div>
 						<div class="createaccount">
 							<p>ali si ustvari račun</p>
-							<input type="text" />
-							<input type="email" />
-							<input type="submit" />
+							<input type="text" class="accountname" placeholder="ime in priimek" />
+							<input type="email" class="accountemail" placeholder="email" />
+							<div class="submitargumentfor"></div>
 						</div>
 					</div>
 				</div>
@@ -123,18 +122,18 @@
 
 			<div class="addargumentagainst">
 				<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
-				<input type="textarea" name="argumentinput" id="argumentinput"/>
+				<textarea id="argumentinput"></textarea>
 				<div class="socialconnect">
-					<p>Poveži se z</p>
-					<img src="/static/img/gumb_fb.png" class="fbsingin"/>
-					<img src="/static/img/gumb_twitter.png" />
+					<p class="connectwith">Poveži se z</p>
+					<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+					<img src="/static/img/gumb_twitter.png" class="twsignin"/>
 					<img src="/static/img/gumb_g+.png" class="googlesign"/>
 				</div>
 				<div class="createaccount">
 					<p>ali si ustvari račun</p>
-					<input type="text" />
-					<input type="email" />
-					<input type="submit" />
+					<input type="text" class="accountname" placeholder="ime in priimek"/>
+					<input type="email" class="accountemail" placeholder="email"/>
+					<div class="submitargumentagainst"></div>
 				</div>
 			</div>
 		</div>
@@ -150,7 +149,7 @@
 		<p>One fine body…</p>
 		<form>
 			<input type="text" class="addsuggestiontitle" />
-			<input type="textarea" class="addsuggestioncontent" />
+			<textarea class="addsuggestioncontent"></textarea>
 		</form>
 	</div>
 	<div class="modal-footer">
