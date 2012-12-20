@@ -44,7 +44,7 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
 				User::login ($user_id);
 			}
             if(isset($_SESSION['ref'])){
-                header("Location: ".$_SESSION['ref']);
+                header("Location: " . $_GET['ref']);
                 unset($_SESSION['ref']);
             }
     }
