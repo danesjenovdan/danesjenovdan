@@ -42,6 +42,7 @@ function createbuttons() {
 		$.ajax({
 			type: 'post',
 			url: 'http://sect.io/ajax/add_proposal.php',
+//			url: 'danejenovdan:8888/ajax/add_proposal.php',
 			dataType: 'json',
 			data: {
 				'right_id': $('#rightid').val(),

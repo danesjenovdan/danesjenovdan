@@ -528,7 +528,7 @@ input.addsuggestiontitle:focus {
 	border: 2px solid #1d7373;
 	box-shadow: 0px 0px 0px 0px;
 }
-input.addsuggestioncontent {
+.addsuggestioncontent {
 	border-radius: 0px;
 	height: 100px;
 	border: 2px solid #c5c5c5;
@@ -536,7 +536,10 @@ input.addsuggestioncontent {
 	width: 80%;
 	margin-left: 10%;
 }
-input.addsuggestioncontent:focus {
+.addsuggestioncontent:focus {
 	border: 2px solid #1d7373;
 	box-shadow: 0px 0px 0px 0px !important;
+}
+.modal-backdrop {
+	background-color: #a1a1a1;
 }

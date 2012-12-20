@@ -140,19 +140,28 @@
 	</div>
 </div>
 <input type="hidden" value="<?php print $this->id_right; ?>" id="rightid"/>
-<div class="modal hide fade">
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h3>Modal header</h3>
-	</div>
+<div class="modal hide fade suggestionpopup">
+	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
 	<div class="modal-body">
-		<p>One fine body…</p>
 		<form>
-			<input type="text" class="addsuggestiontitle" />
-			<textarea class="addsuggestioncontent"></textarea>
+			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
+			<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
 		</form>
+		<div class="socialconnect">
+			<p class="connectwith">Poveži se z</p>
+			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
+			<img src="/static/img/gumb_g+.png" class="googlesign"/>
+		</div>
+		<div class="createaccount">
+			<p>ali si ustvari račun</p>
+			<input type="text" class="accountname" placeholder="ime in priimek"/>
+			<input type="email" class="accountemail" placeholder="email"/>
+			<div class="submitsuggestion postsuggestion"></div>
+		</div>
 	</div>
 </div>
+
 
 
 
