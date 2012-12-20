@@ -64,7 +64,9 @@ $(document).ready(function() {
 			},
 			success: function(data) {
 				if (data.success == -1) {
-					alert('Za predlog lahko glasuješ samo enkrat.');
+					alert('Za argument lahko glasuješ samo enkrat.');
+				} else if (data.success == 1) {
+					alert('Hvala za glas!');
 				}
 				console.log(data);
 			}
@@ -82,7 +84,10 @@ $(document).ready(function() {
 			},
 			success: function(data) {
 				if (data.success == -1) {
-					alert('Za predlog lahko glasuješ samo enkrat.');
+					alert('Za argument lahko glasuješ samo enkrat.');
+				}
+				} else if (data.success == 1) {
+					alert('Hvala za glas!');
 				}
 				console.log(data);
 			}
