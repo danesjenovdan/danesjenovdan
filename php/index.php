@@ -1,5 +1,5 @@
 <?php
-
+$user_id = (int)$_SESSION['uid'];
 // proposal -> arguments
 if(RewriteUrl::rru(1)!=''){
 
@@ -13,6 +13,7 @@ if(RewriteUrl::rru(1)!=''){
 	$id_proposal = RewriteUrl::rru(1);
 
 	$tpl->set("id_right", $id_right);
+	$tpl->set("id_user", $id_user);
 
 	//seznam
 	// proposal + votes
@@ -108,7 +109,8 @@ if(RewriteUrl::rru(0)!=''){
 	$tpl->set("id", $id_right);
 
 	$tpl->set("link", RewriteUrl::rru(0));
-
+	$tpl->set("id_user", $id_user);
+	
 	//print '<h1>pravica</h1>';
 	$query = "SELECT * FROM  `right` where id_right = $id_right";
 
@@ -117,9 +119,10 @@ if(RewriteUrl::rru(0)!=''){
 		$tpl->set("pravica", $result->fetch_object());
 
 		// proposals + votes
-		$query="select title,timestamp,id_proposal as id, (select count(*) from vote where
+		$query="select title,timestamp,id_proposal as id, id_user,  (select count(*) from vote where
 		id_proposal=id and vote_plus>0) as vote_plus, (select count(*) from vote where
 		id_proposal=id and vote_minus>0) as vote_minus from proposal where approved=1 and id_right=".$id_right." order by timestamp desc limit 10;";
+
 
 		if ($result = $db->query($query)) {
 			$data = array();
