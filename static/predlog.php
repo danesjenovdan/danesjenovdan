@@ -81,20 +81,24 @@
 			<div class="row">
 				<div class="span6">
 					<div class="addargumentfor">
-						<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
-						<textarea id="argumentinputfor"></textarea>
-						<div class="usersignedinargument">objavi kot <span class="signedinname"></span></div>
-						<div class="socialconnect">
-							<p class="connectwith">Poveži se z</p>
-							<img src="/static/img/gumb_fb.png" class="fbsignin"/>
-							<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-							<img src="/static/img/gumb_g+.png" class="googlesign"/>
+						<div class="argumentinputwrap">
+							<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
+							<textarea id="argumentinputfor"></textarea>
+							<div class="usersignedinargument">objavi kot <span class="signedinname"></span></div>
 						</div>
-						<div class="createaccount">
-							<p>ali si ustvari račun</p>
-							<input type="text" class="accountname" placeholder="ime in priimek" />
-							<input type="email" class="accountemail" placeholder="email" />
-							<div class="submitargumentfor"></div>
+						<div class="socialwrap">
+							<div class="socialconnect">
+								<p class="connectwith">Poveži se z</p>
+								<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+								<img src="/static/img/gumb_twitter.png" class="twsignin"/>
+								<img src="/static/img/gumb_g+.png" class="googlesign"/>
+							</div>
+							<div class="createaccount">
+								<p>ali si ustvari račun</p>
+								<input type="text" class="accountname" placeholder="ime in priimek" />
+								<input type="email" class="accountemail" placeholder="email" />
+								<div class="submitargumentfor"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -122,20 +126,24 @@
 			
 
 			<div class="addargumentagainst">
-				<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
-				<textarea id="argumentinputagainst"></textarea>
-				<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
-				<div class="socialconnect">
-					<p class="connectwith">Poveži se z</p>
-					<img src="/static/img/gumb_fb.png" class="fbsignin"/>
-					<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-					<img src="/static/img/gumb_g+.png" class="googlesign"/>
+				<div class="argumentinputwrap">
+					<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
+					<textarea id="argumentinputagainst"></textarea>
+					<div class="usersignedinargument">objavi kot <span class="signedinname"></span></div>
 				</div>
-				<div class="createaccount">
-					<p>ali si ustvari račun</p>
-					<input type="text" class="accountname" placeholder="ime in priimek"/>
-					<input type="email" class="accountemail" placeholder="email"/>
-					<div class="submitargumentagainst"></div>
+				<div class="socialwrap">
+					<div class="socialconnect">
+						<p class="connectwith">Poveži se z</p>
+						<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+						<img src="/static/img/gumb_twitter.png" class="twsignin"/>
+						<img src="/static/img/gumb_g+.png" class="googlesign"/>
+					</div>
+					<div class="createaccount">
+						<p>ali si ustvari račun</p>
+						<input type="text" class="accountname" placeholder="ime in priimek"/>
+						<input type="email" class="accountemail" placeholder="email"/>
+						<div class="submitargumentagainst"></div>
+					</div>
 				</div>
 			</div>
 		</div>
