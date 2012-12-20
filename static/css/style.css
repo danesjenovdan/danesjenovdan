@@ -116,12 +116,13 @@ body {
 	background-repeat: no-repeat;
 	width: 24px;
 	height: 20px;
-	padding-left: 10px;
 	margin-top: 10px;
 	margin-left: 5px;
-	font-size: 13px;
+	font-size: 10px;
 	color: #a1a1a1;
 	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
 }
 .ihaveanargument {
 	background-image: url('/static/img/gumb_imam-argument.png');
@@ -347,6 +348,14 @@ body {
 }
 .temporarybox {
 	float: right;
+}
+.temporarybox .suggestionup {
+	margin-top: 5px;
+}
+.temporarybox .votecount {
+	margin: 0px;
+	position: relative;
+	top: -10px;
 }
 
 .adddocument {
