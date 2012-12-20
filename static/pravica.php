@@ -64,8 +64,8 @@
 			<p>ali si ustvari račun</p>
 			<input type="text" class="accountname" placeholder="ime in priimek"/>
 			<input type="email" class="accountemail" placeholder="email"/>
-			<div class="submitsuggestion postsuggestion"></div>
 		</div>
+		<div class="submitsuggestion postsuggestion"></div>
 	</div>
 </div>
 
