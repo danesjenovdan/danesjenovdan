@@ -129,7 +129,7 @@ $(document).ready(function() {
 			success: function(data) {
 				if (data.success == 1) {
 					alert(data.description);
-					$('#argumentinputfor').val('');
+					$('#argumentinputagainst').val('');
 				}
 				console.log(data);
 			}
