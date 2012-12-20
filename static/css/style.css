@@ -299,15 +299,29 @@ body {
 }
 .suggestionup {
 	display: inline-block;
-	background-image: url('../img/gumb_za.png');
+	background-image: url('/static/img/gumb_za.png');
 	width: 70px;
 	height: 33px;
+	cursor: pointer;
+}
+.suggestionup:hover {
+	background-image: url('/static/img/gumb_za.png');
+}
+.suggestionup.marked {
+	background-image: url('/static/img/gumb_za_hover.png');	
 }
 .suggestiondown {
 	display: inline-block;
-	background-image: url('../img/gumb_proti.png');
+	background-image: url('/static/img/gumb_proti.png');
 	width: 94px;
 	height: 32px;
+	cursor: pointer;
+}
+.suggestiondown:hover {
+		background-image: url('/static/img/gumb_proti_hover.png');
+}
+.suggestiondown.marked {
+		background-image: url('/static/img/gumb_proti_hover.png');
 }
 
 .suggest {
