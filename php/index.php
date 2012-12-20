@@ -107,6 +107,7 @@ if(RewriteUrl::rru(0)!=''){
 	$tpl->set("footer", $w);
 	$tpl->set("id", $id_right);
 
+	$tpl->set("link", RewriteUrl::rru(0));
 
 	//print '<h1>pravica</h1>';
 	$query = "SELECT * FROM  `right` where id_right = $id_right";
