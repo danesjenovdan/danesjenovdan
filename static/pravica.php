@@ -8,8 +8,8 @@
 </div>
 <div class="container" id="predlogi">
 <div class="row sortrow">
-	<div class="span5">SORT TOGGLE</div>
-	<div class="span2 timestampwrap">.</div>
+	<div class="span4 toggle"><img src="/static/img/toggle_datum_active.png" /></div>
+	<div class="span2 timestampwrap"></div>
 </div>
 			<?php foreach ($this->predlogi as $key => $value) { ?>
 
@@ -52,6 +52,7 @@
 		<form>
 			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
 			<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
+			<div class="usersignedin">objavi kot IME UPORABNIKA</div>
 		</form>
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>

@@ -18,17 +18,17 @@ $user_id = (int)$_SESSION['uid'];
 
 $proposal_id	= (int)$_POST['proposal_id'];
 $type			= (int)$_POST['type'];
-$title			= (string)$_POST['title'];
+//$title			= (string)$_POST['title'];
 $content		= (string)$_POST['content'];
 
 $returnArr	= array ();
 
-if (empty ($returnArr) && empty ($title)) {
-	$returnArr = array (
-		'success'		=> 0,
-		'description'	=> 'Prosimo, vnesite naziv argumenta.'
-	);
-}
+//if (empty ($returnArr) && empty ($title)) {
+//	$returnArr = array (
+//		'success'		=> 0,
+//		'description'	=> 'Prosimo, vnesite naziv argumenta.'
+//	);
+//}
 
 if (empty ($returnArr) && empty ($content)) {
 	$returnArr = array (
@@ -50,9 +50,9 @@ if (empty ($returnArr)) {
 	$sql = "
 		INSERT INTO
 			argument
-		(`id_proposal`, `id_user`, `type`, `title`, `text`, `timestamp`) //
+		(`id_proposal`, `id_user`, `type`, `text`, `timestamp`)
 		VALUES
-		('" . $proposal_id . "', '" . $user_id . "', '" . $type . "', '" . mysqli_real_escape_string ($mysqli, $title) . "', '" . mysqli_real_escape_string ($mysqli, $content) . "', NOW())
+		('" . $proposal_id . "', '" . $user_id . "', '" . $type . "', '" . mysqli_real_escape_string ($mysqli, $content) . "', NOW())
 	";
 	mysqli_query ($mysqli, $sql);
 	if (mysqli_affected_rows ($mysqli) <= 0) {

@@ -37,6 +37,8 @@ body {
 	max-width: 492px;
 	height: 44px;
 	float: left;
+	text-align: center;
+	cursor: pointer;
 }
 
 .tabright {
@@ -46,6 +48,8 @@ body {
 	max-width: 492px;
 	height: 44px;
 	float: right;
+	text-align: center;
+	cursor: pointer;
 }
 
 .leftbox .limiter {
@@ -59,6 +63,7 @@ body {
 
 .rightbox .limiter {
 	background-color: #ffffff;
+	padding-bottom: 1em;
 }
 
 .boxpravica {
@@ -80,7 +85,6 @@ body {
 	height: 42px;
 	display: inline-block;
 	float: right;
-	margin-right: 10px;
 }
 .signupform {
 	background-color: white;
@@ -92,6 +96,11 @@ body {
 	font-family: 'Dosus', sans-serif;
 	line-height: 42px;
 	float: left;
+	color: #363636;
+}
+.pravicatext:hover {
+	text-decoration: none;
+	color: #363636;
 }
 
 .tekstpravica {
@@ -114,8 +123,9 @@ body {
 
 .podporniki {
 	font-family: 'Archivo Narrow', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	padding: 2em;
+	padding-bottom: 0px;
 }
 
 /* Sign up form */
@@ -124,12 +134,13 @@ body {
 	font-family: 'Archivo Narrow', sans-serif;
 	margin: 2em;
 	width: 30%;
+	padding: 1em;
 }
 .signupform h2 {
 	color: #1d7373;
 	font-family: 'Archivo Narrow', sans-serif;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 22px;
 	text-transform: uppercase;
 }
 .signupform input {
@@ -137,6 +148,8 @@ body {
 	height: 28px;
 	border: 2px solid #eaeaea;
 	padding-left: 5px;
+	width: 92%;
+	overflow: hidden;
 }
 .signupform input:focus {
 	border: 2px solid #1d7373;
@@ -150,17 +163,18 @@ body {
 }
 .signupform .radio input {
 	position: relative;
-	top: -5px;
-}
-.signupform .radio label {
-	
+	top: -7px;
+	width: 15px;
 }
 #mc-embedded-subscribe {
-	background-color: #1d7373;
-	border: none;
-	color: #e6e6e6;
-	padding-left: 10px;
-	padding-right: 10px;
+	background-image: url('/static/img/gumb_poslji.png');
+	width: 68px;
+	height: 31px;
+	float: right;
+	border: 0px;
+}
+#mc-embedded-subscribe:hover {
+	background-image: url('/static/img/gumb_poslji_hover.png');
 }
 /* End of sign up form */
 
@@ -169,6 +183,10 @@ body {
 	width: 69px;
 	height: 36px;
 	margin-left: 33%;
+	cursor: pointer;
+}
+.m0ar:hover {
+	background-image: url('/static/img/gumb_vec_hover.png');
 }
 
 
@@ -223,5 +241,16 @@ body {
 	top: -8px;
 }
 .footerlink {
+	color: #1d7373;
+}
+.tabtext {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #a1a1a1;
+	font-weight: bold;
+	display: inline-block;
+	padding-top: 15px;
+	font-size: 1.2em;
+}
+.tabtext.infocus {
 	color: #1d7373;
 }

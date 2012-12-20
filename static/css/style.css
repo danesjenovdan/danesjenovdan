@@ -23,6 +23,7 @@ body {
 	background-color: #1d7373;
 	padding-left: 10px;
 	padding-top: 4px;
+	cursor: pointer;
 }
 .navblock a {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -76,10 +77,11 @@ body {
 	text-align: center;
 }
 .timestamp {
-	font-family: 'Archivo Narrow', sans-serif;
-	font-size: 20px;
+	font-family: 'Dosis', sans-serif;
+	font-size: 14px;
 	line-height: 20px;
 	font-weight: normal;
+	color: #a1a1a1;
 }
 .votefor {
 	margin-top: 3px;
@@ -87,6 +89,10 @@ body {
 	background-image: url('/static/img/gumb_za.png');
 	width: 70px;
 	height: 33px;
+	cursor: pointer;
+}
+.votefor:hover {
+	background-image: url('/static/img/gumb_za_hover.png');
 }
 .voteagainst {
 	margin-top: 3px;
@@ -94,6 +100,10 @@ body {
 	background-image: url('/static/img/gumb_proti.png');
 	width: 94px;
 	height: 33px;
+	cursor: pointer;
+}
+.voteagainst:hover {
+	background-image: url('/static/img/gumb_proti_hover.png');
 }
 .votecount {
 	background-image: url('/static/img/counter_back.png');
@@ -111,7 +121,12 @@ body {
 	background-image: url('/static/img/gumb_imam-argument.png');
 	width: 128px;
 	height: 32px;
-	margin-top: 7px;
+	margin-top: 4px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+.ihaveanargument:hover {
+	background-image: url('/static/img/gumb_imam-argument_hover.png');
 }
 .m0ar {
 	background-image: url('/static/img/gumb_vec.png');
@@ -119,9 +134,11 @@ body {
 	height: 36px;
 	margin: auto;
 	margin-bottom: 1em;
+	cursor: pointer;
 }
-
-
+.m0ar:hover {
+	background-image: url('/static/img/gumb_vec_hover.png');
+}
 
 
 
@@ -214,6 +231,11 @@ body {
 	margin-bottom: 1em;
 }
 
+.toggle {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
 .workgrouptext {
 	float: left;
 	font-family: 'Dosis', sans-serif;
@@ -287,6 +309,7 @@ body {
 	height: 63px;
 	float: right;
 	margin-bottom: 1em;
+	cursor: pointer;
 }
 .suggest:hover {
 	background-image: url('../img/gumb_dodaj-predlog_hover.png');
@@ -425,7 +448,7 @@ input.accountemail:focus {
 	box-shadow: 0px 0px 0px 0px;
 }
 
-#argumentinput {
+#argumentinputfor {
 	width: 90%;
 	border-radius: 0px;
 	height: 100px;
@@ -434,7 +457,20 @@ input.accountemail:focus {
 	width: 78%;
 	display: inline-block;
 }
-#argumentinput:focus {
+#argumentinputfor:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+#argumentinputagainst {
+	width: 90%;
+	border-radius: 0px;
+	height: 100px;
+	border: 2px solid #c5c5c5;
+	padding-left: 5px;	
+	width: 78%;
+	display: inline-block;
+}
+#argumentinputagainst:focus {
 	border: 2px solid #1d7373;
 	box-shadow: 0px 0px 0px 0px;
 }
@@ -492,11 +528,13 @@ input.accountemail:focus {
 	width: 20%;
 	float: left;
 	min-width: 100px;
+	display: none;
 }
 .createaccount {
 	display: inline-block;
 	width: 60%;
 	margin-left: 35px;
+	display: none;
 }
 .createaccount > * {
 	float: right;
@@ -519,9 +557,7 @@ input.addsuggestiontitle {
 	border-radius: 0px;
 	height: 20px;
 	border: 2px solid #c5c5c5;
-	padding-left: 5px;	
 	width: 80%;
-	margin-left: 10%;
 	margin-top: 2em;
 }
 input.addsuggestiontitle:focus {
@@ -532,9 +568,8 @@ input.addsuggestiontitle:focus {
 	border-radius: 0px;
 	height: 100px;
 	border: 2px solid #c5c5c5;
-	padding: 5px;	
 	width: 80%;
-	margin-left: 10%;
+	margin-bottom: 0px;
 }
 .addsuggestioncontent:focus {
 	border: 2px solid #1d7373;
@@ -542,4 +577,23 @@ input.addsuggestiontitle:focus {
 }
 .modal-backdrop {
 	background-color: #a1a1a1;
+}
+.modal-body {
+	text-align: center;
+}
+.usersignedin {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: white;
+	background-color: #a1a1a1;
+	text-align: right;
+	width: 80%;
+	margin: auto;
+	padding-right: 12px;
+	border: 2px solid #c5c5c5;
+	border-top: 0px;
+}
+.iamthestar {
+	color: white !important;
+}
+.nonexistent {	
 }

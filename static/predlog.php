@@ -82,7 +82,8 @@
 				<div class="span6">
 					<div class="addargumentfor">
 						<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
-						<textarea id="argumentinput"></textarea>
+						<textarea id="argumentinputfor"></textarea>
+						<div class="usersignedin">objavi kot IME UPORABNIKA</div>
 						<div class="socialconnect">
 							<p class="connectwith">Poveži se z</p>
 							<img src="/static/img/gumb_fb.png" class="fbsignin"/>
@@ -122,7 +123,8 @@
 
 			<div class="addargumentagainst">
 				<img src="/static/img/human.png"><!-- INJECT SRC FROM FACEBOOK -->
-				<textarea id="argumentinput"></textarea>
+				<textarea id="argumentinputagainst"></textarea>
+				<div class="usersignedin">objavi kot IME UPORABNIKA</div>
 				<div class="socialconnect">
 					<p class="connectwith">Poveži se z</p>
 					<img src="/static/img/gumb_fb.png" class="fbsignin"/>
@@ -146,6 +148,7 @@
 		<form>
 			<input type="text" class="addsuggestiontitle" placeholder="naslov predloga (do 70 znakov)" />
 			<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
+			<div class="usersignedin">objavi kot IME UPORABNIKA</div>
 		</form>
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>
