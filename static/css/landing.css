@@ -11,6 +11,37 @@ body {
 	margin-bottom: 2em;
 	margin-top: 2em;
 }
+.navigation div {
+	float: right;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+.navblock {
+	width: 105px;
+	height: 106px;
+	background-color: #1d7373;
+	padding-left: 10px;
+	padding-top: 4px;
+	cursor: pointer;
+}
+.navblock a {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #262626;
+	font-weight: bold;
+}
+.navblock a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+.navblock.active a {
+	color: #ffffff;
+}
+.divider {
+	width: 1px;
+	height: 110px;
+	background-color: #196666;
+}
+
 
 .steps {
 /*	text-align: center;*/

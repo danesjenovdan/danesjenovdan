@@ -591,6 +591,18 @@ input.addsuggestiontitle:focus {
 	padding-right: 12px;
 	border: 2px solid #c5c5c5;
 	border-top: 0px;
+	display: none;
+}
+.usersignedinargument {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: white;
+	background-color: #a1a1a1;
+	text-align: right;
+	width: 80%;
+	margin: auto;
+	padding-right: 12px;
+	border: 2px solid #c5c5c5;
+	border-top: 0px;
 }
 .iamthestar {
 	color: white !important;

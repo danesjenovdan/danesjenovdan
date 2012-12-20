@@ -7,6 +7,9 @@ $(document).ready(function() {
 			if (data.uid == -1) {
 				$('.socialconnect').css('display', 'inline-block');
 				$('.createaccount').css('display', 'inline-block');
+			} else {
+				$('.usersignedin').css('display', 'block');
+				$('.signedinname').text(data.name);
 			}
 		}
 	});
@@ -22,6 +25,9 @@ $(document).ready(function() {
 				'type': 1
 			},
 			success: function(data) {
+				if (data.success == -1) {
+					alert('Za predlog lahko glasuješ samo enkrat.');
+				}
 				console.log(data);
 			}});
 		//TODO function to vote for
@@ -36,6 +42,9 @@ $(document).ready(function() {
 				'type': -1
 			},
 			success: function(data) {
+				if (data.success == -1) {
+					alert('Za predlog lahko glasuješ samo enkrat.');
+				}
 				console.log(data);
 			}});
 		//TODO function to vote against
@@ -54,6 +63,9 @@ $(document).ready(function() {
 				'type': 1
 			},
 			success: function(data) {
+				if (data.success == -1) {
+					alert('Za predlog lahko glasuješ samo enkrat.');
+				}
 				console.log(data);
 			}
 		});
@@ -69,6 +81,9 @@ $(document).ready(function() {
 				'type': -1
 			},
 			success: function(data) {
+				if (data.success == -1) {
+					alert('Za predlog lahko glasuješ samo enkrat.');
+				}
 				console.log(data);
 			}
 		});

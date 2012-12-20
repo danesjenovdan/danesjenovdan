@@ -18,7 +18,10 @@ function createbuttons() {
 				'type': 1
 			},
 			success: function(data) {
-				console.log(data);
+				if (data.success == -1) {
+					alert('Za predlog lahko glasuješ le enkrat.');
+				}
+				console.log(data.success);
 			}});
 	});
 	$('.voteagainst').click(function() {
@@ -31,7 +34,10 @@ function createbuttons() {
 				'type': -1
 			},
 			success: function(data) {
-				console.log(data);
+				if (data.success == -1) {
+					alert('Za predlog lahko glasuješ le enkrat.');
+				}
+				console.log(data.success);
 			}});
 	});
 	$('.suggest').click(function() {
@@ -63,6 +69,12 @@ function createbuttons() {
 		console.log('in');
 	}, function() {
 		$(this).children().css('color', '#363636');
+	});
+	$('.navblock').click(function() {
+		document.location = $(this).children().attr('href');
+	});
+	$('.fbsignin').click(function() {
+		document.location.href = '/login/facebook.php';
 	});
 }
 
