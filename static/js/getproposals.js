@@ -60,6 +60,7 @@ function createbuttons() {
 					alert(data.description);
 					$('.addsuggestiontitle').val('');
 					$('.addsuggestioncontent').val('');
+					$('.suggestionpopup').modal('hide');
 				} else if (data.success == 0) {
 					alert(data.description);
 				}

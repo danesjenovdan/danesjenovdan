@@ -157,7 +157,7 @@
 <div class="modal hide fade suggestionpopup">
 	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
 	<div class="modal-body">
-		<input type="text" class="addsuggestiontitle" maxlength="70" placeholder="naslov predloga (do 70 znakov)" />
+		<input type="text" class="addsuggestiontitle" maxlength="100" placeholder="naslov predloga (do 100 znakov)" />
 		<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
 		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
 		<div class="socialconnect">
