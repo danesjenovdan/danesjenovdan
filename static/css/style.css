@@ -94,6 +94,9 @@ body {
 .votefor:hover {
 	background-image: url('/static/img/gumb_za_hover.png');
 }
+.votefor.marked {
+	background-image: url('/static/img/gumb_za_hover.png');
+}
 .voteagainst {
 	margin-top: 3px;
 	display: inline-block;
@@ -103,6 +106,9 @@ body {
 	cursor: pointer;
 }
 .voteagainst:hover {
+	background-image: url('/static/img/gumb_proti_hover.png');
+}
+.voteagainst.marked {
 	background-image: url('/static/img/gumb_proti_hover.png');
 }
 .votecount {
@@ -360,18 +366,32 @@ body {
 	font-size: 1.2em;
 }
 .argumentup {
-	background-image: url('../img/gumb_arg_za.png');
+	background-image: url('/static/img/gumb_arg_za.png');
 	width: 32px;
 	height: 33px;
 	float: left;
 	margin-left: 1.2em;
+	cursor: pointer;
+}
+.argumentup:hover {
+	background-image: url('/static/img/gumb_arg_za_hover.png');
+}
+.argumentup.marked {
+	background-image: url('/static/img/gumb_arg_za_hover.png');
 }
 .argumentdown {
-	background-image: url('../img/gumb_arg_proti.png');
+	background-image: url('/static/img/gumb_arg_proti.png');
 	width: 32px;
 	height: 32px;
 	float: right;
 	margin-right: 1.2em;
+	cursor: pointer;
+}
+.argumentdown:hover {
+	background-image: url('/static/img/gumb_arg_proti_hover.png');
+}
+.argumentdown.marked {
+	background-image: url('/static/img/gumb_arg_proti_hover.png');
 }
 .argumentcrta {
 	color: #363636;
