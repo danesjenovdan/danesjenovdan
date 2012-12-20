@@ -31,5 +31,6 @@ session_start();
 
    $app_id = "212117025591104";
    $app_secret = "23f0eb6371165818dabb378b7fabbf7a";
-   $my_url = "/login/facebook.php?ref=" . $_SERVER['HTTP_REFERAL'];
+   $my_url = "http://sect.io/login/facebook.php?ref=" . $_SERVER['HTTP_REFERER'];
 
+    $google_return_url = "http://sect.io/login/google.php?ref=" . $_SERVER['HTTP_REFERER'];
