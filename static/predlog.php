@@ -174,6 +174,26 @@
 		<div class="submitsuggestion postsuggestion"></div>
 	</div>
 </div>
+<div class="modal hide fade suggestionpopup">
+	<button type="button" class="closepopup" data-dismiss="suggestionpopup" aria-hidden="true"></button>
+	<div class="modal-body">
+		<input type="text" class="addsuggestiontitle" maxlength="70" placeholder="naslov predloga (do 70 znakov)" />
+		<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
+		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
+		<div class="socialconnect">
+			<p class="connectwith">Poveži se z</p>
+			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
+			<img src="/static/img/gumb_g+.png" class="googlesign"/>
+		</div>
+		<div class="createaccount">
+			<p>ali si ustvari račun</p>
+			<input type="text" class="accountname" placeholder="ime in priimek"/>
+			<input type="email" class="accountemail" placeholder="email"/>
+		</div>
+		<div class="submitsuggestion postsuggestion"></div>
+	</div>
+</div>
 
 
 

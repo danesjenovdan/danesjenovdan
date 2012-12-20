@@ -41,7 +41,7 @@ function createbuttons() {
 			}});
 	});
 	$('.suggest').click(function() {
-		$('.modal').modal('show');
+		$('.suggestionpopup').modal('show');
 	});
 	$('.postsuggestion').click(function() {
 		console.log('begin');

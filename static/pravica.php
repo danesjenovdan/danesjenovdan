@@ -58,7 +58,7 @@
 </div>
 <input type="hidden" value="<?php print $this->id; ?>" id="rightid"/>
 <div class="modal hide fade suggestionpopup">
-	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
+	<button type="button" class="closepopup" data-dismiss="suggestionpopup" aria-hidden="true"></button>
 	<div class="modal-body">
 		<form>
 			<input type="text" class="addsuggestiontitle" maxlength="70" placeholder="naslov predloga (do 70 znakov)" />
