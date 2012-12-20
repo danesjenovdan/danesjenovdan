@@ -20,7 +20,7 @@ $code = $_REQUEST["code"];
 if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) { 
     $token_url = "https://graph.facebook.com/oauth/access_token?"
        . "client_id=" . $app_id . "&redirect_uri=" . urlencode($my_url)
-       . "&client_secret=" . $app_secret . "&code=" . $code;
+       . "&client_secret=" . $app_secret . "&code={$code}";
 
      $response = file_get_contents($token_url);
      $params = null;
