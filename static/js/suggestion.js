@@ -85,7 +85,6 @@ $(document).ready(function() {
 			success: function(data) {
 				if (data.success == -1) {
 					alert('Za argument lahko glasuješ samo enkrat.');
-				}
 				} else if (data.success == 1) {
 					alert('Hvala za glas!');
 				}
