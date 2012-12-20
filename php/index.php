@@ -137,7 +137,7 @@ select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) fr
 		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
 (select count(*) from vote where
 		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus
-		 from proposal where approved=1 and id_right=$id_right order by timestamp desc limit 10
+		 from proposal where approved=1 and id_right=$id_right order by timestamp desc
 		";
 
 

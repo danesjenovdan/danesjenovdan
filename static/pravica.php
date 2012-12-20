@@ -1,5 +1,16 @@
 <?php print ($this->header); $id_user = $this->id_user; ?>
 
+<div class="container predlog">
+
+	<div class="row">
+		<div class="span12">
+			<p>
+				<?php print $this->pravica->text; ?>
+			</p>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div class="row">
 		<div class="span3 offset9 suggest">
@@ -7,6 +18,8 @@
 	</div>
 </div>
 <div class="container" id="predlogi">
+
+
 <div class="row sortrow">
 	<div class="span4 toggle"><img src="/static/img/toggle_datum_active.png" /></div>
 	<div class="span2 timestampwrap"></div>
@@ -43,7 +56,7 @@
 		<div class="suggestionrow">
 		</div>
 	</div>
-	<div class="m0ar"></div>
+	<!--<div class="m0ar"></div>-->
 </div>
 <input type="hidden" value="<?php print $this->id; ?>" id="rightid"/>
 <div class="modal hide fade suggestionpopup">
