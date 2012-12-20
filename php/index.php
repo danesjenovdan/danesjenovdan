@@ -140,6 +140,43 @@ select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) fr
 		 from proposal where approved=1 and id_right=$id_right order by timestamp desc
 		";
 
+if($_GET['sort']){
+	if ($_GET['sort']=="ts") {
+		$w = ($_GET["w"] == 'asc') ? 'asc' : 'desc';
+
+	
+		$query="
+select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) from vote where
+		id_proposal=id and vote_plus>0) as vote_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0) as vote_minus,
+(select count(*) from vote where
+		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus
+		 from proposal where approved=1 and id_right=$id_right order by timestamp $w
+		";
+	}
+	if ($_GET['sort']=="vote") {
+		$w = ($_GET["w"] == 'asc') ? 'asc' : 'desc';
+
+	
+		$query="
+select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) from vote where
+		id_proposal=id and vote_plus>0) as vote_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0) as vote_minus,
+(select count(*) from vote where
+		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus
+		 from proposal where approved=1 and id_right=$id_right order by (vote_plus - vote_minus) $w
+		";
+	}
+
+}
+
+
 
 		if ($result = $db->query($query)) {
 			$data = array();
