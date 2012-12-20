@@ -215,6 +215,7 @@ body {
 	height: 36px;
 	margin-left: 33%;
 	cursor: pointer;
+	margin: auto;
 }
 .m0ar:hover {
 	background-image: url('/static/img/gumb_vec_hover.png');
@@ -223,6 +224,7 @@ body {
 
 .footy {
 	background-image: url('/static/img/footer_pattern.png');
+	overflow: hidden;
 /*	max-width: 906px !important;*/
 }
 
@@ -237,13 +239,11 @@ body {
 
 .footy p {
 	color: #363636;
-	font-family: 'Dosus', sans-serif;
+	font-family: 'Archivo Narrow', sans-serif;
 	font-weight: normal;
 	font-size: 14px;
 }
 .footy .mail {
-	position: relative;
-	top: -20px;
 	padding-left: 1.5em;
 	color: #363636;
 }
@@ -259,20 +259,17 @@ body {
 .crticapokoncna {
 	background-image: url('/static/img/crtica_footer_pokoncna.png');
 	height: 50px;
+	line-height: 50px;
 	width: 8px;
 	display: inline-block;
 }
 .uredniskapolitika {
 	padding-left: 1.5em;
 }
-.footy ul {
-	display: inline-block;
-	list-style: none;
-	position: relative;
-	top: -8px;
-}
 .footerlink {
 	color: #1d7373;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 .tabtext {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -284,4 +281,21 @@ body {
 }
 .tabtext.infocus {
 	color: #1d7373;
+}
+.razvijaj {
+	display: none;
+	padding-right: 20px;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+.fb-like {
+	display: inline-block;
+	position: relative;
+	top: -3px;
+}
+.twitter-share-button {
+	display: inline-block;
+}
+#___plusone_0 {
+	display: inline-block;
+	width: 60px !important;
 }
