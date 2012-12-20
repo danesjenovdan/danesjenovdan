@@ -10,11 +10,13 @@ if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['surname']))
 	        "name" => mysqli_real_escape_string($db, $_POST['name']),
 	        "surname" => mysqli_real_escape_string($db, $_POST['surname']),
 	    ));
+	    User::login($userID);
+	    echo User::jsonEncodeUser();
+	}else{
+		echo "Prijavi se"
 	}
     
-    User::login($userID);
+    
 }
-
-echo User::jsonEncodeUser();
 
 ?>
