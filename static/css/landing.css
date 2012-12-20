@@ -284,11 +284,6 @@ body {
 .tabtext.infocus {
 	color: #1d7373;
 }
-.razvijaj {
-	display: none;
-	padding-right: 20px;
-	font-family: 'Archivo Narrow', sans-serif;
-}
 .fb-like {
 	display: inline-block;
 	position: relative;
