@@ -74,7 +74,7 @@ $(document).ready(function() {
 				if (data.success == -1) {
 					alert('Za argument lahko glasuješ samo enkrat.');
 				} else if (data.success == 1) {
-					alert('Hvala za glas!');
+//					alert('Hvala za glas!');
 				}
 				console.log(data);
 			}
@@ -154,7 +154,7 @@ $(document).ready(function() {
 			dataType: 'json',
 			success: function(data) {
 				if (data.uid == -1) {
-					
+					$('.loginpopup').modal('show');
 				} else {
 					alert('ups, napaka!');
 				}
