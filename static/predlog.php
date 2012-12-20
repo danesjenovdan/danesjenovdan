@@ -36,11 +36,11 @@
 		<div class="span6">
 			<h1 class="documenttitle">Dokumenti</h1>
 			<div class="documentbox">
+				<div class="adddocument"></div>
+				
 			<?php foreach ($this->document as $key => $value) { ?>
 				<a href="/documents/<?php print $value->path; ?>" target="_blank" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print strtolower($value->type); ?>, <?php print $value->size; ?>)</span></a><br />
 			<?php } ?>	
-				<div class="adddocument"></div>
-
 				<form class="adddocumentbox" id="adddocumentbox" action="/ajax/add_document.php" method="post"> 
 					<input type="text" name="documentname" id="documentname" placeholder="ime dokumenta" />
 <input type="hidden" name="right_id" value="<?php print $this->id_right; ?>" />
