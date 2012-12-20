@@ -38,7 +38,7 @@ Class User {
 		return false;
 	}
 
-	public static function updateUser ($vars)
+	public static function updateUser ($vars, $mainKey = "user_id")
 	{
 		global $db;
 
@@ -55,7 +55,7 @@ Class User {
 		$sql = substr ($sql, 0, -1);
 		$sql.= "
 			WHERE
-				user_id = '" . $vars['user_id'] . "'";
+				".$mainKey." = '" . $vars[$mainKey] . "'";
 
 		mysqli_query ($db, $sql);
 		if (mysqli_affected_rows ($db) > 0) {
