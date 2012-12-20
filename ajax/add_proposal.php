@@ -38,8 +38,6 @@ if (empty ($returnArr) && empty ($content)) {
 
 if (empty ($returnArr)) {
 
-	$mysqli = new mysqli ($dbhost, $dbuser, $dbpassword, $dbname);
-
 	/* check connection */
 	if (mysqli_connect_errno()) {
 		printf("Connect failed: %s\n", mysqli_connect_error());
@@ -51,10 +49,10 @@ if (empty ($returnArr)) {
 			proposal
 		(`id_right`, `id_user`, `title`, `text`, `timestamp`)
 		VALUES
-		('" . $right_id . "', '" . $user_id . "', '" . mysqli_real_escape_string ($mysqli, $title) . "', '" . mysqli_real_escape_string ($mysqli, $content) . "', NOW())
+		('" . $right_id . "', '" . $user_id . "', '" . mysqli_real_escape_string ($db, $title) . "', '" . mysqli_real_escape_string ($db, $content) . "', NOW())
 	";
-	mysqli_query ($mysqli, $sql);
-	if (mysqli_affected_rows ($mysqli) <= 0) {
+	mysqli_query ($db, $sql);
+	if (mysqli_affected_rows ($db) <= 0) {
 		$returnArr = array (
 			'success'		=> 0,
 			'description'	=> 'Pri dodajanju predloga je prišlo do napake. Prosimo, poskusite ponovno ali o tem obvestite urednika.'
@@ -69,6 +67,6 @@ if (empty ($returnArr)) {
 }
 
 /* close connection */
-$mysqli->close();
+$db->close();
 
 echo json_encode ($returnArr);
