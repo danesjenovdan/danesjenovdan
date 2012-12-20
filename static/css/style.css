@@ -1,7 +1,17 @@
 body {
 	background-image: url('../img/bck_pattern.png');
 }
-
+.zigatezi {
+	font-family: 'Archivo Narrow', sans-serif;
+	padding: 20px;
+	margin-bottom: 0px;
+}
+.predlogi {
+	margin-top: 30px;
+	background-color: white;
+	margin-bottom: 30px;
+	font-size: 16px;
+}
 .logo {
 	background-image: url('/static/img/logo.png');
 	width: 218px;

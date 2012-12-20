@@ -3,7 +3,7 @@
 <div class="container predlogi">
 	<div class="row">
 		<div class="span12">
-			<p>
+			<p class="zigatezi">
 				<?php print $this->pravica->text; ?>
 			</p>
 		</div>
