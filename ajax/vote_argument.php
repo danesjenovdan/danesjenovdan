@@ -29,10 +29,17 @@ if (empty ($returnArr) && (empty ($argument_id))) {
 }
 
 if (empty ($returnArr) && empty ($type)) {
-	$returnArr = array (
-		'success'		=> 0,
-		'description'	=> 'Prišlo je do napake.'
-	);
+    $returnArr = array (
+        'success'       => 0,
+        'description'   => 'Prišlo je do napake.'
+    );
+}
+
+if (empty ($returnArr) && (empty ($user_id) || $user_id <= 0)) {
+    $returnArr = array (
+        'success'       => 0,
+        'description'   => 'Uporabnik ni prijavljen.'
+    );
 }
 
 if (empty ($returnArr)) {
@@ -47,7 +54,7 @@ if (empty ($returnArr)) {
 	$vm = ($type == -1) ? 1 : 0;
     
     // user can vote once
-    $sqlCheck = "SELECT id" .
+    $sqlCheck = "SELECT id_vote" .
         " FROM vote" .
         " WHERE id_argument = " . $argument_id .
         " AND id_user = " . $user_id .
