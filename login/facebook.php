@@ -3,7 +3,8 @@ require_once("../config/config.php");
 require_once("../lib/user.php");
 //session_start();
 
-if(!isset($_REQUEST["code"])){
+if (isset($_SESSION['ref']) && $_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {} 
+else if(!isset($_REQUEST["code"])){
     $_SESSION['state'] = md5(uniqid(rand(), TRUE)); // CSRF protection
     
         $_SESSION['ref'] = $_SERVER['HTTP_REFERER'];
@@ -23,28 +24,14 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
        . "client_id=" . $app_id . "&redirect_uri=" . urlencode($my_url)
        . "&client_secret=" . $app_secret . "&code=" . urlencode($code);
 
-     //$response = file_get_contents($token_url);
+     $response = file_get_contents($token_url);
      
-       $ch = curl_init(); 
-            curl_setopt($ch, CURLOPT_URL, $token_url); 
-            curl_setopt($ch, CURLOPT_HEADER, TRUE); 
-            curl_setopt($ch, CURLOPT_NOBODY, TRUE); // remove body 
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); 
-            $response = curl_exec($ch); 
-
      $params = null;
      parse_str($response, $params);
      $_SESSION['access_token'] = $params['access_token'];
-     $graph_url = "https://graph.facebook.com/me?access_token=" 
-       . $params['access_token'];
+     $graph_url = "https://graph.facebook.com/me?" . $response;
        
-       
-       $ch = curl_init(); 
-            curl_setopt($ch, CURLOPT_URL, $graph_url); 
-            curl_setopt($ch, CURLOPT_HEADER, TRUE); 
-            curl_setopt($ch, CURLOPT_NOBODY, TRUE); // remove body 
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); 
-            $response = curl_exec($ch);
+     $response = file_get_contents($graph_url);
 
     $user = json_decode($response);
             //$namesurname=explode(" ",$user->name);
@@ -56,12 +43,16 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
 			);
 		if ($user = User::getUserByArray (array ('fbid' => $user->id))) {
 				User::login ($user['id_user']);
-			} else {
+			} else if (!empty($data['name'])) {
 				$user_id = User::addUser ($data);
 				User::login ($user_id);
+			} else {
+                var_dump($_SESSION);
+			    echo "Login Failed";
 			}
-
-            header("Location: " . $_SESSION['ref']);
+            $ref = $_SESSION['ref'];
+            unset($_SESSION['ref']);
+            header("Location: http://sect.io/" . $ref);
 
     }
    else {
