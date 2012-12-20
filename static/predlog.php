@@ -12,9 +12,9 @@
 		<div class="span12 toprow">
 			<h1 class="title"><?php print $this->predlog->title; ?></h1>
 			<div class="temporarybox">
-				<div class="suggestionup  <?php print ($this->predlog->id_user==$id_user) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
+				<div class="suggestionup  <?php print ($this->predlog->vote_plus>0) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
 				<div class="votecount"><?php print $this->predlog->vote_plus; ?></div>
-				<div class="suggestiondown <?php print ($this->predlog->id_user==$id_user) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
+				<div class="suggestiondown <?php print ($this->predlog->vote_minus>0) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
 				<div class="votecount"><?php print $this->predlog->vote_minus; ?></div>
 			</div>
 		</div>
@@ -72,8 +72,8 @@
 						<div class="argumentboxfor">
 							<p class="authorship"><?php print $value->name; ?>, <?php print $value->timestamp; ?></p>
 							<p class="argumenttext"><?php print $value->text; ?></p>
-							<div class="argumentup" <?php print ($value->id_user==$id_user) ? "marked" : null; ?> data-id="<?php print $value->id_argument; ?>"></div>
-							<div class="argumentdown  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div class="argumentup <?php print ($value->vuser_plus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div class="argumentdown  <?php print ($value->vuser_minus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
 							<hr class="argumentcrta" />
 						</div>
 					</div>
@@ -118,8 +118,8 @@
 						<div class="argumentboxagainst">
 							<p class="authorship"><?php print $value->name; ?>, <?php print $value->timestamp; ?></p>
 							<p class="argumenttext"><?php print $value->text; ?></p>
-							<div class="argumentup  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
-							<div class="argumentdown  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div class="argumentup  <?php print ($value->vuser_plus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div class="argumentdown  <?php print ($value->vuser_minus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
 							<hr class="argumentcrta" />
 						</div>
 					</div>

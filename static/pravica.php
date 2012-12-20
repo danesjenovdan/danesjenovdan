@@ -23,9 +23,9 @@
 		</div>
 		<div class="span4">
 			<div class="votebox" data-id="<?php print $value->id; ?>">
-				<div class="votefor  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>"></div>
+				<div class="votefor  <?php print ($value->vuser_plus>0) ? "marked" : null; ?>"></div>
 				<div class="votecount"><?php print $value->vote_plus; ?></div>
-				<div class="voteagainst  <?php print ($value->id_user==$id_user) ? "marked" : null; ?>"></div>
+				<div class="voteagainst  <?php print ($value->vuser_minus>0) ? "marked" : null; ?>"></div>
 				<div class="votecount"><?php print $value->vote_minus; ?></div>
 			</div>
 		</div>

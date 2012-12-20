@@ -24,7 +24,11 @@ if(RewriteUrl::rru(1)!=''){
 		id_user,
 		id_proposal as id,
 			(select count(*) from vote where id_proposal=id and vote_plus>0) as vote_plus, 
-			(select count(*) from vote where id_proposal=id and vote_minus>0) as vote_minus
+			(select count(*) from vote where id_proposal=id and vote_minus>0) as vote_minus,
+(select count(*) from vote where
+		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus			
 			from proposal where id_proposal=$id_proposal and approved=1 ;";
 	if ($result = $db->query($query)) {
 
@@ -37,23 +41,21 @@ if(RewriteUrl::rru(1)!=''){
 			$tpl->set("user", $result->fetch_object());
 		}
 
-$query = "
-SELECT argument.*, user.*
-FROM argument
-LEFT JOIN user
-ON argument.id_user = user.id_user
-where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=1
-";
-
 		// argument for
 //		$query = "SELECT * FROM  `argument` where id_proposal=$id_proposal and approved=1 and type=1";
 $query = "
-SELECT argument.*, user.*
+SELECT argument.*, user.*, 
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_plus>0 and id_user = $id_user) as vuser_plus, 
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus			
+
 FROM argument
 LEFT JOIN user
 ON argument.id_user = user.id_user
-where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=1
+where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=1;
 ";
+
 		if ($result = $db->query($query)) {
 			$data = array();
 		    while ($obj = $result->fetch_object()) {
@@ -64,12 +66,19 @@ where argument.id_proposal=$id_proposal and argument.approved=1 and argument.typ
 		// argument against
 //		$query = "SELECT * FROM  `argument` where id_proposal=$id_proposal and approved=1 and type=-1";
 $query = "
-SELECT argument.*, user.*
+SELECT argument.*, user.*, 
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_plus>0 and id_user = $id_user) as vuser_plus, 
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus			
+
 FROM argument
 LEFT JOIN user
 ON argument.id_user = user.id_user
-where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=-1
+where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=-1;
+
 ";		
+
 		if ($result = $db->query($query)) {
 			$data = array();
 		    while ($obj = $result->fetch_object()) {
@@ -110,7 +119,7 @@ if(RewriteUrl::rru(0)!=''){
 
 	$tpl->set("link", RewriteUrl::rru(0));
 	$tpl->set("id_user", $id_user);
-	
+
 	//print '<h1>pravica</h1>';
 	$query = "SELECT * FROM  `right` where id_right = $id_right";
 
@@ -119,9 +128,17 @@ if(RewriteUrl::rru(0)!=''){
 		$tpl->set("pravica", $result->fetch_object());
 
 		// proposals + votes
-		$query="select title,timestamp,id_proposal as id, id_user,  (select count(*) from vote where
-		id_proposal=id and vote_plus>0) as vote_plus, (select count(*) from vote where
-		id_proposal=id and vote_minus>0) as vote_minus from proposal where approved=1 and id_right=".$id_right." order by timestamp desc limit 10;";
+		$query="
+select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) from vote where
+		id_proposal=id and vote_plus>0) as vote_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0) as vote_minus,
+(select count(*) from vote where
+		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
+(select count(*) from vote where
+		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus
+		 from proposal where approved=1 and id_right=$id_right order by timestamp desc limit 10
+		";
 
 
 		if ($result = $db->query($query)) {
