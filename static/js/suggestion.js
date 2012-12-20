@@ -107,6 +107,10 @@ $(document).ready(function() {
 				'content': $('#argumentinputfor').val(),
 			},
 			success: function(data) {
+				if (data.success == 1) {
+					alert(data.description);
+					$('#argumentinputfor').val('');
+				}
 				console.log(data);
 			}
 		});
@@ -123,6 +127,10 @@ $(document).ready(function() {
 				'content': $('#argumentinputagainst').val(),
 			},
 			success: function(data) {
+				if (data.success == 1) {
+					alert(data.description);
+					$('#argumentinputfor').val('');
+				}
 				console.log(data);
 			}
 		});
