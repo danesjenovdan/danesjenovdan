@@ -255,6 +255,10 @@ body {
 	width: 101px;
 	height: 32px;
 	float: right;
+	cursor: pointer;
+}
+.toggleworkgroup:hover {
+	background-image: url('/static/img/gumb_pridruzi-se_hover.png');
 }
 .workgrouptitle {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -376,10 +380,14 @@ body {
 }
 
 .adddocument {
-	background-image: url('../img/gumb_dodaj-dokument.png');
+	background-image: url('/static/img/gumb_dodaj-dokument.png');
 	width: 145px;
 	height: 32px;
 	float: right;
+	cursor: pointer;
+}
+.adddocument:hover {
+	background-image: url('/static/img/gumb_dodaj-dokument_hover.png');
 }
 #adddocumentbox {
 	display: none;

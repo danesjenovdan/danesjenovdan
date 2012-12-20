@@ -11,9 +11,13 @@ $(document).ready(function() {
 			if (data.uid == -1) {
 				$('.socialconnect').css('display', 'inline-block');
 				$('.createaccount').css('display', 'inline-block');
+				$('.adddocument').css('display', 'block');
+				$('form.adddocumentbox').css('display', 'none');
 			} else {
 				$('.usersignedin').css('display', 'block');
 				$('.signedinname').text(data.name);
+				$('.adddocument').css('display', 'none');
+				$('form.adddocumentbox').css('display', 'block');
 			}
 		}
 	});
@@ -142,5 +146,24 @@ $(document).ready(function() {
 				console.log(data);
 			}
 		});
+	});
+	$('.adddocument').click(function() {
+		$.ajax({
+			type: 'get',
+			url: 'http://sect.io/ajax/isAuthorized.php',
+			dataType: 'json',
+			success: function(data) {
+				if (data.uid == -1) {
+					
+				} else {
+					alert('ups, napaka!');
+				}
+			}
+		});
+		return false;
+	});
+	$('.toggleworkgroup').click(function() {
+		
+		return false;
 	});
 });
