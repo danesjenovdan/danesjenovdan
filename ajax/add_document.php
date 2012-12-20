@@ -19,7 +19,7 @@ $user_id = (int)$_SESSION['uid'];
 if (!empty($_FILES)) {
 	$tempFile = $_FILES['documentfile']['tmp_name'];
 	$targetPath = '../documents/';
-	$targetFile =  str_replace('//','/',$targetPath) . $_FILES['documentfile']['name'];
+	$targetFile =  $_FILES['documentfile']['name'];
 
 
 	$fileParts  = pathinfo($_FILES['documentfile']['name']);

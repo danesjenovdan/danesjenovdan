@@ -38,7 +38,7 @@
 			<h1 class="documenttitle">Dokumenti</h1>
 			<div class="documentbox">
 			<?php foreach ($this->document as $key => $value) { ?>
-				<a href="<?php print $value->path; ?>" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print $value->type; ?>, <?php print $value->size; ?>)</span></a><br />
+				<a href="<?php print $value->path; ?>" target="_blank" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print $value->type; ?>, <?php print $value->size; ?>)</span></a><br />
 			<?php } ?>	
 				<div class="adddocument"></div>
 
