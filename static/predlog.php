@@ -1,5 +1,19 @@
 <?php print ($this->header); $id_user = $this->id_user; ?>
 
+<?php
+function curPageURL() {
+ $pageURL = 'http';
+ if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+ $pageURL .= "://";
+ if ($_SERVER["SERVER_PORT"] != "80") {
+  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+ } else {
+  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+ }
+ return $pageURL;
+}
+?>
+
 <?php if($this->id_right == 1) {?>
 	<title><?php print $this->predlog->title; ?></title>
 	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
@@ -138,8 +152,8 @@
 			<span class="author"><?php print $this->user->name; ?> <?php print $this->user->surname; ?>, </span>
 			<span class="suggestiontimestamp"><?php print $this->predlog->timestamp; ?></span>
 			<span class="suggestionsocial">
-				<div class="fb-like" data-href="http://danesjenovdan.si" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
-				<div class="g-plusone" data-size="medium" data-annotation="buble" data-width="100"></div>
+				<div class="fb-like" data-href="<?php print curPageURL(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+				<div class="g-plusone" data-href="<?php print curPageURL(); ?>" data-size="medium" data-annotation="buble" data-width="100"></div>
 				<script type="text/javascript">
 					(function() {
 						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -147,7 +161,7 @@
 						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 					})();
 				</script>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+				<a href="https://twitter.com/share" data-url="<?php print curPageURL(); ?>" class="twitter-share-button" data-lang="en" data-hashtags="danesjenovdan" data-text="Pridruži se grajenju skupne prihodnosti: <?php print $this->predlog->title ?>">Tweet</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
 		</div>
 	</div>

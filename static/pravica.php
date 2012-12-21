@@ -1,3 +1,17 @@
+<?php
+function curPageURL() {
+ $pageURL = 'http';
+ if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+ $pageURL .= "://";
+ if ($_SERVER["SERVER_PORT"] != "80") {
+  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+ } else {
+  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+ }
+ return $pageURL;
+}
+?>
+
 <?php print ($this->header); $id_user = $this->id_user; ?>
 
 <?php if($this->id == 1) {?>
@@ -143,7 +157,27 @@
 <div class="container predlogi">
 	<div class="row">
 		<div class="span12">
-			<h1 class="pravicatext"><?php print $this->pravica->title;?></h1>
+			<div class="row">
+				<div class="span6">
+					<h1 class="pravicatext"><?php print $this->pravica->title;?></h1>
+				</div>
+				<div class="span6">
+					<div class="pravicasocial">
+						<div class="fb-like" data-href="<?php print curPageURL(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+						<div class="g-plusone" data-href="<?php print curPageURL(); ?>" data-size="medium" data-annotation="buble" data-width="100"></div>
+						<script type="text/javascript">
+							(function() {
+								var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+								po.src = 'https://apis.google.com/js/plusone.js';
+								var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							})();
+						</script>
+						<a href="https://twitter.com/share" data-url="<?php print curPageURL(); ?>" class="twitter-share-button" data-lang="en" data-hashtags="danesjenovdan" data-text="Pridruži se grajenju skupne prihodnosti: <?php print $this->pravica->title ?>">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
+					</div>
+					
+				</div>
+			</div>
 			<p class="zigatezi">
 				<?php print $this->pravica->text; ?>
 			</p>
@@ -153,7 +187,9 @@
 
 <div class="container">
 	<div class="row">
-		<div class="span3 offset9 suggest">
+		<div class="span4 offset5">
+		</div>
+		<div class="span3 suggest">
 		</div>
 	</div>
 </div>

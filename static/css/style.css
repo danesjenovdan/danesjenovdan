@@ -762,3 +762,7 @@ input.addsuggestiontitle:focus {
 .submitloginpopup:hover {
 	background-image: url('/static/img/gumb_poslji_hover.png');
 }
+.pravicasocial {
+	float: right;
+	padding-top: 22px;
+}
