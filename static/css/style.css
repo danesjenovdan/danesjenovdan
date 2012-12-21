@@ -195,9 +195,9 @@ body {
 	border-right: 0;
 }
 .predlogcrta {
-	color: #363636;
-	height: 2px;
-	background-color: #363636;
+	color: #ccc;
+	height: 1px;
+	background-color: #ccc;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
