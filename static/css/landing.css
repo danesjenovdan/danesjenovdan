@@ -20,7 +20,8 @@ body {
 	width: 105px;
 	height: 106px;
 	background-color: #1d7373;
-	padding-left: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 	padding-top: 4px;
 	cursor: pointer;
 }
