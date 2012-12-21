@@ -260,9 +260,10 @@ function curPageURL() {
 		<div class="span6">
 			<h1 class="workgrouptitle">Delovna skupina</h1>
 			<div class="workgroupbox">
-				<p class="workgrouptext">Iniciativa mi veliko pomeni ...</p>
-				<div class="toggleworkgroup"></div>
-				<div class="toggleworkgroupt"></div>
+				<p class="workgrouptext"><?php print ($this->wg)? "Skupini si že pridružen/-a." : "Iniciativa mi veliko pomeni in o njej veliko vem."; ?></p>
+				<div class="toggleworkgroup <?php print($this->wg); ?>"></div>
+				<br />
+				<div class="workgrouptext toggleworkgroupt"></div>
 			</div>
 		</div>
 	</div>

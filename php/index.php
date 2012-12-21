@@ -99,6 +99,21 @@ where argument.id_proposal=$id_proposal and argument.approved=1 and argument.typ
 		}
 
 
+		$sqlCheck = "SELECT * " .
+		        " FROM wg" .
+		        " WHERE id_proposal = " . $id_proposal .
+		        " AND id_user = " . $id_user .
+		        " AND id_right = " . $id_right .
+		        " LIMIT 1";
+		    mysqli_query($db, $sqlCheck);
+		    if (mysqli_affected_rows($db) > 0) {
+		        $tpl->set("wg", 'active');
+		    }else{
+		    	$tpl->set("wg", '');
+		    }
+
+
+
 	}
 
 print	$tpl->fetch('static/predlog.php');

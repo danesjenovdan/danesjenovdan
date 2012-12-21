@@ -280,8 +280,12 @@ body {
 	float: right;
 	cursor: pointer;
 }
-.toggleworkgroup:hover {
+.toggleworkgroup:hover,
+.toggleworkgroup.active {
 	background-image: url('/static/img/gumb_pridruzi-se_hover.png');
+}
+.toggleworkgroup.active{
+	cursor: text;
 }
 .workgrouptitle {
 	font-family: 'Archivo Narrow', sans-serif;

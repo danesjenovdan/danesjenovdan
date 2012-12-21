@@ -101,17 +101,16 @@ function createbuttons() {
  	
 
 	$('.toggleworkgroup').click(function() {
-		$("#toggleworkgroupt").html("pošiljam...");
+		$(".toggleworkgroupt").html("pošiljam...");
 		$.ajax({
 			type: 'post',
 			url: 'http://sect.io/ajax/add_user_group.php',
-			dataType: 'json',
 			data: {
 				'right_id': $('#rightid').val(),
 				'proposal_id': $('#proposal_id').val()
 			},
 			success: function(data) {
-				$("#toggleworkgroupt").html(data);
+				$(".toggleworkgroupt").html(data);
 			}
 		});
 	}); 	
