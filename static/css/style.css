@@ -21,7 +21,13 @@ body {
 	margin-bottom: 1em;
 	margin-top: 2em;
 }
-
+.pravicatext {
+	font-size: 20px;
+	font-family: 'Dosis', sans-serif;
+	line-height: 42px;
+	color: #363636;
+	margin-left: 20px;
+}
 .navigation div {
 	float: right;
 	margin-top: 2em;
@@ -38,6 +44,7 @@ body {
 .navblock a {
 	font-family: 'Dosis', sans-serif;
 	color: #363636;
+	font-size: 16px;
 	font-weight: 900;
 }
 .navblock a:hover {
@@ -81,7 +88,11 @@ body {
 .suggestiontitle a:hover {
 	text-decoration: none;
 }
-
+.suggestionsocial {
+	padding-left: 20px;
+	position: relative;
+	top: 4px;
+}
 .timestampwrap {
 	border-left: 1px solid #e5e5e5;
 	border-right: 1px solid #e5e5e5;
@@ -477,6 +488,7 @@ body {
 .footy .mail {
 	padding-left: 1.5em;
 	color: #363636;
+	font-family: 'Archivo Narrow', sans-serif;
 }
 
 .crtica {
@@ -500,6 +512,7 @@ body {
 .footerlink {
 	color: #1d7373;
 	display: block;
+	font-family: 'Archivo Narrow', sans-serif;
 }
 .tabtext {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -619,6 +632,24 @@ input.accountemail:focus {
 }
 .fbsignin {
 	margin-left: 20px;	
+	background-image: url('/static/img/gumb_fb.png');
+	cursor: pointer;
+	width: 29px;
+	height: 29px;
+	display: inline-block;
+}
+.fbsignin:hover {
+	background-image: url('/static/img/gumb_fb_hover.png');
+}
+.googlesign {
+	background-image: url('/static/img/gumb_g+.png');
+	width: 29px;
+	height: 29px;
+	cursor: pointer;
+	display: inline-block;
+}
+.googlesign:hover {
+	background-image: url('/static/img/gumb_g+_hover.png');
 }
 .twsignin {
 	display: none;
@@ -654,6 +685,10 @@ input.accountemail:focus {
 
 /* suggestion popup */
 .suggestionpopup {
+	border-radius: 0px;
+	background-color: #e6e6e6;
+}
+.loginpopup {
 	border-radius: 0px;
 	background-color: #e6e6e6;
 }
@@ -716,4 +751,9 @@ input.addsuggestiontitle:focus {
 }
 .mediji {
 	display: none;
+}
+.submitloginpopup {
+	width: 100px;
+	height: 20px;
+	background-color: black;
 }

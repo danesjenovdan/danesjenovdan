@@ -21,9 +21,20 @@
 	</div>
 	<div class="row">
 		<div class="span12">
-			<span class="author"><?php print $this->user->name; ?>, </span>
+			<span class="author"><?php print $this->user->name; ?> <?php print $this->user->surname; ?>, </span>
 			<span class="suggestiontimestamp"><?php print $this->predlog->timestamp; ?></span>
-			<span class="suggestionsocial">LAJK BATONS</span>
+			<span class="suggestionsocial">
+				<div class="fb-like" data-href="http://danesjenovdan.si" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+				<div class="g-plusone" data-size="medium" data-annotation="buble" data-width="100"></div>
+				<script type="text/javascript">
+					(function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					})();
+				</script>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
 		</div>
 	</div>
 	<div class="row">
@@ -90,20 +101,7 @@
 							<textarea id="argumentinputfor"></textarea>
 							<div class="usersignedinargument">objavi kot <span class="signedinname"></span></div>
 						</div>
-						<div class="socialwrap">
-							<div class="socialconnect">
-								<p class="connectwith">Poveži se z</p>
-								<img src="/static/img/gumb_fb.png" class="fbsignin"/>
-								<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-								<img src="/static/img/gumb_g+.png" class="googlesign"/>
-							</div>
-							<div class="createaccount">
-								<p>ali si ustvari račun</p>
-								<input type="text" class="accountname" placeholder="ime in priimek" />
-								<input type="email" class="accountemail" placeholder="email" />
-							</div>
-							<div class="submitargumentfor"></div>
-						</div>
+						<div class="submitargumentfor"></div>
 					</div>
 				</div>
 			</div>
@@ -135,20 +133,7 @@
 					<textarea id="argumentinputagainst"></textarea>
 					<div class="usersignedinargument">objavi kot <span class="signedinname"></span></div>
 				</div>
-				<div class="socialwrap">
-					<div class="socialconnect">
-						<p class="connectwith">Poveži se z</p>
-						<img src="/static/img/gumb_fb.png" class="fbsignin"/>
-						<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-						<img src="/static/img/gumb_g+.png" class="googlesign"/>
-					</div>
-					<div class="createaccount">
-						<p>ali si ustvari račun</p>
-						<input type="text" class="accountname" placeholder="ime in priimek"/>
-						<input type="email" class="accountemail" placeholder="email"/>
-					</div>
-					<div class="submitargumentagainst"></div>
-				</div>
+				<div class="submitargumentagainst"></div>
 			</div>
 		</div>
 	</div>
@@ -160,17 +145,6 @@
 		<input type="text" class="addsuggestiontitle" maxlength="100" placeholder="naslov predloga (do 100 znakov)" />
 		<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
 		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
-		<div class="socialconnect">
-			<p class="connectwith">Poveži se z</p>
-			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
-			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-			<img src="/static/img/gumb_g+.png" class="googlesign"/>
-		</div>
-		<div class="createaccount">
-			<p>ali si ustvari račun</p>
-			<input type="text" class="accountname" placeholder="ime in priimek"/>
-			<input type="email" class="accountemail" placeholder="email"/>
-		</div>
 		<div class="submitsuggestion postsuggestion"></div>
 	</div>
 </div>
@@ -180,9 +154,9 @@
 		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>
-			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+			<div class="fbsignin"></div>
 			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-			<img src="/static/img/gumb_g+.png" class="googlesign"/>
+			<div class="googlesign"></div>
 		</div>
 		<div class="createaccount">
 			<p>ali si ustvari račun</p>

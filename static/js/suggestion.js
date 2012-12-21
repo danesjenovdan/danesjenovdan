@@ -17,6 +17,20 @@ $(document).ready(function() {
 				$('.createaccount').css('display', 'inline-block');
 				$('.adddocument').css('display', 'block');
 				$('form.adddocumentbox').css('display', 'none');
+				$('#argumentinputagainst').focus(function() {
+					$('.loginpopup').modal('show');
+				});
+				$('#argumentinputfor').focus(function() {
+					$('.loginpopup').modal('show');
+				});
+				$('.addsuggestioncontent').focus(function() {
+					$('.suggestionpopup').modal('hide');
+					$('.loginpopup').modal('show');
+				});
+				$('.addsuggestiontitle').focus(function() {
+					$('.suggestionpopup').modal('hide');
+					$('.loginpopup').modal('show');
+				});
 			} else {
 				$('.usersignedin').css('display', 'block');
 				$('.signedinname').text(data.name);
@@ -26,6 +40,23 @@ $(document).ready(function() {
 		}
 	});
 	//buttons
+	$('.submitloginpopup').click(function() {
+		console.log('email login');
+//		$.ajax({
+//			context: this,
+//			type: 'post',
+//			url: 'http://sect.io/login/email.php',
+//			dataType: 'json',
+//			data: {
+//				'email': $('.accountemail').val(), 
+//				'name': $('.accountname').val().split(' ')[0], 
+//				'surname': $('.accountname').val().split(' ')[1]
+//			},
+//			success: function(data) {
+//				console.log(data);
+//			}
+//		});
+	});
 	$('.suggestionup').click(function() {
 		console.log('begin');
 		$.ajax({

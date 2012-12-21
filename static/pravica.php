@@ -18,6 +18,7 @@
 <div class="container predlogi">
 	<div class="row">
 		<div class="span12">
+			<h1 class="pravicatext"><?php print $this->pravica->title;?></h1>
 			<p class="zigatezi">
 				<?php print $this->pravica->text; ?>
 			</p>
@@ -79,18 +80,25 @@
 			<textarea class="addsuggestioncontent" placeholder="opis"></textarea>
 			<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
 		</form>
+		<div class="submitsuggestion postsuggestion"></div>
+	</div>
+</div>
+<div class="modal hide fade loginpopup">
+	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
+	<div class="modal-body">
+		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
 		<div class="socialconnect">
 			<p class="connectwith">Poveži se z</p>
-			<img src="/static/img/gumb_fb.png" class="fbsignin"/>
+			<div class="fbsignin"></div>
 			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
-			<img src="/static/img/gumb_g+.png" class="googlesign"/>
+			<div class="googlesign"></div>
 		</div>
 		<div class="createaccount">
 			<p>ali si ustvari račun</p>
 			<input type="text" class="accountname" placeholder="ime in priimek"/>
 			<input type="email" class="accountemail" placeholder="email"/>
 		</div>
-		<div class="submitsuggestion postsuggestion"></div>
+		<div class="submitloginpopup"></div>
 	</div>
 </div>
 
