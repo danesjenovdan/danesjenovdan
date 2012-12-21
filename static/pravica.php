@@ -1,5 +1,20 @@
 <?php print ($this->header); $id_user = $this->id_user; ?>
 
+
+<?php if ($this->id == 6) {?>
+<div class="container predlogi">
+	<div class="row">
+		<div class="span12">
+			<p class="zigatezi">Pravica do vključenosti je pravica, ki se nanaša na preostalih pet pravic in ekplicitno izjavlja, da pravice veljajo za vse. Zavračamo delitve na podlagi kakršnih koli osebnih okoliščin. Dovolj je politike izključevanja, ki naključnim družbenim skupinam jemlje dostojno življenje, jih potiska na družbene robove ter jim krade moč, ki jim pripada. Z ustavo zagotovljena pravica do enakosti ne sme biti samo deklarativna. O tem ne razpravljamo.</p>
+			<p class="zigatezi">Pravica do vključenosti zato ne dopušča vnašanja predlogov, glasovanja zanje in dodajanja argumentov. O dejstvu, da smo vsi enaki, se ne glasuje in ne razpravlja. Na teoretski ravni zavračamo že samo dihotomijo vključen - izključen, saj je skregana s pojmom skupnosti. Vendar pa na pragmatični ravni nihče ne more zanikati dejstva, da družbeni robovi obstajajo, da so mnogi ljudje oropani raznih pravic in moči, da so torej izključeni iz skupnosti. Sporno binarno opozicijo vključen-izključen lahko presežemo le tako, da omogočimo vsakomur, da je slišan, in da vsak glas šteje enako. Le tako bomo na podlagi novega družbenega konsenza skupnost, v kateri nihče ni "marginalen" in "izključen", šele zgradili.
+			</p>
+		</div>
+	</div>
+</div>
+<?php }?>
+
+<?php if ($this->id != 6) {?>
+
 <div class="container predlogi">
 	<div class="row">
 		<div class="span12">
@@ -9,7 +24,6 @@
 		</div>
 	</div>
 </div>
-
 
 <div class="container">
 	<div class="row">
@@ -48,13 +62,13 @@
 
 			<?php } ?>	
 
-
 	<!-- konec predlogov -->
 	<div class="row predlog">
 		<div class="suggestionrow">
 		</div>
 	</div>
 	<div class="m0ar"></div>
+	<?php }?>
 </div>
 <input type="hidden" value="<?php print $this->id; ?>" id="rightid"/>
 <div class="modal hide fade suggestionpopup">

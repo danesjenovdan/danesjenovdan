@@ -12,7 +12,6 @@ else if(!isset($_REQUEST["code"])){
     $dialog_url = "https://www.facebook.com/dialog/oauth?client_id=" 
        . $app_id . "&redirect_uri=" . urlencode($my_url) . "&state="
        . $_SESSION['state']."&scope=email";
-     //header("Location: " . $dialog_url);
      echo("<script> top.location.href='" . $dialog_url . "'</script>");
 }
 else
@@ -53,7 +52,8 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
 			}
             $ref = $_SESSION['ref'];
             unset($_SESSION['ref']);
-            header("Location: http://sect.io/" . $ref);
+//            header("Location: http://sect.io/" . $ref);
+			echo($ref);
 
     }
    else {
