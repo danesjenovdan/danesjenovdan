@@ -35,12 +35,12 @@
 		<div class="span4">
 			<div class="votebox" data-id="<?php print $value->id; ?>">
 				<div class="votefor  <?php print ($value->vuser_plus>0) ? "marked" : null; ?>"></div>
-				<div class="votecount"><?php print $value->vote_plus; ?></div>
+				<div class="votecount"><span><?php print $value->vote_plus; ?></span></div>
 				<div class="voteagainst  <?php print ($value->vuser_minus>0) ? "marked" : null; ?>"></div>
-				<div class="votecount"><?php print $value->vote_minus; ?></div>
+				<div class="votecount"><span><?php print $value->vote_minus; ?></span></div>
 			</div>
 		</div>
-		<div class="span1">
+		<div class="span1 hidden-phone">
 		<div class="ihaveanargument" data-id="<?php print $value->id; ?>"></div>
 	</div>
 	</div>

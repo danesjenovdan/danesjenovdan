@@ -37,7 +37,9 @@ $(document).ready(function() {
 					alert('Za predlog lahko glasuješ samo enkrat.');
 				}
 				console.log(data);
-			}});
+			}
+		});
+		$(this).toggleClass('marked');
 		//TODO function to vote for
 	});
 	$('.suggestiondown').click(function() {
@@ -54,7 +56,9 @@ $(document).ready(function() {
 					alert('Za predlog lahko glasuješ samo enkrat.');
 				}
 				console.log(data);
-			}});
+			}
+		});
+		$(this).toggleClass('marked');
 		//TODO function to vote against
 	});
 	$('.adddocument').click(function() {
@@ -79,6 +83,7 @@ $(document).ready(function() {
 				console.log(data);
 			}
 		});
+		$(this).toggleClass('marked');
 		//TODO function to vote for
 	});
 	$('.argumentdown').click(function() {
@@ -99,6 +104,7 @@ $(document).ready(function() {
 				console.log(data);
 			}
 		});
+		$(this).toggleClass('marked');
 		//TODO function to vote against
 	});
 	$('.fbsignin').click(function() {

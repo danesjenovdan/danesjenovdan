@@ -133,6 +133,9 @@ body {
 	text-align: right;
 	padding-right: 10px;
 }
+.votecount span {
+	padding-right: 2px;
+}
 .ihaveanargument {
 	background-image: url('/static/img/gumb_imam-argument.png');
 	width: 128px;

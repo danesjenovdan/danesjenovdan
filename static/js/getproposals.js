@@ -22,7 +22,9 @@ function createbuttons() {
 					alert('Za predlog lahko glasuješ le enkrat.');
 				}
 				console.log(data.success);
-			}});
+			}
+		});
+		$(this).toggleClass('marked');	
 	});
 	$('.voteagainst').click(function() {
 		$.ajax({
@@ -38,7 +40,9 @@ function createbuttons() {
 					alert('Za predlog lahko glasuješ le enkrat.');
 				}
 				console.log(data.success);
-			}});
+			}
+		});
+		$(this).toggleClass('marked');
 	});
 	$('.suggest').click(function() {
 		$('.suggestionpopup').modal('show');
