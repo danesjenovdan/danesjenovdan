@@ -3,8 +3,14 @@ require_once("../config/config.php");
 require_once("../lib/user.php");
 //session_start();
 
-if (isset($_SESSION['ref']) && $_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {} 
-else if(!isset($_REQUEST["code"])){
+if(!isset($_SESSION['trajlala'])) {
+$_SESSION['trajlala'] = $_GET['trajlala'];
+}
+
+//if (isset($_SESSION['ref']) && $_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {echo 'asdasdasd';} 
+
+//else
+ if(!isset($_REQUEST["code"])){
     $_SESSION['state'] = md5(uniqid(rand(), TRUE)); // CSRF protection
     
         $_SESSION['ref'] = $_SERVER['HTTP_REFERER'];
@@ -35,10 +41,10 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
     $user = json_decode($response);
             //$namesurname=explode(" ",$user->name);
 			$data = array(
-				'name' => $user->first_name,
-				'surname' => $user->last_name ,
-				'email' => $user->email,
-                'fbid' => $user->id
+				'name' => mysqli_real_escape_string($db, $user->first_name),
+				'surname' => mysqli_real_escape_string($db, $user->last_name),
+				'email' => mysqli_real_escape_string($db, $user->email),
+                'fbid' => mysqli_real_escape_string($db, $user->id)
 			);
 		if ($user = User::getUserByArray (array ('email' => $user->email))) {
 				User::updateUser(array ('fbid' => $user->id, "email" => $user->email), "email");
@@ -50,10 +56,10 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
                 var_dump($_SESSION);
 			    echo "Login Failed";
 			}
-            $ref = $_SESSION['ref'];
-            unset($_SESSION['ref']);
+            $ref = $_SESSION['trajlala'];
+            unset($_SESSION['trajlala']);
 //            header("Location: http://sect.io/" . $ref);
-			echo($ref);
+			echo("<script> top.location.href='" . $ref . "'</script>");
 
     }
    else {
