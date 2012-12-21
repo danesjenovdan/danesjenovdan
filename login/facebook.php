@@ -4,10 +4,17 @@ require_once("../lib/user.php");
 //session_start();
 
 if(!isset($_SESSION['trajlala'])) {
-$_SESSION['trajlala'] = $_GET['trajlala'];
+$_SESSION['trajlala'] = $_GET['ref'];
 }
 
-//if (isset($_SESSION['ref']) && $_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {echo 'asdasdasd';} 
+if (isset($_SESSION['ref']) && $_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
+	            $ref = $_SESSION['trajlala'];
+	            unset($_SESSION['trajlala']);
+	            header("Location: " . $ref);
+	//			echo($ref);
+	//			echo("<script> top.location.href='" . $ref . "'</script>");
+	
+} 
 
 //else
  if(!isset($_REQUEST["code"])){
@@ -56,10 +63,11 @@ if($_SESSION['state'] && ($_SESSION['state'] === $_REQUEST['state'])) {
                 var_dump($_SESSION);
 			    echo "Login Failed";
 			}
-            $ref = $_SESSION['trajlala'];
-            unset($_SESSION['trajlala']);
+//            $ref = $_SESSION['trajlala'];
+//            unset($_SESSION['trajlala']);
 //            header("Location: http://sect.io/" . $ref);
-			echo("<script> top.location.href='" . $ref . "'</script>");
+//			echo($ref);
+//			echo("<script> top.location.href='" . $ref . "'</script>");
 
     }
    else {

@@ -29,6 +29,7 @@ $(document).ready(function() {
 	$('.suggestionup').click(function() {
 		console.log('begin');
 		$.ajax({
+			context: this,
 			type: 'post',
 			url: 'http://sect.io/ajax/vote_proposal.php',
 			dataType: 'json',
@@ -39,11 +40,13 @@ $(document).ready(function() {
 			success: function(data) {
 				if (data.success == -1) {
 					alert('Za predlog lahko glasuješ samo enkrat.');
+				} else if (data.success == 1) {
+					$(this).next().children().first().text(parseInt($(this).next().children().first().text()) + 1);
+					$(this).toggleClass('marked');
 				}
 				console.log(data);
 			}
 		});
-		$(this).toggleClass('marked');
 		//TODO function to vote for
 	});
 	$('.suggestiondown').click(function() {
@@ -58,11 +61,13 @@ $(document).ready(function() {
 			success: function(data) {
 				if (data.success == -1) {
 					alert('Za predlog lahko glasuješ samo enkrat.');
+				} else if (data.success == 1) {
+					$(this).next().children().first().text(parseInt($(this).next().children().first().text()) + 1);
+					$(this).toggleClass('marked');
 				}
 				console.log(data);
 			}
 		});
-		$(this).toggleClass('marked');
 		//TODO function to vote against
 	});
 	$('.adddocument').click(function() {

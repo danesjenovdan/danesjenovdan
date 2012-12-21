@@ -10,6 +10,7 @@ function getmore() {
 function createbuttons() {
 	$('.votefor').click(function() {
 		$.ajax({
+			context: this,
 			type: 'post',
 			url: 'http://sect.io/ajax/vote_proposal.php',
 			dataType: 'json',
@@ -19,15 +20,18 @@ function createbuttons() {
 			},
 			success: function(data) {
 				if (data.success == -1) {
-					alert('Za predlog lahko glasuješ le enkrat.');
+					alert('Za predlog lahko glasujete samo enkrat');
+				} else if (data.success == 1) {
+					$(this).next().children().first().text(parseInt($(this).next().children().first().text()) + 1);
+					$(this).toggleClass('marked');
 				}
-				console.log(data.success);
+				console.log(data);
 			}
 		});
-		$(this).toggleClass('marked');	
 	});
 	$('.voteagainst').click(function() {
 		$.ajax({
+			context: this,
 			type: 'post',
 			url: 'http://sect.io/ajax/vote_proposal.php',
 			dataType: 'json',
@@ -37,12 +41,14 @@ function createbuttons() {
 			},
 			success: function(data) {
 				if (data.success == -1) {
-					alert('Za predlog lahko glasuješ le enkrat.');
+					alert('Za predlog lahko glasujete samo enkrat.');
+				} else if (data.success == 1) {
+					$(this).next().children().first().text(parseInt($(this).next().children().first().text()) + 1);
+					$(this).toggleClass('marked');
 				}
 				console.log(data.success);
 			}
 		});
-		$(this).toggleClass('marked');
 	});
 	$('.suggest').click(function() {
 		$('.suggestionpopup').modal('show');
@@ -86,7 +92,7 @@ function createbuttons() {
 		document.location = $(this).children().attr('href');
 	});
 	$('.fbsignin').click(function() {
-		document.location.href = '/login/facebook.php';
+		document.location = 'http://sect.io/login/facebook.php?ref=' + encodeURIComponent(document.location.href);
 	});
  	
 }

@@ -5,6 +5,10 @@ require_once ("../lib/user.php");
 require_once ('../lib/openid.php');
 # Logging in with Google accounts requires setting special identity, so this example shows how to do it.
 
+if(!isset($_SESSION['googleref'])) {
+	$_SESSION['googleref'] = $_GET['ref'];
+}
+
 //try {
 	# Change 'localhost' to your domain name.
 	$openid = new LightOpenID($_SERVER['HTTP_HOST']);
@@ -48,7 +52,9 @@ require_once ('../lib/openid.php');
 				$user_id = User::addUser ($data);
 				User::login ($user_id);
 			}
-			header ("Location: " . $_GET['ref']);
+			$ref = $_SESSION['googleref'];
+			unset($_SESSION['googleref']);
+			header ("Location: " . $ref);
 		} else {
 			echo ("NOT");
 			//user is not logged in
