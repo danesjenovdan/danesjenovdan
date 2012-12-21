@@ -248,7 +248,7 @@ function curPageURL() {
 				<form class="adddocumentbox" id="adddocumentbox" action="/ajax/add_document.php" method="post"> 
 					<input type="text" name="documentname" id="documentname" placeholder="ime dokumenta" />
 <input type="hidden" name="right_id" value="<?php print $this->id_right; ?>" />
-<input type="hidden" name="proposal_id" value="<?php print $this->predlog->id; ?>" />
+<input type="hidden" id="proposal_id" name="proposal_id" value="<?php print $this->predlog->id; ?>" />
 
 					<label for="documentfile" id="uploadlabel"></label>
 					<input type="file" name="documentfile" id="documentfile" />
@@ -262,6 +262,7 @@ function curPageURL() {
 			<div class="workgroupbox">
 				<p class="workgrouptext">Iniciativa mi veliko pomeni ...</p>
 				<div class="toggleworkgroup"></div>
+				<div class="toggleworkgroupt"></div>
 			</div>
 		</div>
 	</div>
