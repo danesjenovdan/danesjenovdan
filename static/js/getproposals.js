@@ -24,6 +24,8 @@ function createbuttons() {
 				} else if (data.success == 1) {
 					$(this).next().children().first().text(parseInt($(this).next().children().first().text()) + 1);
 					$(this).toggleClass('marked');
+				} else if (data.success == 0) {
+					$('.loginpopup').modal('show');
 				}
 				console.log(data);
 			}
@@ -45,6 +47,8 @@ function createbuttons() {
 				} else if (data.success == 1) {
 					$(this).next().children().first().text(parseInt($(this).next().children().first().text()) + 1);
 					$(this).toggleClass('marked');
+				} else if (data.success == 0) {
+					$('.loginpopup').modal('show');
 				}
 				console.log(data.success);
 			}

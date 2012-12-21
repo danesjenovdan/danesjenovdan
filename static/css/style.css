@@ -37,7 +37,8 @@ body {
 	width: 105px;
 	height: 106px;
 	background-color: #1d7373;
-	padding-left: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 	padding-top: 4px;
 	cursor: pointer;
 }
@@ -45,7 +46,7 @@ body {
 	font-family: 'Dosis', sans-serif;
 	color: #363636;
 	font-size: 16px;
-	font-weight: 900;
+	font-weight: 600;
 }
 .navblock a:hover {
 	text-decoration: none;
@@ -753,7 +754,11 @@ input.addsuggestiontitle:focus {
 	display: none;
 }
 .submitloginpopup {
-	width: 100px;
-	height: 20px;
-	background-color: black;
+	background-image: url('/static/img/gumb_poslji.png');
+	width: 68px;
+	height: 31px;
+	cursor: pointer;
+}
+.submitloginpopup:hover {
+	background-image: url('/static/img/gumb_poslji_hover.png');
 }
