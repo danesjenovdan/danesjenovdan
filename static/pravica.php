@@ -33,8 +33,8 @@
 </div>
 <div class="container" id="predlogi">
 <div class="row sortrow">
-	<div class="span4 toggle"><img src="/static/img/toggle_datum_active.png" /></div>
-	<div class="span2 timestampwrap"></div>
+<!--	<div class="span4 toggle"><img src="/static/img/toggle_datum_active.png" /></div>
+	<div class="span2 timestampwrap"></div>-->
 </div>
 			<?php foreach ($this->predlogi as $key => $value) { ?>
 
@@ -67,7 +67,7 @@
 		<div class="suggestionrow">
 		</div>
 	</div>
-	<div class="m0ar"></div>
+<!--	<div class="m0ar"></div>-->
 	<?php }?>
 </div>
 <input type="hidden" value="<?php print $this->id; ?>" id="rightid"/>

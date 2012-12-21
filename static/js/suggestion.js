@@ -3,6 +3,10 @@ $(document).ready(function() {
 		$('.razvijaj').toggle('slow');
 		return false;
 	});
+	$('.medijiklik').click(function() {
+		$('.mediji').toggle('slow');
+		return false;
+	});
 	$.ajax({
 		type: 'get',
 		url: 'http://sect.io/ajax/isAuthorized.php',

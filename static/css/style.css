@@ -58,6 +58,8 @@ body {
 #predlogi {
 	background-color: white;
 	margin-bottom: 5em;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .suggestionrow {
 	font-family: 'Dosus', sans-serif;
@@ -710,5 +712,8 @@ input.addsuggestiontitle:focus {
 .nonexistent {	
 }
 .razvijaj {
+	display: none;
+}
+.mediji {
 	display: none;
 }
