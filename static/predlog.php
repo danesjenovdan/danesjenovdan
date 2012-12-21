@@ -173,35 +173,6 @@ function curPageURL() {
 	<hr class="predlogcrta" />
 	<div class="row">
 		<div class="span6">
-			<h1 class="documenttitle">Dokumenti</h1>
-			<div class="documentbox">
-				<div class="adddocument"></div>
-				
-			<?php foreach ($this->document as $key => $value) { ?>
-				<a href="/documents/<?php print $value->path; ?>" target="_blank" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print strtolower($value->type); ?>, <?php print $value->size; ?>)</span></a><br />
-			<?php } ?>	
-				<form class="adddocumentbox" id="adddocumentbox" action="/ajax/add_document.php" method="post"> 
-					<input type="text" name="documentname" id="documentname" placeholder="ime dokumenta" />
-<input type="hidden" name="right_id" value="<?php print $this->id_right; ?>" />
-<input type="hidden" name="proposal_id" value="<?php print $this->predlog->id; ?>" />
-
-					<label for="documentfile" id="uploadlabel"></label>
-					<input type="file" name="documentfile" id="documentfile" />
-					<input type="submit" id="submitdocument" value="" />
-					<div id="docresp"></div>
-				</form>
-			</div>
-		</div>
-		<div class="span6">
-			<h1 class="workgrouptitle">Delovna skupina</h1>
-			<div class="workgroupbox">
-				<p class="workgrouptext">Iniciativa mi veliko pomeni ...</p>
-				<div class="toggleworkgroup"></div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="span6">
 			<h1 class="documenttitle">Prednosti</h1>
 			<?php
 			foreach ($this->argplus as $key => $value) { ?>
@@ -262,6 +233,35 @@ function curPageURL() {
 					<div class="usersignedinargument">objavi kot <span class="signedinname"></span></div>
 				</div>
 				<div class="submitargumentagainst"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span6">
+			<h1 class="documenttitle">Dokumenti</h1>
+			<div class="documentbox">
+				<div class="adddocument"></div>
+				
+			<?php foreach ($this->document as $key => $value) { ?>
+				<a href="/documents/<?php print $value->path; ?>" target="_blank" class="documentlink"><?php print $value->title; ?> <span class="documenttype">(<?php print strtolower($value->type); ?>, <?php print $value->size; ?>)</span></a><br />
+			<?php } ?>	
+				<form class="adddocumentbox" id="adddocumentbox" action="/ajax/add_document.php" method="post"> 
+					<input type="text" name="documentname" id="documentname" placeholder="ime dokumenta" />
+<input type="hidden" name="right_id" value="<?php print $this->id_right; ?>" />
+<input type="hidden" name="proposal_id" value="<?php print $this->predlog->id; ?>" />
+
+					<label for="documentfile" id="uploadlabel"></label>
+					<input type="file" name="documentfile" id="documentfile" />
+					<input type="submit" id="submitdocument" value="" />
+					<div id="docresp"></div>
+				</form>
+			</div>
+		</div>
+		<div class="span6">
+			<h1 class="workgrouptitle">Delovna skupina</h1>
+			<div class="workgroupbox">
+				<p class="workgrouptext">Iniciativa mi veliko pomeni ...</p>
+				<div class="toggleworkgroup"></div>
 			</div>
 		</div>
 	</div>
