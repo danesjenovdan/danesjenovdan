@@ -126,9 +126,9 @@
 		<div class="span12 toprow">
 			<h1 class="title"><?php print $this->predlog->title; ?></h1>
 			<div class="temporarybox">
-				<div class="suggestionup  <?php print ($this->predlog->vote_plus>0) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
+				<div class="suggestionup  <?php print ($this->predlog->vuser_plus>0) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
 				<div class="votecount"><span><?php print $this->predlog->vote_plus; ?></span></div>
-				<div class="suggestiondown <?php print ($this->predlog->vote_minus>0) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
+				<div class="suggestiondown <?php print ($this->predlog->vuser_minus>0) ? "marked" : null; ?>" data-id="<?php print $this->predlog->id; ?>"></div>
 				<div class="votecount"><span><?php print $this->predlog->vote_minus; ?></span></div>
 			</div>
 		</div>
