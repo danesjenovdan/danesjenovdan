@@ -19,8 +19,12 @@ $user_id = (int)$_SESSION['uid'];
 if (!empty($_FILES)) {
 	$tempFile = $_FILES['documentfile']['tmp_name'];
 	$targetPath = '../documents/';
-	$targetFile =  $_FILES['documentfile']['name'];
+	$targetFile =  $targetPath.$_FILES['documentfile']['name'];
 
+	if($_FILES['documentfile']['size']> 4100000){
+		print('Datoteka je prevelika, max. 4MB');
+		die();
+	}
 
 	$fileParts  = pathinfo($_FILES['documentfile']['name']);
 
@@ -32,7 +36,7 @@ if (!empty($_FILES)) {
 			$right_id	= (int)$_POST['right_id'];
 			$proposal_id		= (string)$_POST['proposal_id'];
 			$documentname	= (string)$_POST['documentname'];
-			$file_name_file = str_replace($_SERVER['DOCUMENT_ROOT'],'',$targetFile);
+			$file_name_file = str_replace($targetPath,'',$targetFile);
 
 			$returnArr	= array ();
 
