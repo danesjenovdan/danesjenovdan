@@ -1,5 +1,130 @@
 <?php print ($this->header); $id_user = $this->id_user; ?>
 
+<?php if($this->id == 1) {?>
+	<title>Pravica do dobrega življenja in solidarne družbe</title>
+	<meta name="description" content="Vsakdo ima pravico do kvalitetnega zdravstva, šolstva, oskrbe, do bivališča, pravico do solidarne družbe, ki te podpira, ko padeš in spodbuja, ko rasteš, pravico do prostega časa, pravico do srečnega otroštva, kreativne mladosti, preskrbljene odraslosti in varne starosti. Vsakdo ima pravico do prihodnosti. Predolgo je bilo merilo uspešnosti države njen gospodarski razvoj in merilo posameznika njegov dohodek. Naše merilo je veselje do življenja.">
+	<meta property="og:title" content="Pravica do dobrega življenja in solidarne družbe" />
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobrega-zivljenja-in-solidarne-druzbe" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_1.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id == 2) {?>
+	<title>Pravica do skupnega</title>
+	<meta name="description" content="Naša skupna moč presega seštevek naših posameznih moči, zato je potrebno varovati skupno, z njim upravljati demokratično in v dobrobit vseh. Ne dovolimo privatizacije in uničevanja naravnih virov in javnih prostorov.">
+	<meta property="og:title" content="Pravica do skupnega"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-skupnega" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_2.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id == 4) {?>
+	<title>Pravica (do) narave</title>
+	<meta name="description" content="Narava je subjekt zaščite, interesi naravnega okolja so skupni interesi, živali imajo pravico do dostojanstva. Napredek, razvoj in gospodarska rast ne smejo biti izgovor za neodgovorno ravnanje z naravo.">
+	<meta property="og:title" content="Pravica (do) narave"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-narave" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_3.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id == 3) {?>
+	<title>Pravica do dobre politične oblasti</title>
+	<meta name="description" content="Politika ni boj za oblast, ampak je v službi skupnih interesov. Hočemo odprt politični prostor in umik političnih elit. Civilni sferi je treba omogočiti dostop do mehanizmov odločanja.">
+	<meta property="og:title" content="Pravica do dobre politične oblasti"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobre-politicne-oblasti" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_4.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id == 5) {?>
+	<title>Pravica do človeku prijazne ekonomije</title>
+	<meta name="description" content="Javni dolg je rezultat zasebnega delovanja, zato ga ne bo plačala javnost. Hočemo ustvariti okolje, v katerem bodo prosperirala podjetja, ki so prijazna do človeka in narave. Vsakdo ima pravico do dela in dostojnega življenja.">
+	<meta property="og:title" content="Pravica do človeku prijazne ekonomije"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-cloveku-prijazne-ekonomije" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_5.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id == 6) {?>
+	<title>Pravica do vključenosti</title>
+	<meta name="description" content="Zavračamo delitve na podlagi kakršnih koli osebnih okoliščin. Dovolj je politike izključevanja, ki naključnim družbenim skupinam jemlje dostojno življenje, jih potiska na družbene robove ter jim krade moč, ki jim pripada. Z ustavo zagotovljena pravica do enakosti ne sme biti samo deklarativna. Pravica do vključenosti in človekove pravice veljajo za vse. O tem ne razpravljamo.">
+	<meta property="og:title" content="Pravica do vključenosti"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-vkljucenosti" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_6.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+</head>
+<body>
+
+	<!-- facebook crap -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=301375193309601";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- end of facebook crap -->
+
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<a class="nonexistent" href="/"><div class="logo"></div></a>
+			</div>
+			<div class="span9">
+				<div class="navigation">
+					<div class="navblock 6">
+						<a href="/pravica-do-vkljucenosti">PRAVICA DO VKLJUČENOSTI</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 5">
+						<a href="/pravica-do-cloveku-prijazne-ekonomije">PRAVICA DO ČLOVEKU PRIJAZNE EKONOMIJE</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 4">
+						<a href="/pravica-do-narave">PRAVICA (DO) NARAVE</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 3">
+						<a href="/pravica-do-dobre-politicne-oblasti">PRAVICA DO DOBRE POLITIČNE OBLASTI</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 2">
+						<a href="/pravica-do-skupnega">PRAVICA DO SKUPNEGA</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 1">
+						<a href="/pravica-do-dobrega-zivljenja-in-solidarne-druzbe">PRAVICA DO DOBREGA ŽIVLJENJA IN SOLIDARNE DRUŽBE</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php if ($this->id == 6) {?>
 <div class="container predlogi">

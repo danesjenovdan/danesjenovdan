@@ -1,5 +1,119 @@
 <?php print ($this->header); $id_user = $this->id_user; ?>
 
+<?php if($this->id_right == 1) {?>
+	<title><?php print $this->predlog->title; ?></title>
+	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
+	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobrega-zivljenja-in-solidarne-druzbe/<?php print $this->predlog->id; ?>" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_2.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id_right == 2) {?>
+	<title><?php print $this->predlog->title; ?></title>
+	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
+	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-skupnega/<?php print $this->predlog->id; ?>" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_3.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id_right == 4) {?>
+	<title><?php print $this->predlog->title; ?></title>
+	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
+	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-narave/<?php print $this->predlog->id; ?>" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_4.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id_right == 3) {?>
+	<title><?php print $this->predlog->title; ?></title>
+	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
+	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobre-politicne-oblasti/<?php print $this->predlog->id; ?>" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_5.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+<?php if($this->id_right == 5) {?>
+	<title><?php print $this->predlog->title; ?></title>
+	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
+	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-cloveku-prijazne-ekonomije/<?php print $this->predlog->id; ?>" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_6.png" />
+	<meta property="og:site_name" content="Danes je nov dan.si" />
+	<meta property="fb:app_id" content="301375193309601" />
+<?php }?>
+
+</head>
+<body>
+
+	<!-- facebook crap -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=301375193309601";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- end of facebook crap -->
+
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<a class="nonexistent" href="/"><div class="logo"></div></a>
+			</div>
+			<div class="span9">
+				<div class="navigation">
+					<div class="navblock 6">
+						<a href="/pravica-do-vkljucenosti">PRAVICA DO VKLJUČENOSTI</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 5">
+						<a href="/pravica-do-cloveku-prijazne-ekonomije">PRAVICA DO ČLOVEKU PRIJAZNE EKONOMIJE</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 4">
+						<a href="/pravica-do-narave">PRAVICA (DO) NARAVE</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 3">
+						<a href="/pravica-do-dobre-politicne-oblasti">PRAVICA DO DOBRE POLITIČNE OBLASTI</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 2">
+						<a href="/pravica-do-skupnega">PRAVICA DO SKUPNEGA</a>
+					</div>
+					<div class="divider">
+					</div>
+					<div class="navblock 1">
+						<a href="/pravica-do-dobrega-zivljenja-in-solidarne-druzbe">PRAVICA DO DOBREGA ŽIVLJENJA IN SOLIDARNE DRUŽBE</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <div class="container">
 	<div class="row">
 		<div class="span3 offset9">
