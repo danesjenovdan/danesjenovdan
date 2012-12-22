@@ -25,16 +25,20 @@ $(document).ready(function() {
 		document.location = $(this).children().attr('href');
 	});
 	$('.m0ar').click(function() {
-		$('.podporniki').text(signatures);
+		$.getJSON('http://danesjenovdan.si/ajax/signatures.php', function(data){
+			$('.podporniki').text(data);
+		});
 		$(this).hide();
 		return false;
 	});
 	$('.naprej').click(function() {
 		$('.razvijaj').toggle('slow');
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		return false;
 	});
 	$('.medijiklik').click(function() {
 		$('.mediji').toggle('slow');
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 		return false;
 	});
 });

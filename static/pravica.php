@@ -158,10 +158,10 @@ function curPageURL() {
 	<div class="row">
 		<div class="span12">
 			<div class="row">
-				<div class="span6">
+				<div class="span8">
 					<h1 class="pravicatext"><?php print $this->pravica->title;?></h1>
 				</div>
-				<div class="span6">
+				<div class="span4">
 					<div class="pravicasocial">
 						<div class="fb-like" data-href="<?php print curPageURL(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 						<div class="g-plusone" data-href="<?php print curPageURL(); ?>" data-size="medium" data-annotation="buble" data-width="100"></div>
@@ -255,7 +255,7 @@ function curPageURL() {
 			<div class="googlesign"></div>
 		</div>
 		<div class="createaccount">
-			<p>ali si ustvari račun</p>
+			<p> </p>
 			<input type="text" class="accountname" placeholder="ime in priimek"/>
 			<input type="email" class="accountemail" placeholder="email"/>
 		</div>

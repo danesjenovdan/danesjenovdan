@@ -1,5 +1,5 @@
 function getmore() {
-	var url = 'http://sect.io/danesjenovdan/ajax/list_proposals.php?id=' + $('#rightid').val();
+	var url = 'http://danesjenovdan.si/ajax/list_proposals.php?id=' + $('#rightid').val();
 	$.getJSON(url, function(data) {
 		for (var i=0; i<data.length; i++) {
 			$('#predlogi').prepend('<div class="row predlog"><div class="span4"><p class="suggestiontitle">'+ data[i].title +'</p></div><div class="span1"><p class="timestamp">'+data[i].timestamp+'</p></div><div class="span4"><div class="votebox" data-id="'+data[i].id+'"><div class="votefor">glasujza '+data[i].vote_plus+'</div><div class="voteagainst">glasujproti '+data[i].vote_minus+'</div></div></div><div class="span3"><div class="ihaveanargument">imam argument</div></div></div>');
@@ -12,7 +12,7 @@ function createbuttons() {
 		$.ajax({
 			context: this,
 			type: 'post',
-			url: 'http://sect.io/ajax/vote_proposal.php',
+			url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': $(this).parent().data('id'),
@@ -35,7 +35,7 @@ function createbuttons() {
 		$.ajax({
 			context: this,
 			type: 'post',
-			url: 'http://sect.io/ajax/vote_proposal.php',
+			url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': $(this).parent().data('id'),
@@ -61,7 +61,7 @@ function createbuttons() {
 		console.log('begin');
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/add_proposal.php',
+			url: 'http://danesjenovdan.si/ajax/add_proposal.php',
 //			url: 'danejenovdan:8888/ajax/add_proposal.php',
 			dataType: 'json',
 			data: {
@@ -96,7 +96,7 @@ function createbuttons() {
 		document.location = $(this).children().attr('href');
 	});
 	$('.fbsignin').click(function() {
-		document.location = 'http://sect.io/login/facebook.php?ref=' + encodeURIComponent(document.location.href);
+		document.location = 'http://danesjenovdan.si/login/facebook.php?ref=' + encodeURIComponent(document.location.href);
 	});
  	
 
@@ -104,7 +104,7 @@ function createbuttons() {
 		$(".toggleworkgroupt").html("pošiljam...");
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/add_user_group.php',
+			url: 'http://danesjenovdan.si/ajax/add_user_group.php',
 			data: {
 				'right_id': $('#rightid').val(),
 				'proposal_id': $('#proposal_id').val()

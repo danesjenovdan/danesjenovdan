@@ -289,7 +289,7 @@ function curPageURL() {
 			<div class="googlesign"></div>
 		</div>
 		<div class="createaccount">
-			<p>ali si ustvari račun</p>
+			<p> </p>
 			<input type="text" class="accountname" placeholder="ime in priimek"/>
 			<input type="email" class="accountemail" placeholder="email"/>
 		</div>

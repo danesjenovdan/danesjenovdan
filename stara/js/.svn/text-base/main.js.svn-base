@@ -1,0 +1,17 @@
+/* Start Up */
+function StartUp(runnable)
+{
+	$(document).ready(runnable.run);
+}
+
+var Main =
+{
+	run: function ()
+	{
+		$('a.botext_trigger').bind ('click', function () {
+			$('.botext').fadeToggle ();
+			return false;
+		});
+	}
+}
+StartUp (Main);

@@ -222,6 +222,9 @@ body {
 	font-family: 'Dosis', sans-serif;
 	font-size: 1.2em;
 }
+.documentlink:hover {
+	color: #1d7373;
+}
 .documenttype {
 	color: #a1a1a1;
 }
@@ -360,7 +363,7 @@ body {
 }
 
 .suggest {
-	background-image: url('../img/gumb_dodaj-predlog.png');
+	background-image: url('/static/img/gumb_dodaj-predlog.png');
 	width: 211px;
 	height: 63px;
 	float: right;
@@ -368,17 +371,7 @@ body {
 	cursor: pointer;
 }
 .suggest:hover {
-	background-image: url('../img/gumb_dodaj-predlog_hover.png');
-}
-.title {
-	font-size: 1.2em;
-	padding: 10px;
-	padding-left: 20px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	width: 50%;
-	float: left;
-	line-height: 1.2em;
+	background-image: url('/static/img/gumb_dodaj-predlog_hover.png');
 }
 .author {
 	padding-left: 20px;
@@ -688,7 +681,8 @@ body {
 	background-image: url('../img/gumb_dodaj-predlog_hover.png');
 }
 .title {
-	font-size: 1.2em;
+	font-size: 18px;
+	font-family: 'Archivo Narrow', sans-serif;
 	padding: 10px;
 	padding-left: 20px;
 	margin-bottom: 0px;
@@ -697,6 +691,7 @@ body {
 	float: left;
 	line-height: 1.2em;
 }
+
 .author {
 	padding-left: 20px;
 	color: #a1a1a1;
@@ -708,6 +703,7 @@ body {
 }
 .suggestiontext {
 	padding-left: 20px;
+	padding-right: 20px;
 	padding-top: 10px;
 	color: #363636;
 	font-family: 'Dosis', sans-serif;
@@ -787,7 +783,6 @@ body {
 
 
 /* FOOTER */
->>>>>>> style
 .footy {
 	background-image: url('/static/img/footer_pattern.png');
 	overflow: hidden;

@@ -3,15 +3,17 @@ var a;
 $(document).ready(function() {
 	$('.naprej').click(function() {
 		$('.razvijaj').toggle('slow');
+		$('html, body').animate({ scrollTop: $(document).height() }, 'slow');
 		return false;
 	});
 	$('.medijiklik').click(function() {
 		$('.mediji').toggle('slow');
+		$('html, body').animate({ scrollTop: $(document).height() }, 'slow');
 		return false;
 	});
 	$.ajax({
 		type: 'get',
-		url: 'http://sect.io/ajax/isAuthorized.php',
+		url: 'http://danesjenovdan.si/ajax/isAuthorized.php',
 		dataType: 'json',
 		success: function(data) {
 			if (data.uid == -1) {
@@ -50,7 +52,7 @@ $(document).ready(function() {
 		console.log('email login');
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/login/email.php',
+			url: 'http://danesjenovdan.si/login/email.php',
 			dataType: 'json',
 			data: {
 				'email': $('.accountemail').val(), 
@@ -75,7 +77,7 @@ $(document).ready(function() {
 		$.ajax({
 			context: this,
 			type: 'post',
-			url: 'http://sect.io/ajax/vote_proposal.php',
+			url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': parseInt($('.suggestionup').data('id')),
@@ -98,7 +100,7 @@ $(document).ready(function() {
 	$('.suggestiondown').click(function() {
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/vote_proposal.php',
+			url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': parseInt($(this).data('id')),
@@ -125,7 +127,7 @@ $(document).ready(function() {
 		console.log('begin');
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/vote_argument.php',
+			url: 'http://danesjenovdan.si/ajax/vote_argument.php',
 			dataType: 'json',
 			data: {
 				'argument_id': parseInt($(this).data('id')),
@@ -148,7 +150,7 @@ $(document).ready(function() {
 	$('.argumentdown').click(function() {
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/vote_argument.php',
+			url: 'http://danesjenovdan.si/ajax/vote_argument.php',
 			dataType: 'json',
 			data: {
 				'argument_id': parseInt($(this).data('id')),
@@ -172,13 +174,13 @@ $(document).ready(function() {
 		//TODO function for facebook login
 	});
 	$('.googlesign').click(function() {
-		window.location.href = "http://sect.io/login/google.php"
+		window.location.href = "http://danesjenovdan.si/login/google.php"
 	});
 	$('.submitargumentfor').click(function() {
 		console.log('begin');
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/add_argument.php',
+			url: 'http://danesjenovdan.si/ajax/add_argument.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': $('.suggestionup').data('id'),
@@ -198,7 +200,7 @@ $(document).ready(function() {
 		console.log('begin');
 		$.ajax({
 			type: 'post',
-			url: 'http://sect.io/ajax/add_argument.php',
+			url: 'http://danesjenovdan.si/ajax/add_argument.php',
 			dataType: 'json',
 			data: {
 				'proposal_id': $('.suggestionup').data('id'),
@@ -217,7 +219,7 @@ $(document).ready(function() {
 	$('.adddocument').click(function() {
 		$.ajax({
 			type: 'get',
-			url: 'http://sect.io/ajax/isAuthorized.php',
+			url: 'http://danesjenovdan.si/ajax/isAuthorized.php',
 			dataType: 'json',
 			success: function(data) {
 				if (data.uid == -1) {
