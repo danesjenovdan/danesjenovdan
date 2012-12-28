@@ -6,14 +6,14 @@ header('Access-Control-Allow-Origin: *');
 
 include_once ("../config/config.php");
 
-if (empty ($_SESSION['uid'])) {
-	$returnArr = array (
-		'success'		=> 0,
-		'description'	=> 'Uporabnik ni prijavljen.'
-	);
-	echo json_encode ($returnArr);
-	exit();
-}
+//if (empty ($_SESSION['uid'])) {
+//	$returnArr = array (
+//		'success'		=> 0,
+//		'description'	=> 'Uporabnik ni prijavljen.'
+//	);
+//	echo json_encode ($returnArr);
+//	exit();
+//}
 $user_id = (int)$_SESSION['uid'];
 
 $right_id	= (int)$_POST['right_id'];
@@ -21,7 +21,7 @@ $title		= (string)$_POST['title'];
 $content	= (string)$_POST['content'];
 
 $returnArr	= array ();
-
+$success = 0;
 if (empty ($returnArr) && empty ($title)) {
 	$returnArr = array (
 		'success'		=> 0,
@@ -62,6 +62,7 @@ if (empty ($returnArr)) {
 			'success'		=> 1,
 			'description'	=> 'Hvala, vaš predlog je uspešno dodan in čaka na potrditev objave.'
 		);
+		$success = 1;
 	}
 
 }
@@ -69,4 +70,4 @@ if (empty ($returnArr)) {
 /* close connection */
 $db->close();
 
-echo json_encode ($returnArr);
+echo $success;

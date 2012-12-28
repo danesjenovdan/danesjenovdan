@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
 require_once ('../config/config.php');
 require_once ("../lib/user.php");
 
-if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['surname'])) {
+if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['fbid'])) {
 	if
 		($user = User::getUserByArray
 			(array 
@@ -22,14 +22,13 @@ if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['surname']))
 	        "email" => mysqli_real_escape_string($db, $_POST['email']),
 	        "name" => mysqli_real_escape_string($db, $_POST['name']),
 	        "surname" => mysqli_real_escape_string($db, $_POST['surname']),
+	        "fbid" => mysqli_real_escape_string($db, $_POST['fbid'])
 	    ));
 	    User::login($userID);
 	    echo User::jsonEncodeUser();
 	}
     
     
-} else {
-	echo "motherfucker";
 }
 
 ?>

@@ -6,25 +6,27 @@ header('Access-Control-Allow-Origin: *');
 
 include_once ("../config/config.php");
 
-if (empty ($_SESSION['uid'])) {
-	$returnArr = array (
-		'success'		=> 0,
-		'description'	=> 'Uporabnik ni prijavljen.'
-	);
-	echo json_encode ($returnArr);
-	exit();
-}
-$user_id = (int)mysqli_real_escape_string($db, $_SESSION['uid']);
+//if (empty ($_SESSION['uid'])) {
+//	$returnArr = array (
+//		'success'		=> 0,
+//		'description'	=> 'Uporabnik ni prijavljen.'
+//	);
+//	echo json_encode ($returnArr);
+//	exit();
+//}
+$user_id = (int)mysqli_real_escape_string($db, $_POST['uid']);
 
 $proposal_id    = (int)mysqli_real_escape_string($db, $_POST['proposal_id']);
 $type       = (int)mysqli_real_escape_string($db, $_POST['type']);
 
 $returnArr	= array ();
 
+$success = 0;
+
 if (empty ($returnArr) && empty ($proposal_id)) {
 	$returnArr = array (
 		'success'		=> 0,
-		'description'	=> 'Prišlo je do napake.'
+		'description'	=> 'Prišlo je do napake. 1'
 	);
 }
 
@@ -35,12 +37,12 @@ if (empty ($returnArr) && empty ($type)) {
 	);
 }
 
-if (empty ($returnArr) && (empty ($user_id) || $user_id <= 0)) {
-    $returnArr = array (
-        'success'       => 0,
-        'description'   => 'Uporabnik ni prijavljen.'
-    );
-}
+//if (empty ($returnArr) && (empty ($user_id) || $user_id <= 0)) {
+//    $returnArr = array (
+//        'success'       => 0,
+//        'description'   => 'Uporabnik ni prijavljen.'
+//    );
+//}
 
 if (empty ($returnArr)) {
 
@@ -65,6 +67,7 @@ if (empty ($returnArr)) {
             'success'       => -1,
             'description'   => 'Uporabnik je že glasoval.'
         );
+        $success = -1;
     }
     
     if (empty($returnArr)) {
@@ -86,6 +89,7 @@ if (empty ($returnArr)) {
     			'success'		=> 1,
     			'description'	=> 'OK'
     		);
+    		$success = 1;
     	}
     }
 
@@ -93,4 +97,4 @@ if (empty ($returnArr)) {
 	$db->close();
 }
 
-echo json_encode ($returnArr);
+echo $success;

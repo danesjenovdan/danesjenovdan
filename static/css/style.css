@@ -965,7 +965,7 @@ input.accountemail:focus {
 	width: 29px;
 	height: 29px;
 	cursor: pointer;
-	display: inline-block;
+	display: none;
 }
 .googlesign:hover {
 	background-image: url('/static/img/gumb_g+_hover.png');

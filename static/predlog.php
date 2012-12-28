@@ -21,7 +21,7 @@ function curPageURL() {
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobrega-zivljenja-in-solidarne-druzbe/<?php print $this->predlog->id; ?>" />
-	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_2.png" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_1.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
 	<meta property="fb:app_id" content="301375193309601" />
 <?php }?>
@@ -33,7 +33,7 @@ function curPageURL() {
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-skupnega/<?php print $this->predlog->id; ?>" />
-	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_3.png" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_2.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
 	<meta property="fb:app_id" content="301375193309601" />
 <?php }?>
@@ -57,7 +57,7 @@ function curPageURL() {
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobre-politicne-oblasti/<?php print $this->predlog->id; ?>" />
-	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_5.png" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_3.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
 	<meta property="fb:app_id" content="301375193309601" />
 <?php }?>
@@ -69,7 +69,7 @@ function curPageURL() {
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-cloveku-prijazne-ekonomije/<?php print $this->predlog->id; ?>" />
-	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_6.png" />
+	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_5.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
 	<meta property="fb:app_id" content="301375193309601" />
 <?php }?>
@@ -87,6 +87,10 @@ function curPageURL() {
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- end of facebook crap -->
+
+	<!-- dirty dirty banner hack -->
+	<div id="banner" style="width: 100%; background: #1d7373; color: #262626; position: fixed; bottom: 0px; display: block; text-align: center; color: white; line-height: 30px">Zdravo! Ker bi bilo narobe, da bi kdo drug v vašem imenu preoblikoval predloge, <a style="color: #ffffff"; href="http://www.danesjenovdan.si/stara" target="_blank"><strong>tukaj</strong></a> ostaja posnetek stare verzije, vi pa ste vabljeni, da svoje predloge prilagodite novemu formatu.</a></div>
+	<!-- end of dirty dirty banner hack -->
 
 	<div class="container">
 		<div class="row">
