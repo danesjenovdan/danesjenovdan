@@ -33,7 +33,7 @@ function checkUserAuth() {
 }
 
 // Additional JS functions here
-window.fbAsyncInit = function() {
+function dotheloginbiatch() {
 //	FB.init({
 //		appId      : '301375193309601', // App ID
 //		channelUrl : 'http://www.danesjenovdan.si/channel.html', // Channel File

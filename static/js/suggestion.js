@@ -258,4 +258,5 @@ $(document).ready(function() {
 		return false;
 	});
 	createbuttons();
+	dotheloginbiatch();
 });
