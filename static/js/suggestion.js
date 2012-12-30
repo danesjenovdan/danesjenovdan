@@ -18,7 +18,7 @@ $(document).ready(function() {
 		if ($('.accountname').val().split(' ')[1]) {
 			$.ajax({
 				type: 'post',
-				url: 'http://www.danesjenovdan.si/login/email.php',
+				url: 'http://danesjenovdan.si/login/email.php',
 				data: {
 					email: $('.accountemail').val(), 
 					name: $('.accountname').val().split(' ')[0], 
@@ -51,14 +51,14 @@ $(document).ready(function() {
 	$('.suggestionup').click(function() {
 		console.log('begin');
 		bla = $(this);
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/vote_proposal.php',
+					url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 					data: {
 						'proposal_id': bla.data('id'),
 						'type': 1,
@@ -83,14 +83,14 @@ $(document).ready(function() {
 	});
 	$('.suggestiondown').click(function() {
 		bla = $(this);
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/vote_proposal.php',
+					url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 					data: {
 						'proposal_id': bla.data('id'),
 						'type': -1,
@@ -118,14 +118,14 @@ $(document).ready(function() {
 	$('.argumentup').click(function() {
 		console.log('begin');
 		bla = $(this);
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/vote_argument.php',
+					url: 'http://danesjenovdan.si/ajax/vote_argument.php',
 					data: {
 						'argument_id': bla.data('id'),
 						'type': 1,
@@ -149,14 +149,14 @@ $(document).ready(function() {
 	});
 	$('.argumentdown').click(function() {
 		bla = $(this);
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/vote_argument.php',
+					url: 'http://danesjenovdan.si/ajax/vote_argument.php',
 					data: {
 						'argument_id': bla.data('id'),
 						'type': -1,
@@ -180,14 +180,14 @@ $(document).ready(function() {
 	});
 	$('.submitargumentfor').click(function() {
 		console.log('begin');
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
-			console.log(response);
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+			console.log(response.uid);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/add_argument.php',
+					url: 'http://danesjenovdan.si/ajax/add_argument.php',
 					data: {
 						'proposal_id': $('.suggestionup').data('id'),
 						'type': 1,
@@ -197,6 +197,7 @@ $(document).ready(function() {
 					success: function(data) {
 						if (data == 0) {
 							alert('Nekaj je šlo narobe. :(');
+							$('#argumentinputfor').val('');
 						} else if (data == 1) {
 							alert('Argument čaka na potrditev');
 						}
@@ -207,21 +208,22 @@ $(document).ready(function() {
 				$('.loginpopup').modal('show');
 			}
 		});
+		console.log('end');
 	});
 	$('.submitargumentagainst').click(function() {
 		console.log('begin');
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/add_argument.php',
+					url: 'http://danesjenovdan.si/ajax/add_argument.php',
 					data: {
 						'proposal_id': $('.suggestionup').data('id'),
 						'type': -1,
-						'content': $('#argumentinputfor').val(),
+						'content': $('#argumentinputagainst').val(),
 						'uid': response.uid
 					},
 					success: function(data) {
@@ -229,6 +231,7 @@ $(document).ready(function() {
 							alert('Nekaj je šlo narobe. :(');
 						} else if (data == 1) {
 							alert('Argument čaka na potrditev');
+							$('#argumentinputagainst').val('');
 						}
 						console.log(data);
 					}
@@ -258,5 +261,5 @@ $(document).ready(function() {
 		return false;
 	});
 	createbuttons();
-	dotheloginbiatch();
+	FBinitmadafaka();
 });

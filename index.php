@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 include('config/config.php');
 include('lib/class.template.php');
 

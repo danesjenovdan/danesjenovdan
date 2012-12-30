@@ -1,5 +1,5 @@
 function getuid() {
-	$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {a = response;});
+	$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {a = response;});
 }
 
 // FB login function
@@ -7,7 +7,7 @@ function login() {
     FB.login(function(response) {
         if (response.authResponse) {
             // connected
-            document.location.reload();
+            window.location.reload(true);
         } else {
             // cancelled
         }
@@ -23,7 +23,7 @@ function loginUser() {
 }
 
 function checkUserAuth() {
-	$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+	$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 		if (response.uid != -1) {
 			// user logged in
 		} else {
@@ -33,16 +33,16 @@ function checkUserAuth() {
 }
 
 // Additional JS functions here
-function dotheloginbiatch() {
-//	FB.init({
-//		appId      : '301375193309601', // App ID
-//		channelUrl : 'http://www.danesjenovdan.si/channel.html', // Channel File
-//		status     : true, // check login status
-//		cookie     : true, // enable cookies to allow the server to access the session
-//		xfbml      : true  // parse XFBML
-//    });
+window.fbAsyncInit = function() {
+	FB.init({
+		appId      : '301375193309601', // App ID
+		channelUrl : 'http://danesjenovdan.si/channel.html', // Channel File
+		status     : true, // check login status
+		cookie     : true, // enable cookies to allow the server to access the session
+		xfbml      : true  // parse XFBML
+    });
     
-    $.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(data) {
+    $.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(data) {
     	console.log('first auth check:');
     	console.log(data.uid);
 		if (data.uid != -1) { // FALSE
@@ -70,13 +70,15 @@ function dotheloginbiatch() {
 					// we know the user isn't logged in, so we log him/her in
 					// first let's get the info from facebook and then pass it on to our internal login
 					FB.api('/me', function(FBinfo) {
+						console.log(FBinfo);
 						$.ajax({
 							type: 'post',
-							url: 'http://www.danesjenovdan.si/login/facebook2.php', 
+							url: 'http://danesjenovdan.si/login/facebook2.php', 
 							data: {name: FBinfo.first_name, surname: FBinfo.last_name, email: FBinfo.email, fbid: FBinfo.id},
 							success: function(response){
 								// we know the user is logged in so refresh the page TODO
-								window.location.reload();
+								console.log(response);
+								
 							}
 						});
 					});
@@ -126,17 +128,104 @@ function dotheloginbiatch() {
 	console.log('FBinit completed');
 };
 
+function FBinitmadafaka() {
+    $.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(data) {
+    	console.log('first auth check:');
+    	console.log(data.uid);
+		if (data.uid != -1) { // FALSE
+			// user logged in
+			
+			// show bar under text input
+			$('.usersignedin').css('display', 'block');
+			// display name
+			$('.signedinname').text(data.name);
+			// hide add document button
+			$('.adddocument').css('display', 'none');
+			// show document form
+			$('form.adddocumentbox').css('display', 'block');
+		} else {
+			// user not logged in
+			
+			// try to log user in with facebook
+			console.log('about to check for facebook login status');
+			
+			FB.getLoginStatus(function(response) {
+				if (response.status === 'connected') {
+					// connected
+					console.log('user is logged into facebook and authorised');
+					
+					// we know the user isn't logged in, so we log him/her in
+					// first let's get the info from facebook and then pass it on to our internal login
+					FB.api('/me', function(FBinfo) {
+						$.ajax({
+							type: 'post',
+							url: 'http://danesjenovdan.si/login/facebook2.php', 
+							data: {name: FBinfo.first_name, surname: FBinfo.last_name, email: FBinfo.email, fbid: FBinfo.id},
+							success: function(response){
+								// we know the user is logged in so refresh the page TODO
+								console.log(response);
+								window.location.reload(true);
+							}
+						});
+					});
+				} else {
+					// user not logged in to facebook or hasn't given permission -> show them BATONS
+					console.log('user not logged in');
+					
+					// show social connect
+					$('.socialconnect').css('display', 'inline-block');
+					$('.createaccount').css('display', 'inline-block');
+					// show add document
+					$('.adddocument').css('display', 'block');
+					// hide document form
+					$('form.adddocumentbox').css('display', 'none');
+					// set up modal behavior for input
+					$('#argumentinputagainst').focus(function() {
+						$('.loginpopup').modal('show');
+						a = 1;
+					});
+					$('#argumentinputfor').focus(function() {
+						$('.loginpopup').modal('show');
+						a = 1;
+					});
+					$('.addsuggestioncontent').focus(function() {
+						$('.suggestionpopup').modal('hide');
+						$('.loginpopup').modal('show');
+						a = 0;
+					});
+					$('.addsuggestiontitle').focus(function() {
+						$('.suggestionpopup').modal('hide');
+						$('.loginpopup').modal('show');
+						a = 0;
+					});
+					
+					
+				}
+			});
+			
+		}
+		console.log('end');
+	});
+
+	// Additional init code here
+	
+	// create buttons
+	
+	console.log('FBinit completed');
+
+}
+
 function createbuttons() {
 	$('.votefor').click(function() {
 		bla = $(this);
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/vote_proposal.php',
+					url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 					data: {
 						'proposal_id': bla.parent().data('id'),
 						'type': 1,
@@ -160,14 +249,14 @@ function createbuttons() {
 	});
 	$('.voteagainst').click(function() {
 		bla = $(this);
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/vote_proposal.php',
+					url: 'http://danesjenovdan.si/ajax/vote_proposal.php',
 					data: {
 						'proposal_id': bla.parent().data('id'),
 						'type': -1,
@@ -193,14 +282,14 @@ function createbuttons() {
 	});
 	$('.postsuggestion').click(function() {
 		console.log('begin');
-		$.getJSON('http://www.danesjenovdan.si/ajax/isAuthorized.php', function(response) {
+		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
 			console.log(response);
 			if (response.uid != -1) {
 				console.log(response.uid);
 				$.ajax({
 					context: this,
 					type: 'post',
-					url: 'http://www.danesjenovdan.si/ajax/add_proposal.php',
+					url: 'http://danesjenovdan.si/ajax/add_proposal.php',
 					data: {
 						'right_id': $('#rightid').val(),
 						'title': $('.addsuggestiontitle').val(),
@@ -239,7 +328,7 @@ function createbuttons() {
 		login();
 	});
  	$('.googlesign').click(function() {
- 		url = 'http://www.danesjenovdan.si/login/google.php';
+ 		url = 'http://danesjenovdan.si/login/google.php';
  		window.location.href = url;
  	});
 

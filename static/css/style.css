@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
 	background-image: url('../img/bck_pattern.png');
 }
@@ -1085,4 +1086,1126 @@ input.addsuggestiontitle:focus {
 .pravicasocial {
 	float: right;
 	padding-top: 22px;
+=======
+body {
+	background-image: url('../img/bck_pattern.png');
+}
+.zigatezi {
+	font-family: 'Archivo Narrow', sans-serif;
+	padding: 20px;
+	margin-bottom: 0px;
+}
+.predlogi {
+	margin-top: 30px;
+	background-color: white;
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+.logo {
+	background-image: url('/static/img/logo.png');
+	width: 218px;
+	height: 111px;
+	display: inline-block;
+	float: left;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+.pravicatext {
+	font-size: 20px;
+	font-family: 'Dosis', sans-serif;
+	line-height: 42px;
+	color: #363636;
+	margin-left: 20px;
+}
+.navigation div {
+	float: right;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+.navblock {
+	width: 105px;
+	height: 106px;
+	background-color: #1d7373;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 4px;
+	cursor: pointer;
+}
+.navblock a {
+	font-family: 'Dosis', sans-serif;
+	color: #363636;
+	font-size: 16px;
+	font-weight: 600;
+}
+.navblock a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+.navblock.active a {
+	color: #ffffff;
+}
+.divider {
+	width: 1px;
+	height: 110px;
+	background-color: #196666;
+}
+.votebox div {
+	float: left;
+}
+#predlogi {
+	background-color: white;
+	margin-bottom: 5em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.suggestionrow {
+	font-family: 'Dosus', sans-serif;
+	border-top: 1px solid #e5e5e5;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+}
+.suggestiontitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	padding-left: 1em;
+}
+.suggestiontitle a {
+	color: #363636;
+}
+.suggestiontitle a:hover {
+	text-decoration: none;
+}
+.suggestionsocial {
+	padding-left: 20px;
+	position: relative;
+	top: 4px;
+}
+.timestampwrap {
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	text-align: center;
+}
+	.icsort a{color:#A1A1A1;}
+	.icsort a.active{color:#363636;}
+.timestamp {
+	font-family: 'Dosis', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #a1a1a1;
+}
+.votefor {
+	margin-top: 3px;
+	display: inline-block;
+	background-image: url('/static/img/gumb_za.png');
+	width: 70px;
+	height: 33px;
+	cursor: pointer;
+}
+.votefor:hover {
+	background-image: url('/static/img/gumb_za_hover.png');
+}
+.votefor.marked {
+	background-image: url('/static/img/gumb_za_hover.png');
+}
+.voteagainst {
+	margin-top: 3px;
+	display: inline-block;
+	background-image: url('/static/img/gumb_proti.png');
+	width: 94px;
+	height: 33px;
+	cursor: pointer;
+}
+.voteagainst:hover {
+	background-image: url('/static/img/gumb_proti_hover.png');
+}
+.voteagainst.marked {
+	background-image: url('/static/img/gumb_proti_hover.png');
+}
+.argumentvotesplus {
+	background-image: url('/static/img/counter_back.png');
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 20px;
+	margin-top: 6px;
+	margin-left: 5px;
+	font-size: 10px;
+	color: #a1a1a1;
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+}
+.argumentvotesplus span {
+	padding-right: 2px;
+}
+.argumentvotesminus {
+	background-image: url('/static/img/counter_back_right.png');
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 20px;
+	margin-top: 6px;
+	margin-right: 5px;
+	font-size: 10px;
+	color: #a1a1a1;
+	display: inline-block;
+	text-align: right;
+/*	padding-right: 10px;*/
+	float: right;
+}
+.argumentvotesminus span {
+	padding-right: 15px;
+}
+.votecount {
+	background-image: url('/static/img/counter_back.png');
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 10px;
+	color: #a1a1a1;
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+}
+.votecount span {
+	padding-right: 2px;
+<<<<<<< HEAD
+}
+.ihaveanargument {
+	background-image: url('/static/img/gumb_imam-argument.png');
+	width: 128px;
+	height: 32px;
+	margin-top: 4px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+.ihaveanargument:hover {
+	background-image: url('/static/img/gumb_imam-argument_hover.png');
+}
+.m0ar {
+	background-image: url('/static/img/gumb_vec.png');
+	width: 69px;
+	height: 36px;
+	margin: auto;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+.m0ar:hover {
+	background-image: url('/static/img/gumb_vec_hover.png');
+}
+
+
+
+
+
+
+/* SUGGESTION PAGE */
+.blokic {
+	background-color: white;
+	padding-bottom: 2em;
+	margin-bottom: 4em;
+}
+.toprow {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	border-image: url('/static/img/crtica.png') 20 3 repeat stretch;
+	border-left: 0;
+	border-right: 0;
+}
+.predlogcrta {
+	color: #ccc;
+	height: 1px;
+	background-color: #ccc;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.documenttitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	margin-left: 1.8em;
+}
+.documentbox {
+	background-image: url('/static/img/bck_pattern.png');
+	margin-left: 20px;
+	padding: 1em;
+	overflow: hidden;
+}
+.documentlink {
+	color: #1d7373;
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.2em;
+}
+.documentlink:hover {
+	color: #1d7373;
+}
+.documenttype {
+	color: #a1a1a1;
+}
+#documentname {
+	border-radius: 0px;
+	height: 20px;
+	border: 2px solid #c5c5c5;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 98%;	
+	margin-top: 2em;
+}
+#documentname:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+#documentfile {
+	opacity: 0;
+	float: left;
+}
+#uploadlabel {
+	background-image: url('/static/img/gumb_izberi-datoteko.png');
+	width: 103px;
+	height: 25px;
+	float: left;
+}
+#submitdocument {
+	background-image: url('/static/img/gumb_objavi.png');
+	width: 69px;
+	height: 32px;
+	border: 0px;
+	float: right;
+	margin-bottom: 1em;
+}
+.submitsuggestion {
+	background-image: url('/static/img/gumb_objavi.png');
+	width: 69px;
+	height: 32px;
+	border: 0px;
+	float: right;
+	margin-bottom: 1em;
+}
+
+.toggle {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+.workgrouptext {
+	float: left;
+	font-family: 'Dosis', sans-serif;
+}
+.toggleworkgroup {
+	background-image: url('/static/img/gumb_pridruzi-se.png');
+	width: 101px;
+	height: 32px;
+	float: right;
+	cursor: pointer;
+}
+.toggleworkgroup:hover,
+.toggleworkgroup.active {
+	background-image: url('/static/img/gumb_pridruzi-se_hover.png');
+}
+.toggleworkgroup.active{
+	cursor: text;
+}
+.workgrouptitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	margin-left: 1.2em;
+}
+.workgroupbox {
+	background-image: url('/static/img/bck_pattern.png');
+	padding: 1em;
+	margin-right: 20px;
+	overflow: hidden;
+}
+
+.argumentboxfor {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-left: 20px;
+}
+.argumentboxagainst {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-right: 20px;
+}
+.addargumentfor {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-left: 20px;
+	padding-bottom: 1em;
+}
+.addargumentagainst {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-right: 20px;
+	padding-bottom: 1em;
+}
+
+.suggestionvotefor {
+	display: inline-block;
+}
+.suggestionvoteagainst {
+	display: inline-block;
+}
+.suggestionup {
+	display: inline-block;
+	background-image: url('/static/img/gumb_za.png');
+	width: 70px;
+	height: 33px;
+	cursor: pointer;
+}
+.suggestionup:hover {
+	background-image: url('/static/img/gumb_za.png');
+}
+.suggestionup.marked {
+	background-image: url('/static/img/gumb_za_hover.png');	
+}
+.suggestiondown {
+	display: inline-block;
+	background-image: url('/static/img/gumb_proti.png');
+	width: 94px;
+	height: 32px;
+	cursor: pointer;
+}
+.suggestiondown:hover {
+		background-image: url('/static/img/gumb_proti_hover.png');
+}
+.suggestiondown.marked {
+		background-image: url('/static/img/gumb_proti_hover.png');
+}
+
+.suggest {
+	background-image: url('/static/img/gumb_dodaj-predlog.png');
+	width: 211px;
+	height: 63px;
+	float: right;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+.suggest:hover {
+	background-image: url('/static/img/gumb_dodaj-predlog_hover.png');
+}
+.author {
+	padding-left: 20px;
+	color: #a1a1a1;
+	font-family: 'Dosis', sans-serif;
+}
+.suggestiontimestamp {
+	color: #a1a1a1;
+	font-family: 'Dosis', sans-serif;
+}
+.suggestiontext {
+	padding-left: 20px;
+	padding-top: 10px;
+	color: #363636;
+	font-family: 'Dosis', sans-serif;
+}
+.temporarybox {
+	float: right;
+}
+.temporarybox .suggestionup {
+	margin-top: 5px;
+}
+.temporarybox .votecount {
+	margin: 0px;
+	position: relative;
+	top: -10px;
+}
+
+.adddocument {
+	background-image: url('/static/img/gumb_dodaj-dokument.png');
+	width: 145px;
+	height: 32px;
+	float: right;
+	cursor: pointer;
+}
+.adddocument:hover {
+	background-image: url('/static/img/gumb_dodaj-dokument_hover.png');
+}
+#adddocumentbox {
+	display: none;
+}
+.authorship {
+	font-family: 'Dosis', sans-serif;
+	padding-left: 1.2em;
+	padding-top: 1em;
+}
+.argumenttext {
+	font-family: 'Dosis', sans-serif;
+	padding-left: 1em;
+	font-size: 1.2em;
+}
+.argumentup {
+	background-image: url('/static/img/gumb_arg_za.png');
+	width: 32px;
+	height: 33px;
+	float: left;
+	margin-left: 1.2em;
+	cursor: pointer;
+}
+.argumentup:hover {
+	background-image: url('/static/img/gumb_arg_za_hover.png');
+}
+.argumentup.marked {
+	background-image: url('/static/img/gumb_arg_za_hover.png');
+}
+.argumentdown {
+	background-image: url('/static/img/gumb_arg_proti.png');
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-right: 1.2em;
+	cursor: pointer;
+}
+.argumentdown:hover {
+	background-image: url('/static/img/gumb_arg_proti_hover.png');
+}
+.argumentdown.marked {
+	background-image: url('/static/img/gumb_arg_proti_hover.png');
+}
+.argumentcrta {
+	color: #363636;
+	height: 1px;
+	background-color: #363636;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	border: 0px;
+	margin-top: 64px;
+}
+
+
+/* FOOTER */
+=======
+}
+.ihaveanargument {
+	background-image: url('/static/img/gumb_imam-argument.png');
+	width: 128px;
+	height: 32px;
+	margin-top: 4px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+.ihaveanargument:hover {
+	background-image: url('/static/img/gumb_imam-argument_hover.png');
+}
+.m0ar {
+	background-image: url('/static/img/gumb_vec.png');
+	width: 69px;
+	height: 36px;
+	margin: auto;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+.m0ar:hover {
+	background-image: url('/static/img/gumb_vec_hover.png');
+}
+
+
+
+
+
+
+/* SUGGESTION PAGE */
+.blokic {
+	background-color: white;
+	padding-bottom: 2em;
+	margin-bottom: 4em;
+}
+.toprow {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	border-image: url('/static/img/crtica.png') 20 3 repeat stretch;
+	border-left: 0;
+	border-right: 0;
+}
+.predlogcrta {
+	color: #363636;
+	height: 2px;
+	background-color: #363636;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.documenttitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	margin-left: 1.8em;
+}
+.documentbox {
+	background-image: url('/static/img/bck_pattern.png');
+	margin-left: 20px;
+	padding: 1em;
+	overflow: hidden;
+}
+.documentlink {
+	color: #1d7373;
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.2em;
+}
+.documenttype {
+	color: #a1a1a1;
+}
+#documentname {
+	border-radius: 0px;
+	height: 20px;
+	border: 2px solid #c5c5c5;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 98%;	
+	margin-top: 2em;
+}
+#documentname:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+#documentfile {
+	opacity: 0;
+	float: left;
+}
+#uploadlabel {
+	background-image: url('/static/img/gumb_izberi-datoteko.png');
+	width: 103px;
+	height: 25px;
+	float: left;
+}
+#submitdocument {
+	background-image: url('/static/img/gumb_objavi.png');
+	width: 69px;
+	height: 32px;
+	border: 0px;
+	float: right;
+	margin-bottom: 1em;
+}
+.submitsuggestion {
+	background-image: url('/static/img/gumb_objavi.png');
+	width: 69px;
+	height: 32px;
+	border: 0px;
+	float: right;
+	margin-bottom: 1em;
+}
+
+.toggle {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+.workgrouptext {
+	float: left;
+	font-family: 'Dosis', sans-serif;
+}
+.toggleworkgroup {
+	background-image: url('/static/img/gumb_pridruzi-se.png');
+	width: 101px;
+	height: 32px;
+	float: right;
+	cursor: pointer;
+}
+.toggleworkgroup:hover {
+	background-image: url('/static/img/gumb_pridruzi-se_hover.png');
+}
+.workgrouptitle {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	margin-top: 0.5em;
+	margin-left: 1.2em;
+}
+.workgroupbox {
+	background-image: url('/static/img/bck_pattern.png');
+	padding: 1em;
+	margin-right: 20px;
+	overflow: hidden;
+}
+
+.argumentboxfor {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-left: 20px;
+}
+.argumentboxagainst {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-right: 20px;
+}
+.addargumentfor {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-left: 20px;
+	padding-bottom: 1em;
+}
+.addargumentagainst {
+	background-color: #e6e6e6;
+	overflow: hidden;
+	margin-right: 20px;
+	padding-bottom: 1em;
+}
+
+.suggestionvotefor {
+	display: inline-block;
+}
+.suggestionvoteagainst {
+	display: inline-block;
+}
+.suggestionup {
+	display: inline-block;
+	background-image: url('/static/img/gumb_za.png');
+	width: 70px;
+	height: 33px;
+	cursor: pointer;
+}
+.suggestionup:hover {
+	background-image: url('/static/img/gumb_za_hover.png');
+}
+.suggestionup.marked {
+	background-image: url('/static/img/gumb_za_hover.png');	
+}
+.suggestiondown {
+	display: inline-block;
+	background-image: url('/static/img/gumb_proti.png');
+	width: 94px;
+	height: 32px;
+	cursor: pointer;
+}
+.suggestiondown:hover {
+		background-image: url('/static/img/gumb_proti_hover.png');
+}
+.suggestiondown.marked {
+		background-image: url('/static/img/gumb_proti_hover.png');
+}
+
+.suggest {
+	background-image: url('../img/gumb_dodaj-predlog.png');
+	width: 211px;
+	height: 63px;
+	float: right;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+.suggest:hover {
+	background-image: url('../img/gumb_dodaj-predlog_hover.png');
+}
+.title {
+	font-size: 18px;
+	font-family: 'Archivo Narrow', sans-serif;
+	padding: 10px;
+	padding-left: 20px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	width: 50%;
+	float: left;
+	line-height: 1.2em;
+}
+
+.author {
+	padding-left: 20px;
+	color: #a1a1a1;
+	font-family: 'Dosis', sans-serif;
+}
+.suggestiontimestamp {
+	color: #a1a1a1;
+	font-family: 'Dosis', sans-serif;
+}
+.suggestiontext {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	color: #363636;
+	font-family: 'Dosis', sans-serif;
+}
+.temporarybox {
+	float: right;
+}
+.temporarybox .suggestionup {
+	margin-top: 5px;
+}
+.temporarybox .votecount {
+	margin: 0px;
+	position: relative;
+	top: -10px;
+}
+
+.adddocument {
+	background-image: url('/static/img/gumb_dodaj-dokument.png');
+	width: 145px;
+	height: 32px;
+	float: right;
+	cursor: pointer;
+}
+.adddocument:hover {
+	background-image: url('/static/img/gumb_dodaj-dokument_hover.png');
+}
+#adddocumentbox {
+	display: none;
+}
+.authorship {
+	font-family: 'Dosis', sans-serif;
+	padding-left: 1.2em;
+	padding-top: 1em;
+}
+.argumenttext {
+	font-family: 'Dosis', sans-serif;
+	padding-left: 1em;
+	font-size: 1.2em;
+}
+.argumentup {
+	background-image: url('/static/img/gumb_arg_za.png');
+	width: 32px;
+	height: 33px;
+	float: left;
+	margin-left: 1.2em;
+	cursor: pointer;
+}
+.argumentup:hover {
+	background-image: url('/static/img/gumb_arg_za_hover.png');
+}
+.argumentup.marked {
+	background-image: url('/static/img/gumb_arg_za_hover.png');
+}
+.argumentdown {
+	background-image: url('/static/img/gumb_arg_proti.png');
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-right: 1.2em;
+	cursor: pointer;
+}
+.argumentdown:hover {
+	background-image: url('/static/img/gumb_arg_proti_hover.png');
+}
+.argumentdown.marked {
+	background-image: url('/static/img/gumb_arg_proti_hover.png');
+}
+.argumentcrta {
+	color: #363636;
+	height: 1px;
+	background-color: #363636;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	border: 0px;
+	margin-top: 64px;
+}
+
+
+/* FOOTER */
+.footy {
+	background-image: url('/static/img/footer_pattern.png');
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+.footy h1 {
+	color: #363636;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding-left: 1.5em;
+}
+
+.footy p {
+	color: #363636;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+.footy .mail {
+	padding-left: 1.5em;
+	color: #363636;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+.crtica {
+	background-image: url('/static/img/crtica_footer.png');
+	height: 8px;
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1em;
+}
+.crticapokoncna {
+	background-image: url('/static/img/crtica_footer_pokoncna.png');
+	height: 50px;
+	line-height: 50px;
+	width: 8px;
+	display: inline-block;
+}
+.uredniskapolitika {
+	padding-left: 1.5em;
+}
+.footerlink {
+	color: #1d7373;
+	display: block;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+.tabtext {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #a1a1a1;
+	font-weight: bold;
+	display: inline-block;
+	padding-top: 15px;
+	font-size: 1.2em;
+}
+.tabtext.infocus {
+	color: #1d7373;
+}
+.fb-like {
+	display: inline-block;
+	position: relative;
+	top: -3px;
+}
+.twitter-share-button {
+	display: inline-block;
+}
+#___plusone_0 {
+	display: inline-block;
+	width: 60px !important;
+}
+.lajkbatons {
+	margin: auto;
+}
+
+.argumentinputwrap {
+	width: 100%;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.addargumentfor {
+	padding: 20px;
+}
+.addargumentfor>img {
+	display: inline-block;
+	position: relative;
+	top: -41px;
+}
+#argumentinputfor {
+	border-radius: 0px;
+	height: 100px;
+	border: 2px solid #c5c5c5;
+	padding-left: 5px;	
+	width: 75%;
+	display: block;
+	margin-bottom: 0px;
+	float: right;
+}
+#argumentinputfor:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+
+.addargumentagainst {
+	padding: 20px;
+}
+.addargumentagainst>img {
+	display: inline-block;
+	position: relative;
+	top: -41px;
+}
+#argumentinputagainst {
+	border-radius: 0px;
+	height: 100px;
+	border: 2px solid #c5c5c5;
+	padding-left: 5px;	
+	width: 75%;
+	display: block;
+	margin-bottom: 0px;
+	float: right;
+}
+#argumentinputagainst:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+
+input.accountname {
+	width: 90%;
+	border-radius: 0px;
+	border: 2px solid #c5c5c5;
+	padding-left: 5px;	
+	width: 78%;
+	display: inline-block;
+}
+input.accountname:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+input.accountemail {
+	width: 90%;
+	border-radius: 0px;
+	border: 2px solid #c5c5c5;
+	padding-left: 5px;	
+	width: 78%;
+	display: inline-block;
+}
+input.accountemail:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+.usersignedinargument {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: white;
+	background-color: #a1a1a1;
+	text-align: right;
+	width: 75%;
+	padding-right: 11px;
+	border: 2px solid #c5c5c5;
+	border-top: 0px;
+	float: right;
+}
+.connectwith {
+	margin-left: 1.2em;
+}
+.fbsignin {
+	margin-left: 20px;	
+	background-image: url('/static/img/gumb_fb.png');
+	cursor: pointer;
+	width: 29px;
+	height: 29px;
+	display: inline-block;
+}
+.fbsignin:hover {
+	background-image: url('/static/img/gumb_fb_hover.png');
+}
+.googlesign {
+	background-image: url('/static/img/gumb_g+.png');
+	width: 29px;
+	height: 29px;
+	cursor: pointer;
+	display: none;
+}
+.googlesign:hover {
+	background-image: url('/static/img/gumb_g+_hover.png');
+}
+.twsignin {
+	display: none;
+}
+
+.submitargumentfor {
+	background-image: url('/static/img/gumb_dodaj-argument.png');
+	width: 134px;
+	height: 32px;
+	float: right;
+}
+.submitargumentagainst {
+	background-image: url('/static/img/gumb_dodaj-argument.png');
+	width: 134px;
+	height: 32px;
+	float: right;
+}
+.socialconnect {
+	display: block;
+	width: 30%;
+	float: left;
+	min-width: 100px;
+	display: none;
+}
+.createaccount {
+	display: inline-block;
+	width: 70%;
+	display: none;
+}
+.createaccount > * {
+	float: right;
+}
+
+/* suggestion popup */
+.suggestionpopup {
+	border-radius: 0px;
+	background-color: #e6e6e6;
+}
+.loginpopup {
+	border-radius: 0px;
+	background-color: #e6e6e6;
+}
+.closepopup {
+	background-image: url('/static/img/gumb_iks.png');
+	width: 20px;
+	height: 20px;
+	border: 0px;
+	float: right;
+	margin: 5px;
+}
+input.addsuggestiontitle {
+	border-radius: 0px;
+	height: 20px;
+	border: 2px solid #c5c5c5;
+	width: 80%;
+	margin-top: 2em;
+}
+input.addsuggestiontitle:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px;
+}
+.addsuggestioncontent {
+	border-radius: 0px;
+	height: 100px;
+	border: 2px solid #c5c5c5;
+	width: 80%;
+	margin-bottom: 0px;
+}
+.addsuggestioncontent:focus {
+	border: 2px solid #1d7373;
+	box-shadow: 0px 0px 0px 0px !important;
+}
+.modal-backdrop {
+	background-color: #a1a1a1;
+}
+.modal-body {
+	text-align: center;
+}
+.usersignedin {
+	font-family: 'Archivo Narrow', sans-serif;
+	color: white;
+	background-color: #a1a1a1;
+	text-align: right;
+	width: 80%;
+	margin: auto;
+	padding-right: 12px;
+	border: 2px solid #c5c5c5;
+	border-top: 0px;
+	display: none;
+}
+
+.iamthestar {
+	color: white !important;
+}
+.nonexistent {	
+}
+.razvijaj {
+	display: none;
+}
+.mediji {
+	display: none;
+}
+.submitloginpopup {
+	background-image: url('/static/img/gumb_poslji.png');
+	width: 68px;
+	height: 31px;
+	cursor: pointer;
+}
+.submitloginpopup:hover {
+	background-image: url('/static/img/gumb_poslji_hover.png');
+}
+.pravicasocial {
+	float: right;
+	padding-top: 22px;
+>>>>>>> fixed login and implemented sort by klemensek
 }

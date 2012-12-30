@@ -8,7 +8,9 @@ function getmore() {
 }
 
 $(document).ready(function() {
-	$('.timestamp').text($('.timestamp').text().split(' ')[0])
+	$('.timestamp').each(function(i, obj) {
+		$(this).text($(this).text().split(' ')[0]);
+	});
 	$('.'+$('#rightid').val()+' a').toggleClass('iamthestar');
 
 

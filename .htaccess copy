@@ -1,9 +1,4 @@
 <IfModule mod_rewrite.c>
-RewriteCond %{HTTP_HOST} ^www\.danesjenovdan\.si$
-RewriteRule ^(.*)$ http://danesjenovdan.si/$1 [R=301,L]
-</IfModule>
-
-<IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
 </IfModule>
