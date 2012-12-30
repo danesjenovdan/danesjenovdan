@@ -99,6 +99,8 @@ body {
 	border-right: 1px solid #e5e5e5;
 	text-align: center;
 }
+	.icsort a{color:#A1A1A1;}
+	.icsort a.active{color:#363636;}
 .timestamp {
 	font-family: 'Dosis', sans-serif;
 	font-size: 14px;

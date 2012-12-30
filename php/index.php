@@ -41,6 +41,28 @@ if(RewriteUrl::rru(1)!=''){
 			$tpl->set("user", $result->fetch_object());
 		}
 
+//sort
+if(isset($_GET['sort'])){
+	if($_GET['sort']=='f'){
+		$sqf = " ,(SELECT count(*) as st FROM `vote` where id_argument=argument.id_argument and vote_plus=1 group by id_argument) as ssort ";		
+		if($_GET['w']=='asc'){
+			$sq_f = "order by ssort asc";
+		}
+		if($_GET['w']=='desc'){
+			$sq_f = "order by ssort desc";
+		}
+	}
+	if($_GET['sort']=='a'){
+		$sqa = " ,(SELECT count(*) as st FROM `vote` where id_argument=argument.id_argument and vote_minus=1 group by id_argument) as ssort ";
+		if($_GET['w']=='asc'){
+			$sq_a = " order by ssort asc";
+		}
+		if($_GET['w']=='desc'){
+			$sq_a = " order by ssort desc";
+		}
+	}
+}
+
 		// argument for
 //		$query = "SELECT * FROM  `argument` where id_proposal=$id_proposal and approved=1 and type=1";
 $query = "
@@ -48,12 +70,14 @@ SELECT argument.*, user.*,
 (select count(*) from vote where
 		id_argument=argument.id_argument and vote_plus>0 and id_user = $id_user) as vuser_plus, 
 (select count(*) from vote where
-		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus			
+		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus
+$sqf			
 
 FROM argument
 LEFT JOIN user
 ON argument.id_user = user.id_user
-where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=1;
+where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=1
+$sq_f
 ";
 
 		if ($result = $db->query($query)) {
@@ -70,14 +94,15 @@ SELECT argument.*, user.*,
 (select count(*) from vote where
 		id_argument=argument.id_argument and vote_plus>0 and id_user = $id_user) as vuser_plus, 
 (select count(*) from vote where
-		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus			
-
+		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus
+$sqa
 FROM argument
 LEFT JOIN user
 ON argument.id_user = user.id_user
-where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=-1;
-
+where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=-1
+$sq_a
 ";		
+
 
 		if ($result = $db->query($query)) {
 			$data = array();
@@ -143,6 +168,7 @@ if(RewriteUrl::rru(0)!=''){
 		$tpl->set("pravica", $result->fetch_object());
 
 		// proposals + votes
+
 		$query="
 select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) from vote where
 		id_proposal=id and vote_plus>0) as vote_plus, 
@@ -156,7 +182,7 @@ select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) fr
 		";
 
 if($_GET['sort']){
-	if ($_GET['sort']=="ts") {
+	if ($_GET['sort']=="date") {
 		$w = ($_GET["w"] == 'asc') ? 'asc' : 'desc';
 
 	
@@ -172,7 +198,7 @@ select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) fr
 		 from proposal where approved=1 and id_right=$id_right order by timestamp $w
 		";
 	}
-	if ($_GET['sort']=="vote") {
+	if ($_GET['sort']=="imp") {
 		$w = ($_GET["w"] == 'asc') ? 'asc' : 'desc';
 
 	
@@ -184,25 +210,16 @@ select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) fr
 (select count(*) from vote where
 		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
 (select count(*) from vote where
-		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus
-		 from proposal where approved=1 and id_right=$id_right order by (vote_plus - vote_minus) $w
+		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus,
+(select vote_plus - vote_minus) as imp
+
+		 from proposal where approved=1 and id_right=$id_right order by imp $w
 		";
 	}
 
 }
-		$query="
-select title,timestamp,id_proposal as id, proposal.id_user,  (select count(*) from vote where
-		id_proposal=id and vote_plus>0) as vote_plus, 
-(select count(*) from vote where
-		id_proposal=id and vote_minus>0) as vote_minus,
-(select count(*) from vote where
-		id_proposal=id and vote_plus>0 and id_user = $id_user) as vuser_plus, 
-(select count(*) from vote where
-		id_proposal=id and vote_minus>0 and id_user = $id_user) as vuser_minus
-		 from proposal where approved=1 and id_right=$id_right order by timestamp desc
-		";
 
-
+print $query;
 
 
 		if ($result = $db->query($query)) {

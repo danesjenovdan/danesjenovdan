@@ -199,8 +199,25 @@ function curPageURL() {
 </div>
 <div class="container" id="predlogi">
 <div class="row sortrow">
-<!--	<div class="span4 toggle"><img src="/static/img/toggle_datum_active.png" /></div>
-	<div class="span2 timestampwrap"></div>-->
+	<div class="span4"> </div>
+	<div class="span2 timestampwrap icsort"> 
+		<a href="?sort=date&w=asc" class="<?php print (($_GET['sort']=="date") && ($_GET['w']=="asc"))? "active" : null; ?>">
+			<font class="up">&#9650;</font>
+		</a> 
+		datum 
+		<a href="?sort=date&w=desc" class="<?php print (($_GET['sort']=="date") && ($_GET['w']=="desc"))? "active" : null; ?>">
+			<font class="down ">&#9660;</font>
+		</a>
+	</div>
+	<div class="span4 icsort"> 
+		<a href="?sort=imp&w=asc" class="<?php print (($_GET['sort']=="imp") && ($_GET['w']=="asc"))? "active" : null; ?>">
+			<font class="up ">&#9650;</font> 
+		</a>
+		pomembnost 
+		<a href="?sort=imp&w=desc" class="<?php print (($_GET['sort']=="imp") && ($_GET['w']=="desc"))? "active" : null; ?>">
+			<font class="down ">&#9660;</font>
+		</a> 
+	</div>
 </div>
 			<?php foreach ($this->predlogi as $key => $value) { ?>
 

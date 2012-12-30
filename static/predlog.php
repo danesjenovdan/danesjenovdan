@@ -178,6 +178,18 @@ function curPageURL() {
 	<div class="row">
 		<div class="span6">
 			<h1 class="documenttitle">Prednosti</h1>
+			<div class="row">
+				<div class="span5"> </div>
+				<div class="span1 icsort"> 
+					<a href="?sort=f&w=asc" class="<?php print (($_GET['sort']=="f") && ($_GET['w']=="asc"))? "active" : null; ?>">
+						<font class="up">&#9650;</font>
+					</a> 
+					
+					<a href="?sort=f&w=desc" class="<?php print (($_GET['sort']=="f") && ($_GET['w']=="desc"))? "active" : null; ?>">
+						<font class="down ">&#9660;</font>
+					</a>
+				</div>
+			</div>
 			<?php
 			foreach ($this->argplus as $key => $value) { ?>
 				<div class="row">
@@ -211,6 +223,18 @@ function curPageURL() {
 		</div>
 		<div class="span6">
 			<h1 class="documenttitle">Zadržki</h1>
+			<div class="row">
+				<div class="span5"> </div>
+				<div class="span1 icsort"> 
+					<a href="?sort=a&w=asc" class="<?php print (($_GET['sort']=="a") && ($_GET['w']=="asc"))? "active" : null; ?>">
+						<font class="up">&#9650;</font>
+					</a> 
+					
+					<a href="?sort=a&w=desc" class="<?php print (($_GET['sort']=="a") && ($_GET['w']=="desc"))? "active" : null; ?>">
+						<font class="down ">&#9660;</font>
+					</a>
+				</div>
+			</div>
 			<?php
 			foreach ($this->argminus as $key => $value) { ?>
 				<div class="row">
