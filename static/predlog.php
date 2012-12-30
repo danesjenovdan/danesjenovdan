@@ -178,7 +178,7 @@ function curPageURL() {
 	<div class="row">
 		<div class="span6">
 			<h1 class="documenttitle">Prednosti</h1>
-			<div class="row">
+<!--			<div class="row">
 				<div class="span5"> </div>
 				<div class="span1 icsort"> 
 					<a href="?sort=f&w=asc" class="<?php print (($_GET['sort']=="f") && ($_GET['w']=="asc"))? "active" : null; ?>">
@@ -189,7 +189,7 @@ function curPageURL() {
 						<font class="down ">&#9660;</font>
 					</a>
 				</div>
-			</div>
+			</div>-->
 			<?php
 			foreach ($this->argplus as $key => $value) { ?>
 				<div class="row">
@@ -199,7 +199,9 @@ function curPageURL() {
 							<p class="authorship"><?php print $value->name; ?>, <?php print $value->timestamp; ?></p>
 							<p class="argumenttext"><?php print $value->text; ?></p>
 							<div class="argumentup <?php print ($value->vuser_plus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div > plus <?php print $value->users_plus; ?> </div>
 							<div class="argumentdown  <?php print ($value->vuser_minus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div > minus <?php print $value->users_minus; ?> </div>
 							<hr class="argumentcrta" />
 						</div>
 					</div>
@@ -223,7 +225,7 @@ function curPageURL() {
 		</div>
 		<div class="span6">
 			<h1 class="documenttitle">Zadržki</h1>
-			<div class="row">
+<!--			<div class="row">
 				<div class="span5"> </div>
 				<div class="span1 icsort"> 
 					<a href="?sort=a&w=asc" class="<?php print (($_GET['sort']=="a") && ($_GET['w']=="asc"))? "active" : null; ?>">
@@ -234,7 +236,7 @@ function curPageURL() {
 						<font class="down ">&#9660;</font>
 					</a>
 				</div>
-			</div>
+			</div>-->
 			<?php
 			foreach ($this->argminus as $key => $value) { ?>
 				<div class="row">
@@ -244,7 +246,9 @@ function curPageURL() {
 							<p class="authorship"><?php print $value->name; ?>, <?php print $value->timestamp; ?></p>
 							<p class="argumenttext"><?php print $value->text; ?></p>
 							<div class="argumentup  <?php print ($value->vuser_plus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div > plus <?php print $value->users_plus; ?> </div>
 							<div class="argumentdown  <?php print ($value->vuser_minus>0) ? "marked" : null; ?>" data-id="<?php print $value->id_argument; ?>"></div>
+							<div > minus <?php print $value->users_minus; ?> </div>
 							<hr class="argumentcrta" />
 						</div>
 					</div>

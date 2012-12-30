@@ -70,16 +70,21 @@ SELECT argument.*, user.*,
 (select count(*) from vote where
 		id_argument=argument.id_argument and vote_plus>0 and id_user = $id_user) as vuser_plus, 
 (select count(*) from vote where
-		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus
+		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus,
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_plus>0) as users_plus, 
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_minus>0) as users_minus
 $sqf			
 
 FROM argument
 LEFT JOIN user
 ON argument.id_user = user.id_user
 where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=1
+order by users_plus desc
 $sq_f
 ";
-
+//print $query.'<br>';
 		if ($result = $db->query($query)) {
 			$data = array();
 		    while ($obj = $result->fetch_object()) {
@@ -94,15 +99,20 @@ SELECT argument.*, user.*,
 (select count(*) from vote where
 		id_argument=argument.id_argument and vote_plus>0 and id_user = $id_user) as vuser_plus, 
 (select count(*) from vote where
-		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus
+		id_argument=argument.id_argument and vote_minus>0 and id_user = $id_user) as vuser_minus,
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_plus>0) as users_plus, 
+(select count(*) from vote where
+		id_argument=argument.id_argument and vote_minus>0) as users_minus
 $sqa
 FROM argument
 LEFT JOIN user
 ON argument.id_user = user.id_user
 where argument.id_proposal=$id_proposal and argument.approved=1 and argument.type=-1
+order by users_plus desc
 $sq_a
 ";		
-
+//print $query;
 
 		if ($result = $db->query($query)) {
 			$data = array();
