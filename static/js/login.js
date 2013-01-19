@@ -78,13 +78,13 @@ window.fbAsyncInit = function() {
 							success: function(response){
 								// we know the user is logged in so refresh the page TODO
 								console.log(response);
-								
+								document.location.reload();
 							}
 						});
 					});
 				} else {
 					// user not logged in to facebook or hasn't given permission -> show them BATONS
-					console.log('use not logged in');
+					console.log('user not logged in');
 					
 					// show social connect
 					$('.socialconnect').css('display', 'inline-block');
@@ -98,7 +98,15 @@ window.fbAsyncInit = function() {
 						$('.loginpopup').modal('show');
 						a = 1;
 					});
+					$('.submitargumentagainst').click(function() {
+						$('.loginpopup').modal('show');
+						a = 1;
+					});
 					$('#argumentinputfor').focus(function() {
+						$('.loginpopup').modal('show');
+						a = 1;
+					});
+					$('.submitargumentfor').click(function() {
 						$('.loginpopup').modal('show');
 						a = 1;
 					});
@@ -134,7 +142,9 @@ function FBinitmadafaka() {
     	console.log(data.uid);
 		if (data.uid != -1) { // FALSE
 			// user logged in
-			
+			$('.suggest').click(function() {
+				$('.suggestionpopup').modal('show');
+			});
 			// show bar under text input
 			$('.usersignedin').css('display', 'block');
 			// display name
@@ -198,7 +208,11 @@ function FBinitmadafaka() {
 						$('.loginpopup').modal('show');
 						a = 0;
 					});
-					
+					$('.suggest').click(function() {
+						$('.loginpopup').modal('show');
+						a = 0;
+						console.log('ping');
+					});
 					
 				}
 			});
@@ -277,9 +291,6 @@ function createbuttons() {
 			}
 		});
 	});
-	$('.suggest').click(function() {
-		$('.suggestionpopup').modal('show');
-	});
 	$('.postsuggestion').click(function() {
 		console.log('begin');
 		$.getJSON('http://danesjenovdan.si/ajax/isAuthorized.php', function(response) {
@@ -313,7 +324,7 @@ function createbuttons() {
 		console.log('end');
 	});
 	$('.ihaveanargument').click(function() {
-		document.location = document.location.href + '/' + $(this).data('id');
+		document.location = document.location.href.split('?')[0] + '/' + $(this).data('id');
 	});
 	$('.navblock').hover(function() {
 		$(this).children().css('color', 'white');
