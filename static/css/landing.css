@@ -309,3 +309,50 @@ body {
 .mediji {
 	display: none;
 }
+
+/* MAIN NAVI */
+#dndmainnav ul{padding: 0; margin: 0;}
+#dndmainnav ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+#dndmainnav ul li:first-child a{
+  padding-left: 0;
+}
+#dndmainnav ul li:last-child a{
+  border-right: none;
+}
+#dndmainnav ul li a {
+    border-right: 1px solid #ACACAC;
+    color: #ACACAC;
+    font-size: 12px;
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+}
+#dndmainnav ul li a:active,
+#dndmainnav ul li a:visited,
+#dndmainnav ul li a:link
+{
+  text-decoration: none;
+  color: #ACACAC;
+}
+#dndmainnav ul li a:hover,
+#dndmainnav ul li:hover a
+{
+  text-decoration: none;
+  color: #636363;
+}
+
+
+#dndmainnav ul li.active,#dndmainnav ul li:hover {
+    border-top: 5px solid #327F7F;
+    padding: 5px 0 0 0;
+}
+#dndmainnav ul li.active a {
+    color: #636363;
+    margin: 0;
+    padding: 0 10px;
+}

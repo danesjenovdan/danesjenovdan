@@ -20,9 +20,9 @@
 			            function(response) {
 			                console.log(response);
 			                if (!response || response.error) {
-			                    alert('Error occured');
+			                    console.log('The user has not given permission yet.');
 			                } else {
-			                    alert('Uspešno si podprl Testni predlog! Action ID: ' + response.id);
+			                    console.log('Success! Action ID: ' + response.id);
 			            }
 			        });
 			    }

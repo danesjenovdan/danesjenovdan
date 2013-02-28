@@ -13,7 +13,7 @@ body {
 	font-size: 16px;
 }
 .logo {
-	background-image: url('/static/img/logo.png');
+	background-image: url('http://danesjenovdan.si/static/img/logo.png');
 	width: 218px;
 	height: 111px;
 	display: inline-block;
@@ -111,33 +111,33 @@ body {
 .votefor {
 	margin-top: 3px;
 	display: inline-block;
-	background-image: url('/static/img/gumb_za.png');
-	width: 70px;
+	background-image: url('http://danesjenovdan.si/static/img/za_brez.png');
+	width: 48px;
 	height: 33px;
 	cursor: pointer;
 }
 .votefor:hover {
-	background-image: url('/static/img/gumb_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/za_brez_pressed.png');
 }
 .votefor.marked {
-	background-image: url('/static/img/gumb_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/za_brez_pressed.png');
 }
 .voteagainst {
 	margin-top: 3px;
 	display: inline-block;
-	background-image: url('/static/img/gumb_proti.png');
-	width: 94px;
+	background-image: url('http://danesjenovdan.si/static/img/proti_brez.png');
+	width: 63px;
 	height: 33px;
 	cursor: pointer;
 }
 .voteagainst:hover {
-	background-image: url('/static/img/gumb_proti_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/proti_brez_pressed.png');
 }
 .voteagainst.marked {
-	background-image: url('/static/img/gumb_proti_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/proti_brez_pressed.png');
 }
 .argumentvotesplus {
-	background-image: url('/static/img/counter_back.png');
+	background-image: url('http://danesjenovdan.si/static/img/counter_back.png');
 	background-repeat: no-repeat;
 	width: 24px;
 	height: 20px;
@@ -153,7 +153,7 @@ body {
 	padding-right: 2px;
 }
 .argumentvotesminus {
-	background-image: url('/static/img/counter_back_right.png');
+	background-image: url('http://danesjenovdan.si/static/img/counter_back_right.png');
 	background-repeat: no-repeat;
 	width: 24px;
 	height: 20px;
@@ -170,7 +170,7 @@ body {
 	padding-right: 15px;
 }
 .votecount {
-	background-image: url('/static/img/counter_back.png');
+	background-image: url('http://danesjenovdan.si/static/img/counter_back.png');
 	background-repeat: no-repeat;
 	width: 24px;
 	height: 20px;
@@ -187,7 +187,7 @@ body {
 <<<<<<< HEAD
 }
 .ihaveanargument {
-	background-image: url('/static/img/gumb_imam-argument.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_imam-argument.png');
 	width: 128px;
 	height: 32px;
 	margin-top: 4px;
@@ -195,10 +195,10 @@ body {
 	cursor: pointer;
 }
 .ihaveanargument:hover {
-	background-image: url('/static/img/gumb_imam-argument_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_imam-argument_hover.png');
 }
 .m0ar {
-	background-image: url('/static/img/gumb_vec.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_vec.png');
 	width: 69px;
 	height: 36px;
 	margin: auto;
@@ -206,7 +206,7 @@ body {
 	cursor: pointer;
 }
 .m0ar:hover {
-	background-image: url('/static/img/gumb_vec_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_vec_hover.png');
 }
 
 
@@ -226,7 +226,7 @@ body {
 	line-height: 20px;
 	font-weight: normal;
 	margin-top: 0.5em;
-	border-image: url('/static/img/crtica.png') 20 3 repeat stretch;
+	border-image: url('http://danesjenovdan.si/static/img/crtica.png') 20 3 repeat stretch;
 	border-left: 0;
 	border-right: 0;
 }
@@ -247,7 +247,7 @@ body {
 	margin-left: 1.8em;
 }
 .documentbox {
-	background-image: url('/static/img/bck_pattern.png');
+	background-image: url('http://danesjenovdan.si/static/img/bck_pattern.png');
 	margin-left: 20px;
 	padding: 1em;
 	overflow: hidden;
@@ -281,13 +281,13 @@ body {
 	float: left;
 }
 #uploadlabel {
-	background-image: url('/static/img/gumb_izberi-datoteko.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_izberi-datoteko.png');
 	width: 103px;
 	height: 25px;
 	float: left;
 }
 #submitdocument {
-	background-image: url('/static/img/gumb_objavi.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_objavi.png');
 	width: 69px;
 	height: 32px;
 	border: 0px;
@@ -295,7 +295,7 @@ body {
 	margin-bottom: 1em;
 }
 .submitsuggestion {
-	background-image: url('/static/img/gumb_objavi.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_objavi.png');
 	width: 69px;
 	height: 32px;
 	border: 0px;
@@ -313,7 +313,7 @@ body {
 	font-family: 'Dosis', sans-serif;
 }
 .toggleworkgroup {
-	background-image: url('/static/img/gumb_pridruzi-se.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_pridruzi-se.png');
 	width: 101px;
 	height: 32px;
 	float: right;
@@ -321,7 +321,7 @@ body {
 }
 .toggleworkgroup:hover,
 .toggleworkgroup.active {
-	background-image: url('/static/img/gumb_pridruzi-se_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_pridruzi-se_hover.png');
 }
 .toggleworkgroup.active{
 	cursor: text;
@@ -335,7 +335,7 @@ body {
 	margin-left: 1.2em;
 }
 .workgroupbox {
-	background-image: url('/static/img/bck_pattern.png');
+	background-image: url('http://danesjenovdan.si/static/img/bck_pattern.png');
 	padding: 1em;
 	margin-right: 20px;
 	overflow: hidden;
@@ -372,33 +372,33 @@ body {
 }
 .suggestionup {
 	display: inline-block;
-	background-image: url('/static/img/gumb_za.png');
-	width: 70px;
+	background-image: url('http://danesjenovdan.si/static/img/za_brez.png');
+	width: 48px;
 	height: 33px;
 	cursor: pointer;
 }
 .suggestionup:hover {
-	background-image: url('/static/img/gumb_za.png');
+	background-image: url('http://danesjenovdan.si/static/img/za_brez_pressed.png');
 }
 .suggestionup.marked {
-	background-image: url('/static/img/gumb_za_hover.png');	
+	background-image: url('http://danesjenovdan.si/static/img/za_brez_pressed.png');	
 }
 .suggestiondown {
 	display: inline-block;
-	background-image: url('/static/img/gumb_proti.png');
-	width: 94px;
+	background-image: url('http://danesjenovdan.si/static/img/proti_brez.png');
+	width: 63px;
 	height: 32px;
 	cursor: pointer;
 }
 .suggestiondown:hover {
-		background-image: url('/static/img/gumb_proti_hover.png');
+		background-image: url('http://danesjenovdan.si/static/img/proti_brez_pressed.png');
 }
 .suggestiondown.marked {
-		background-image: url('/static/img/gumb_proti_hover.png');
+		background-image: url('http://danesjenovdan.si/static/img/proti_brez_pressed.png');
 }
 
 .suggest {
-	background-image: url('/static/img/gumb_dodaj-predlog.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-predlog.png');
 	width: 211px;
 	height: 63px;
 	float: right;
@@ -406,7 +406,7 @@ body {
 	cursor: pointer;
 }
 .suggest:hover {
-	background-image: url('/static/img/gumb_dodaj-predlog_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-predlog_hover.png');
 }
 .author {
 	padding-left: 20px;
@@ -436,14 +436,14 @@ body {
 }
 
 .adddocument {
-	background-image: url('/static/img/gumb_dodaj-dokument.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-dokument.png');
 	width: 145px;
 	height: 32px;
 	float: right;
 	cursor: pointer;
 }
 .adddocument:hover {
-	background-image: url('/static/img/gumb_dodaj-dokument_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-dokument_hover.png');
 }
 #adddocumentbox {
 	display: none;
@@ -459,7 +459,7 @@ body {
 	font-size: 1.2em;
 }
 .argumentup {
-	background-image: url('/static/img/gumb_arg_za.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_za.png');
 	width: 32px;
 	height: 33px;
 	float: left;
@@ -467,13 +467,13 @@ body {
 	cursor: pointer;
 }
 .argumentup:hover {
-	background-image: url('/static/img/gumb_arg_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_za_hover.png');
 }
 .argumentup.marked {
-	background-image: url('/static/img/gumb_arg_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_za_hover.png');
 }
 .argumentdown {
-	background-image: url('/static/img/gumb_arg_proti.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_proti.png');
 	width: 32px;
 	height: 32px;
 	float: right;
@@ -481,10 +481,10 @@ body {
 	cursor: pointer;
 }
 .argumentdown:hover {
-	background-image: url('/static/img/gumb_arg_proti_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_proti_hover.png');
 }
 .argumentdown.marked {
-	background-image: url('/static/img/gumb_arg_proti_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_proti_hover.png');
 }
 .argumentcrta {
 	color: #363636;
@@ -501,7 +501,7 @@ body {
 =======
 }
 .ihaveanargument {
-	background-image: url('/static/img/gumb_imam-argument.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_imam-argument.png');
 	width: 128px;
 	height: 32px;
 	margin-top: 4px;
@@ -509,10 +509,10 @@ body {
 	cursor: pointer;
 }
 .ihaveanargument:hover {
-	background-image: url('/static/img/gumb_imam-argument_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_imam-argument_hover.png');
 }
 .m0ar {
-	background-image: url('/static/img/gumb_vec.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_vec.png');
 	width: 69px;
 	height: 36px;
 	margin: auto;
@@ -520,7 +520,7 @@ body {
 	cursor: pointer;
 }
 .m0ar:hover {
-	background-image: url('/static/img/gumb_vec_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_vec_hover.png');
 }
 
 
@@ -540,7 +540,7 @@ body {
 	line-height: 20px;
 	font-weight: normal;
 	margin-top: 0.5em;
-	border-image: url('/static/img/crtica.png') 20 3 repeat stretch;
+	border-image: url('http://danesjenovdan.si/static/img/crtica.png') 20 3 repeat stretch;
 	border-left: 0;
 	border-right: 0;
 }
@@ -561,7 +561,7 @@ body {
 	margin-left: 1.8em;
 }
 .documentbox {
-	background-image: url('/static/img/bck_pattern.png');
+	background-image: url('http://danesjenovdan.si/static/img/bck_pattern.png');
 	margin-left: 20px;
 	padding: 1em;
 	overflow: hidden;
@@ -592,13 +592,13 @@ body {
 	float: left;
 }
 #uploadlabel {
-	background-image: url('/static/img/gumb_izberi-datoteko.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_izberi-datoteko.png');
 	width: 103px;
 	height: 25px;
 	float: left;
 }
 #submitdocument {
-	background-image: url('/static/img/gumb_objavi.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_objavi.png');
 	width: 69px;
 	height: 32px;
 	border: 0px;
@@ -606,7 +606,7 @@ body {
 	margin-bottom: 1em;
 }
 .submitsuggestion {
-	background-image: url('/static/img/gumb_objavi.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_objavi.png');
 	width: 69px;
 	height: 32px;
 	border: 0px;
@@ -624,14 +624,14 @@ body {
 	font-family: 'Dosis', sans-serif;
 }
 .toggleworkgroup {
-	background-image: url('/static/img/gumb_pridruzi-se.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_pridruzi-se.png');
 	width: 101px;
 	height: 32px;
 	float: right;
 	cursor: pointer;
 }
 .toggleworkgroup:hover {
-	background-image: url('/static/img/gumb_pridruzi-se_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_pridruzi-se_hover.png');
 }
 .workgrouptitle {
 	font-family: 'Archivo Narrow', sans-serif;
@@ -642,7 +642,7 @@ body {
 	margin-left: 1.2em;
 }
 .workgroupbox {
-	background-image: url('/static/img/bck_pattern.png');
+	background-image: url('http://danesjenovdan.si/static/img/bck_pattern.png');
 	padding: 1em;
 	margin-right: 20px;
 	overflow: hidden;
@@ -679,33 +679,33 @@ body {
 }
 .suggestionup {
 	display: inline-block;
-	background-image: url('/static/img/gumb_za.png');
-	width: 70px;
+	background-image: url('http://danesjenovdan.si/static/img/za_brez.png');
+	width: 48px;
 	height: 33px;
 	cursor: pointer;
 }
 .suggestionup:hover {
-	background-image: url('/static/img/gumb_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/za_brez_pressed.png');
 }
 .suggestionup.marked {
-	background-image: url('/static/img/gumb_za_hover.png');	
+	background-image: url('http://danesjenovdan.si/static/img/za_brez_pressed.png');	
 }
 .suggestiondown {
 	display: inline-block;
-	background-image: url('/static/img/gumb_proti.png');
-	width: 94px;
+	background-image: url('http://danesjenovdan.si/static/img/proti_brez.png');
+	width: 63px;
 	height: 32px;
 	cursor: pointer;
 }
 .suggestiondown:hover {
-		background-image: url('/static/img/gumb_proti_hover.png');
+		background-image: url('http://danesjenovdan.si/static/img/proti_brez_pressed.png');
 }
 .suggestiondown.marked {
-		background-image: url('/static/img/gumb_proti_hover.png');
+		background-image: url('http://danesjenovdan.si/static/img/proti_brez_pressed.png');
 }
 
 .suggest {
-	background-image: url('../img/gumb_dodaj-predlog.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-predlog.png');
 	width: 211px;
 	height: 63px;
 	float: right;
@@ -713,7 +713,7 @@ body {
 	cursor: pointer;
 }
 .suggest:hover {
-	background-image: url('../img/gumb_dodaj-predlog_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-predlog_hover.png');
 }
 .title {
 	font-size: 18px;
@@ -756,14 +756,14 @@ body {
 }
 
 .adddocument {
-	background-image: url('/static/img/gumb_dodaj-dokument.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-dokument.png');
 	width: 145px;
 	height: 32px;
 	float: right;
 	cursor: pointer;
 }
 .adddocument:hover {
-	background-image: url('/static/img/gumb_dodaj-dokument_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_dodaj-dokument_hover.png');
 }
 #adddocumentbox {
 	display: none;
@@ -779,7 +779,7 @@ body {
 	font-size: 1.2em;
 }
 .argumentup {
-	background-image: url('/static/img/gumb_arg_za.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_za.png');
 	width: 32px;
 	height: 33px;
 	float: left;
@@ -787,13 +787,13 @@ body {
 	cursor: pointer;
 }
 .argumentup:hover {
-	background-image: url('/static/img/gumb_arg_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_za_hover.png');
 }
 .argumentup.marked {
-	background-image: url('/static/img/gumb_arg_za_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_za_hover.png');
 }
 .argumentdown {
-	background-image: url('/static/img/gumb_arg_proti.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_proti.png');
 	width: 32px;
 	height: 32px;
 	float: right;
@@ -801,10 +801,10 @@ body {
 	cursor: pointer;
 }
 .argumentdown:hover {
-	background-image: url('/static/img/gumb_arg_proti_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_proti_hover.png');
 }
 .argumentdown.marked {
-	background-image: url('/static/img/gumb_arg_proti_hover.png');
+	background-image: url('http://danesjenovdan.si/static/img/gumb_arg_proti_hover.png');
 }
 .argumentcrta {
 	color: #363636;
@@ -819,7 +819,7 @@ body {
 
 /* FOOTER */
 .footy {
-	background-image: url('/static/img/footer_pattern.png');
+	background-image: url('http://danesjenovdan.si/static/img/footer_pattern.png');
 	overflow: hidden;
 	padding-bottom: 20px;
 }
@@ -846,7 +846,7 @@ body {
 }
 
 .crtica {
-	background-image: url('/static/img/crtica_footer.png');
+	background-image: url('http://danesjenovdan.si/static/img/crtica_footer.png');
 	height: 8px;
 	width: 96%;
 	margin-left: 2%;
@@ -854,7 +854,7 @@ body {
 	margin-bottom: 1em;
 }
 .crticapokoncna {
-	background-image: url('/static/img/crtica_footer_pokoncna.png');
+	background-image: url('http://danesjenovdan.si/static/img/crtica_footer_pokoncna.png');
 	height: 50px;
 	line-height: 50px;
 	width: 8px;
@@ -983,17 +983,19 @@ input.accountemail:focus {
 }
 .connectwith {
 	margin-left: 1.2em;
+	text-align: left;
+	margin-bottom: 2em;
 }
 .fbsignin {
 	margin-left: 20px;	
-	background-image: url('/static/img/gumb_fb.png');
+	background-image: url('/static/img/facebook_signin.png');
 	cursor: pointer;
-	width: 29px;
-	height: 29px;
+	width: 150px;
+	height: 23px;
 	display: inline-block;
 }
 .fbsignin:hover {
-	background-image: url('/static/img/gumb_fb_hover.png');
+	background-position: left 23px;
 }
 .googlesign {
 	background-image: url('/static/img/gumb_g+.png');
@@ -1117,6 +1119,7 @@ input.addsuggestiontitle:focus {
 	width: 68px;
 	height: 31px;
 	cursor: pointer;
+	float: right;
 }
 .submitloginpopup:hover {
 	background-image: url('/static/img/gumb_poslji_hover.png');
@@ -1125,3 +1128,57 @@ input.addsuggestiontitle:focus {
 	float: right;
 	padding-top: 22px;
 }
+
+.razprava {
+	float: right;
+	position: relative;
+	top: -5px;
+}
+
+/* MAIN NAVI */
+#dndmainnav ul{padding: 0; margin: 0;}
+#dndmainnav ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+#dndmainnav ul li:first-child a{
+  padding-left: 0;
+}
+#dndmainnav ul li:last-child a{
+  border-right: none;
+}
+#dndmainnav ul li a {
+    border-right: 1px solid #ACACAC;
+    color: #ACACAC;
+    font-size: 12px;
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+}
+#dndmainnav ul li a:active,
+#dndmainnav ul li a:visited,
+#dndmainnav ul li a:link
+{
+  text-decoration: none;
+  color: #ACACAC;
+}
+#dndmainnav ul li a:hover,
+#dndmainnav ul li:hover a
+{
+  text-decoration: none;
+  color: #636363;
+}
+
+
+#dndmainnav ul li.active,#dndmainnav ul li:hover {
+    border-top: 5px solid #327F7F;
+    padding: 5px 0 0 0;
+}
+#dndmainnav ul li.active a {
+    color: #636363;
+    margin: 0;
+    padding: 0 10px;
+}
+

@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Danes je nov dan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<meta property="og:title" content="Danes je nov dan: Dan za vodo" />
+	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://spet.danesjenovdan.si" />
+	<meta property="og:image" content="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash4/295510_435758069839655_2122931893_n.jpg" />
+	<meta property="og:site_name" content="Spet nov dan!" />
+	<meta property="fb:app_id" content="301375193309601" />
+
+    <!-- Le styles -->
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--<link href="css/bootstrap-responsive.css" rel="stylesheet">-->
+
+      <link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css' />
+      <link rel='stylesheet' type='text/css' href='css/jquery.addtocal.css' />
+
+  <!-- facebook crap -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=301375193309601";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- end of facebook crap -->
+
+<style type="text/css">
+body{
+  /*background: url(img/bg.png) repeat;*/
+  background:url(img/bck_pattern.png) repeat;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+.footy {
+background-image: url('http://danesjenovdan.si/static/img/footer_pattern.png');
+overflow: hidden;
+}
+.footerlink {
+color: #1d7373;
+display: block;
+}
+.footy .mail {
+padding-left: 1.5em;
+color: #363636;
+font-family: 'Archivo Narrow', sans-serif;
+}
+.ff{
+background:url(img/fs.png) center right no-repeat;
+}
+
+.f1{
+   padding-bottom: 34px;
+    padding-top: 50px;
+}
+.f2{
+    padding-bottom: 31px;
+    padding-top: 25px;
+}
+.f3{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.f4{
+padding-top: 31px;
+}
+
+    .introimg {
+        position:relative;
+        background:url(banner/water.png) top left no-repeat;
+        height:270px;
+    }
+    .introimgtext {
+        position:absolute;
+        left:0;
+        bottom:30px;
+        padding:20px 10px 10px 10px;
+        background: url(img/bg.png) repeat;
+    }
+    .introimgtext h1{
+        text-transform:uppercase;
+        color:#262626;
+        font-size:24px;
+        margin:0;
+        line-height:30px;
+    }
+    .introimgtext h3{
+        text-transform:uppercase;
+        color:#BF4D0A;
+        font-size:15px;
+        margin:0;
+        line-height:20px;
+    }
+    .mctx{
+        font-size:15px;
+        line-height:20px;
+        
+        color:#262626;
+    }
+    .flp20 {
+        float:left;
+        padding:0 20px 0 0;
+    }
+    .sfbtn, .sfbtn:hover, .sfbtn:focus  {
+        background:#1D7373;
+        color:#fff;
+        padding:5px 20px;
+        font-size:12px;
+        text-decoration:none;
+    }
+    .ptb10 {
+        padding:20px 0;
+    }
+    .arhiv {
+        background:#fff;
+        padding:30px;
+    }
+    .arhiv h1 {
+        padding:0 0 20px 0;
+        margin:0;
+        text-transform:uppercase;
+        color:#8EB9B9;
+        font-size:24px;
+        line-height:30px;
+    }
+     
+
+#dndmainnav ul{padding: 0; margin: 0;}
+#dndmainnav ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+#dndmainnav ul li:first-child a{
+  padding-left: 0;
+}
+#dndmainnav ul li:last-child a{
+  border-right: none;
+}
+#dndmainnav ul li a {
+    border-right: 1px solid #ACACAC;
+    color: #ACACAC;
+    font-size: 12px;
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+}
+#dndmainnav ul li a:active,
+#dndmainnav ul li a:visited,
+#dndmainnav ul li a:link
+{
+  text-decoration: none;
+  color: #ACACAC;
+}
+#dndmainnav ul li a:hover,
+#dndmainnav ul li:hover a
+{
+  text-decoration: none;
+  color: #636363;
+}
+
+
+#dndmainnav ul li.active,#dndmainnav ul li:hover {
+    border-top: 5px solid #327F7F;
+    padding: 5px 0 0 0;
+}
+#dndmainnav ul li.active a {
+    color: #636363;
+    margin: 0;
+    padding: 0 10px;
+}
+/*
+#dndmainnav ul li.active{border-top: 5px solid #327f7f;}
+#dndmainnav ul li:last{ border-right: none; }
+#dndmainnav ul li a, #dndmainnav ul li a:hover {color: #acacac; font-size: 12px; padding: 10px }
+#dndmainnav ul li.active a{color: #636363}
+*/
+
+</style>
+
+  </head>
+
+  <body>
+<div class="container">
+    <div id="dndmainnav" class="">
+            <ul>
+              <li class="">
+                <a href="http://danesjenovdan.si">
+                  Danes je nov dan  
+                </a>
+              </li>
+              <li class="active">
+                <a href="http://spet.danesjenovdan.si">
+                  Spet je nov dan
+                </a>
+              </li>
+ <!--             <li class="active">
+                <a href="http://veselje.danesjenovdan.si">
+                  Veselje
+                </a>
+              </li>
+ -->           </ul>            
+
+    </div>
+</div>
+
+    <div class="container">
+        <img src="img/header.png" style="margin-bottom:20px;" />
+      <div class="row">
+          <div class="span8">
+              <div class="introimg">
+                  <div class="introimgtext">
+                      <h1>Ne privatizaciji vode</h1>
+                      <h3>Atrij zrc sazu, 5. marec ob 18.00</h3>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span8 ptb10">
+                        <div  class="flp20">
+                            <a class="sfbtn" href="https://www.facebook.com/events/419027168183769/">RSVP na Facebooku</a>
+                        </div>
+                        <div  class="flp20">
+                            <a class="sfbtn addtocal" href="#">Dodaj na koledar</a>
+                        </div>
+                        <!--<div  class="flp20">
+                            <a class="sfbtn" href="mailto:">Pošlji na mail</a>
+                        </div>
+                        --><div class="flp20">
+                            <div class="fb-like" data-href="http://spet.danesjenovdan.si" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>      
+                        </div>
+                        <div class="flp20">
+                            <div class="g-plusone" data-href="http://spet.danesjenovdan.si" data-size="medium" data-annotation="buble" data-width="100"></div>
+                        </div>
+                        <div class="flp20">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-hashtags="danesjenovdan">Tweet</a>
+                        </div>
+          
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span8 mctx">
+<p>
+Pregledali smo doslej zbrane predloge in za prvo delavnico v fizičnem prostoru izbrali enega izmed najbolj popularnih in aktualnih predlogov na portalu – Prepoved privatizacije skupnega, v okviru katerega bomo govorili o poskusih privatizacije vodnih virov in iskanju bolj demokratičnih načinov upravljanja s skupnim.
+</p>
+<p>
+    Srečanje bo sestavljeno iz dveh delov. V prvem delu bodo imeli kratke predstavitve problema strokovnjaki iz področja, v drugem se bomo lotili dela.
+</p>
+<p>
+Svojo udeležbo so potrdili: <strong>Nikolai Jeffs</strong> (FHŠ), ki bo predstavil socialne vidike privatizacije vode v Veliki Britaniji; <strong>Maja Simoneti</strong> (Inštitut za politike prostora), ki bo opozorila na pasti privatizacije; <strong>Urša Šebenik</strong> (Inštitut za trajnostni razvoj), ki bo govorila o dejanskih razmerah v Sloveniji in <strong>Žiga Vodovnik</strong> (FDV), ki bo povedal, kaj se je s privatizacijo dogajalo v Latinski Ameriki.
+</p>
+<p>
+Ker verjamemo, da okrogle mize ne bodo spremenile sveta, se bomo v duhu delovanja portala, ki temelji na aktivni participaciji vseh, v drugem delu vsi zainteresirani povezali v skupine, ki bodo razdelovale različne nivoje problematike in razmišljale o načinih konkretnega delovanja. Boljšo družbo lahko zgradimo le skupaj.
+</p>
+<p>
+Tudi od vaše udeležbe je odvisno, kakšno vodo bomo pili.<br /><br />
+</p>
+
+                  </div>
+              </div>
+          </div>
+      
+
+        <div class="span4">
+            <div class="arhiv">
+                <h1>Arhiv dogodkov</h1>
+                <p>To bo naš prvi event, arhiv je zaenkrat še prazen.</p>
+            </div>
+        </div>
+    </div>
+        </div> <!-- /container -->
+
+
+
+<footer>
+    <div class="container footy">
+      <div class="row">
+        <div class="span3 ff f1">
+          <a class="mail" href="#">info@danesjenovdan.si</a>
+        </div>
+        <div class="span4 lajkbatons ff f2">
+            <div class="flp20">
+                <div class="fb-like" data-href="http://danesjenovdan.si" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+          
+            </div>
+            <div class="flp20">
+          <div class="g-plusone" data-href="http://danesjenovdan.si" data-size="medium" data-annotation="buble" data-width="100"></div>
+          
+                  </div>
+            <div class="flp20">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-hashtags="danesjenovdan">Tweet</a>
+
+                  </div>
+          
+        </div>
+          <div class="span3 ff f3">
+              <div class="fb-like-box" data-href="http://www.facebook.com/danesjenovdan" data-width="292" data-show-faces="false" data-stream="false" data-header="false"></div>
+
+          </div>
+        <div class="span2 f4">
+            <a class="footerlink" href="http://danesjenovdan.si">danesjenovdan.si</a>
+            <!--<a class="footerlink" href="http://veselje.danesjenovdan.si">veselje.danesjenovdan.si</a>
+            --><br />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+       <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'></script>
+
+      <script type='text/javascript' src='js/rfc3339date.js'></script>
+<script type='text/javascript' src='js/jquery.addtocal.js'></script>
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36901322-1']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+         
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+  </script>
+  
+  <script>
+    $(document).ready(function() {
+        $('.addtocal').AddToCal({
+            // ical and vcal require an ics or vcs file to be served.
+            // Disable these features if reqired (as a result the 30boxes, iCal and vCalendar menu links will not appear)
+            icalEnabled:false,
+            vcalEnabled:false,
+
+            getEventDetails: function( element ) {
+
+                
+                
+              return {
+                webcalurl: null,
+                icalurl: null,
+                vcalurl: null,
+                start: "20130305T180000Z",
+                end: "20130305T200000Z",
+                title: "Ne privatizaciji vode",
+                details: "Ne privatizaciji vode, Atrij ZRC SAZU, 5. marec ob 18.00",
+                location: null,
+                url: null
+            };
+    }
+    });
+    });
+  </script>
+
+  </body>
+</html>

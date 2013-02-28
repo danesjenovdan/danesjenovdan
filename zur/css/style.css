@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dosis Regular'), local('Dosis-Regular'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/7L9_zC5qZfwiKVyE9UcfBqCWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+
+body {
+	background-image: url('../img/bck_pattern.png');
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 5em;
+	font-family: 'Dosis', sans-serif;
+	color: #579696;
+	padding: 16px;
+}
+
+.voteline {
+	width: 100%;
+	float: left;
+	padding: 1em;
+}
+
+#zapicture {
+	background-image: url('../img/toggleza.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 97px;
+	height: 97px;
+	float: left;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+#protipicture {
+	background-image: url('../img/toggleproti.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 97px;
+	height: 97px;
+	float: right;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-right: 2em;
+}
+
+
+#za {
+	background-color: #579696;
+	height: 97px;
+	float: left;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#proti {
+	background-color: #579696;
+	height: 97px;
+	float: right;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}

@@ -19,7 +19,7 @@ function curPageURL() {
 	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
 	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content="danesjenovdan_si:proposal" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobrega-zivljenja-in-solidarne-druzbe/<?php print $this->predlog->id; ?>" />
 	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_1.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
@@ -31,7 +31,7 @@ function curPageURL() {
 	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
 	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content="danesjenovdan_si:proposal" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-skupnega/<?php print $this->predlog->id; ?>" />
 	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_2.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
@@ -43,7 +43,7 @@ function curPageURL() {
 	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
 	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content="danesjenovdan_si:proposal" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-narave/<?php print $this->predlog->id; ?>" />
 	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_4.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
@@ -55,7 +55,7 @@ function curPageURL() {
 	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
 	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content="danesjenovdan_si:proposal" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-dobre-politicne-oblasti/<?php print $this->predlog->id; ?>" />
 	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_3.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
@@ -67,7 +67,7 @@ function curPageURL() {
 	<meta name="description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!"/>
 	<meta property="og:title" content="<?php print $this->predlog->title; ?>"/>
 	<meta property="og:description" content="Ne čakaj pomladi. Pridruži se grajenju boljše družbe!">
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content="danesjenovdan_si:proposal" />
 	<meta property="og:url" content="http://danesjenovdan.si/pravica-do-cloveku-prijazne-ekonomije/<?php print $this->predlog->id; ?>" />
 	<meta property="og:image" content="http://zakonopljo.si/Content/img/pravica_5.png" />
 	<meta property="og:site_name" content="Danes je nov dan.si" />
@@ -93,6 +93,30 @@ function curPageURL() {
 	<!-- end of dirty dirty banner hack -->
 
 	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div id="dndmainnav" class="">
+				            <ul>
+				              <li class="active">
+				                <a href="http://danesjenovdan.si">
+				                  Danes je nov dan  
+				                </a>
+				              </li>
+				              <li class="">
+				                <a href="http://spet.danesjenovdan.si">
+				                  Spet je nov dan
+				                </a>
+				              </li>
+				 <!--             <li class="active">
+				                <a href="http://veselje.danesjenovdan.si">
+				                  Veselje
+				                </a>
+				              </li>
+				 -->           </ul>            
+				
+				    </div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="span3">
 				<a class="nonexistent" href="/"><div class="logo"></div></a>
@@ -314,8 +338,8 @@ function curPageURL() {
 	<button type="button" class="closepopup" data-dismiss="modal" aria-hidden="true"></button>
 	<div class="modal-body">
 		<div class="usersignedin">objavi kot <span class="signedinname"></span></div>
+		<p class="connectwith">Najprej se moraš prijaviti.<br />Če nimaš Facebook računa, se lahko prijaviš tudi z e-naslovom.</p>
 		<div class="socialconnect">
-			<p class="connectwith">Poveži se z</p>
 			<div class="fbsignin"></div>
 			<img src="/static/img/gumb_twitter.png" class="twsignin"/>
 			<div class="googlesign"></div>
